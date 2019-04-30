@@ -1,0 +1,2157 @@
+total 536
+drwxr-xr-x   9 erwincoumans  primarygroup     288 Mar 27 14:24 .
+drwxr-xr-x   5 erwincoumans  primarygroup     160 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup       0 Mar 27 14:24 all.txt
+drwxr-xr-x  59 erwincoumans  primarygroup    1888 Mar 25 07:34 include
+-rw-r--r--   1 erwincoumans  primarygroup     428 Mar 25 07:34 platform_readme.html
+-rw-r--r--   1 erwincoumans  primarygroup  265426 Mar 25 07:34 release_notes.html
+drwxr-xr-x  23 erwincoumans  primarygroup     736 Mar 25 07:34 source
+drwxr-xr-x   4 erwincoumans  primarygroup     128 Mar 25 07:34 tools
+-rw-r--r--   1 erwincoumans  primarygroup      14 Mar 25 07:34 version.txt
+
+./include:
+total 1280
+drwxr-xr-x  59 erwincoumans  primarygroup   1888 Mar 25 07:34 .
+drwxr-xr-x   9 erwincoumans  primarygroup    288 Mar 27 14:24 ..
+-rw-r--r--   1 erwincoumans  primarygroup   9015 Mar 25 07:33 PxActor.h
+-rw-r--r--   1 erwincoumans  primarygroup   8077 Mar 25 07:33 PxAggregate.h
+-rw-r--r--   1 erwincoumans  primarygroup   9036 Mar 25 07:33 PxArticulation.h
+-rw-r--r--   1 erwincoumans  primarygroup  12351 Mar 25 07:33 PxArticulationBase.h
+-rw-r--r--   1 erwincoumans  primarygroup  13810 Mar 25 07:33 PxArticulationJoint.h
+-rw-r--r--   1 erwincoumans  primarygroup   4476 Mar 25 07:33 PxArticulationJointReducedCoordinate.h
+-rw-r--r--   1 erwincoumans  primarygroup   4820 Mar 25 07:33 PxArticulationLink.h
+-rw-r--r--   1 erwincoumans  primarygroup  14302 Mar 25 07:33 PxArticulationReducedCoordinate.h
+-rw-r--r--   1 erwincoumans  primarygroup  11297 Mar 25 07:33 PxBatchQuery.h
+-rw-r--r--   1 erwincoumans  primarygroup  11017 Mar 25 07:33 PxBatchQueryDesc.h
+-rw-r--r--   1 erwincoumans  primarygroup   6956 Mar 25 07:33 PxBroadPhase.h
+-rw-r--r--   1 erwincoumans  primarygroup   2310 Mar 25 07:33 PxClient.h
+-rw-r--r--   1 erwincoumans  primarygroup   9786 Mar 25 07:33 PxConstraint.h
+-rw-r--r--   1 erwincoumans  primarygroup  18180 Mar 25 07:33 PxConstraintDesc.h
+-rw-r--r--   1 erwincoumans  primarygroup  15054 Mar 25 07:33 PxContact.h
+-rw-r--r--   1 erwincoumans  primarygroup  16556 Mar 25 07:33 PxContactModifyCallback.h
+-rw-r--r--   1 erwincoumans  primarygroup   4249 Mar 25 07:33 PxDeletionListener.h
+-rw-r--r--   1 erwincoumans  primarygroup  29386 Mar 25 07:33 PxFiltering.h
+-rw-r--r--   1 erwincoumans  primarygroup   2587 Mar 25 07:33 PxForceMode.h
+-rw-r--r--   1 erwincoumans  primarygroup   5109 Mar 25 07:33 PxFoundation.h
+-rw-r--r--   1 erwincoumans  primarygroup  36620 Mar 25 07:33 PxImmediateMode.h
+-rw-r--r--   1 erwincoumans  primarygroup   2728 Mar 25 07:33 PxLockedData.h
+-rw-r--r--   1 erwincoumans  primarygroup  11194 Mar 25 07:33 PxMaterial.h
+-rw-r--r--   1 erwincoumans  primarygroup   2443 Mar 25 07:33 PxPhysXConfig.h
+-rw-r--r--   1 erwincoumans  primarygroup  27744 Mar 25 07:33 PxPhysics.h
+-rw-r--r--   1 erwincoumans  primarygroup   7498 Mar 25 07:33 PxPhysicsAPI.h
+-rw-r--r--   1 erwincoumans  primarygroup   3541 Mar 25 07:33 PxPhysicsSerialization.h
+-rw-r--r--   1 erwincoumans  primarygroup   2824 Mar 25 07:33 PxPhysicsVersion.h
+-rw-r--r--   1 erwincoumans  primarygroup   4415 Mar 25 07:33 PxPruningStructure.h
+-rw-r--r--   1 erwincoumans  primarygroup  12450 Mar 25 07:33 PxQueryFiltering.h
+-rw-r--r--   1 erwincoumans  primarygroup  16063 Mar 25 07:33 PxQueryReport.h
+-rw-r--r--   1 erwincoumans  primarygroup   9069 Mar 25 07:33 PxRigidActor.h
+-rw-r--r--   1 erwincoumans  primarygroup  28076 Mar 25 07:33 PxRigidBody.h
+-rw-r--r--   1 erwincoumans  primarygroup  14903 Mar 25 07:33 PxRigidDynamic.h
+-rw-r--r--   1 erwincoumans  primarygroup   2950 Mar 25 07:33 PxRigidStatic.h
+-rw-r--r--   1 erwincoumans  primarygroup  66807 Mar 25 07:33 PxScene.h
+-rw-r--r--   1 erwincoumans  primarygroup  38500 Mar 25 07:33 PxSceneDesc.h
+-rw-r--r--   1 erwincoumans  primarygroup   3581 Mar 25 07:33 PxSceneLock.h
+-rw-r--r--   1 erwincoumans  primarygroup  22222 Mar 25 07:33 PxShape.h
+-rw-r--r--   1 erwincoumans  primarygroup  31174 Mar 25 07:33 PxSimulationEventCallback.h
+-rw-r--r--   1 erwincoumans  primarygroup   9589 Mar 25 07:33 PxSimulationStatistics.h
+-rw-r--r--   1 erwincoumans  primarygroup   6846 Mar 25 07:33 PxVisualizationParameter.h
+drwxr-xr-x  10 erwincoumans  primarygroup    320 Mar 25 07:33 characterkinematic
+drwxr-xr-x   3 erwincoumans  primarygroup     96 Mar 25 07:33 collision
+drwxr-xr-x  17 erwincoumans  primarygroup    544 Mar 25 07:33 common
+drwxr-xr-x  10 erwincoumans  primarygroup    320 Mar 25 07:33 cooking
+drwxr-xr-x   6 erwincoumans  primarygroup    192 Mar 25 07:33 cudamanager
+drwxr-xr-x  36 erwincoumans  primarygroup   1152 Mar 25 07:33 extensions
+drwxr-xr-x   3 erwincoumans  primarygroup     96 Mar 25 07:33 filebuf
+drwxr-xr-x   5 erwincoumans  primarygroup    160 Mar 25 07:33 foundation
+drwxr-xr-x  23 erwincoumans  primarygroup    736 Mar 25 07:33 geometry
+drwxr-xr-x   4 erwincoumans  primarygroup    128 Mar 25 07:33 geomutils
+drwxr-xr-x   3 erwincoumans  primarygroup     96 Mar 25 07:33 gpu
+drwxr-xr-x   5 erwincoumans  primarygroup    160 Mar 25 07:33 pvd
+drwxr-xr-x   3 erwincoumans  primarygroup     96 Mar 25 07:34 solver
+drwxr-xr-x   8 erwincoumans  primarygroup    256 Mar 25 07:34 task
+drwxr-xr-x  17 erwincoumans  primarygroup    544 Mar 25 07:34 vehicle
+
+./include/characterkinematic:
+total 168
+drwxr-xr-x  10 erwincoumans  primarygroup    320 Mar 25 07:33 .
+drwxr-xr-x  59 erwincoumans  primarygroup   1888 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   6094 Mar 25 07:33 PxBoxController.h
+-rw-r--r--   1 erwincoumans  primarygroup   6541 Mar 25 07:33 PxCapsuleController.h
+-rw-r--r--   1 erwincoumans  primarygroup   2349 Mar 25 07:33 PxCharacter.h
+-rw-r--r--   1 erwincoumans  primarygroup  27448 Mar 25 07:33 PxController.h
+-rw-r--r--   1 erwincoumans  primarygroup   4895 Mar 25 07:33 PxControllerBehavior.h
+-rw-r--r--   1 erwincoumans  primarygroup  10659 Mar 25 07:33 PxControllerManager.h
+-rw-r--r--   1 erwincoumans  primarygroup   5189 Mar 25 07:33 PxControllerObstacles.h
+-rw-r--r--   1 erwincoumans  primarygroup   6797 Mar 25 07:33 PxExtended.h
+
+./include/collision:
+total 8
+drwxr-xr-x   3 erwincoumans  primarygroup    96 Mar 25 07:33 .
+drwxr-xr-x  59 erwincoumans  primarygroup  1888 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  3496 Mar 25 07:33 PxCollisionDefs.h
+
+./include/common:
+total 216
+drwxr-xr-x  17 erwincoumans  primarygroup    544 Mar 25 07:33 .
+drwxr-xr-x  59 erwincoumans  primarygroup   1888 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   6199 Mar 25 07:33 PxBase.h
+-rw-r--r--   1 erwincoumans  primarygroup   9684 Mar 25 07:33 PxCollection.h
+-rw-r--r--   1 erwincoumans  primarygroup   5263 Mar 25 07:33 PxCoreUtilityTypes.h
+-rw-r--r--   1 erwincoumans  primarygroup   9033 Mar 25 07:33 PxMetaData.h
+-rw-r--r--   1 erwincoumans  primarygroup   3431 Mar 25 07:33 PxMetaDataFlags.h
+-rw-r--r--   1 erwincoumans  primarygroup   3865 Mar 25 07:33 PxPhysXCommonConfig.h
+-rw-r--r--   1 erwincoumans  primarygroup   2940 Mar 25 07:33 PxPhysicsInsertionCallback.h
+-rw-r--r--   1 erwincoumans  primarygroup   2439 Mar 25 07:33 PxProfileZone.h
+-rw-r--r--   1 erwincoumans  primarygroup   4265 Mar 25 07:33 PxRenderBuffer.h
+-rw-r--r--   1 erwincoumans  primarygroup  14057 Mar 25 07:33 PxSerialFramework.h
+-rw-r--r--   1 erwincoumans  primarygroup   8462 Mar 25 07:33 PxSerializer.h
+-rw-r--r--   1 erwincoumans  primarygroup   2507 Mar 25 07:33 PxStringTable.h
+-rw-r--r--   1 erwincoumans  primarygroup   3428 Mar 25 07:33 PxTolerancesScale.h
+-rw-r--r--   1 erwincoumans  primarygroup   4851 Mar 25 07:33 PxTypeInfo.h
+drwxr-xr-x   3 erwincoumans  primarygroup     96 Mar 25 07:33 windows
+
+./include/common/windows:
+total 8
+drwxr-xr-x   3 erwincoumans  primarygroup    96 Mar 25 07:33 .
+drwxr-xr-x  17 erwincoumans  primarygroup   544 Mar 25 07:33 ..
+-rw-r--r--   1 erwincoumans  primarygroup  3560 Mar 25 07:33 PxWindowsDelayLoadHook.h
+
+./include/cooking:
+total 128
+drwxr-xr-x  10 erwincoumans  primarygroup    320 Mar 25 07:33 .
+drwxr-xr-x  59 erwincoumans  primarygroup   1888 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   3624 Mar 25 07:33 PxBVH33MidphaseDesc.h
+-rw-r--r--   1 erwincoumans  primarygroup   2882 Mar 25 07:33 PxBVH34MidphaseDesc.h
+-rw-r--r--   1 erwincoumans  primarygroup   2957 Mar 25 07:33 PxBVHStructureDesc.h
+-rw-r--r--   1 erwincoumans  primarygroup   9255 Mar 25 07:33 PxConvexMeshDesc.h
+-rw-r--r--   1 erwincoumans  primarygroup  20787 Mar 25 07:33 PxCooking.h
+-rw-r--r--   1 erwincoumans  primarygroup   3499 Mar 25 07:33 PxMidphaseDesc.h
+-rw-r--r--   1 erwincoumans  primarygroup   4367 Mar 25 07:33 PxTriangleMeshDesc.h
+-rw-r--r--   1 erwincoumans  primarygroup   2258 Mar 25 07:33 Pxc.h
+
+./include/cudamanager:
+total 80
+drwxr-xr-x   6 erwincoumans  primarygroup    192 Mar 25 07:33 .
+drwxr-xr-x  59 erwincoumans  primarygroup   1888 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  15268 Mar 25 07:33 PxCudaContextManager.h
+-rw-r--r--   1 erwincoumans  primarygroup  10159 Mar 25 07:33 PxCudaMemoryManager.h
+-rw-r--r--   1 erwincoumans  primarygroup   3024 Mar 25 07:33 PxGpuCopyDesc.h
+-rw-r--r--   1 erwincoumans  primarygroup   4629 Mar 25 07:33 PxGpuCopyDescQueue.h
+
+./include/extensions:
+total 648
+drwxr-xr-x  36 erwincoumans  primarygroup   1152 Mar 25 07:33 .
+drwxr-xr-x  59 erwincoumans  primarygroup   1888 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   4588 Mar 25 07:33 PxBinaryConverter.h
+-rw-r--r--   1 erwincoumans  primarygroup   3081 Mar 25 07:33 PxBroadPhaseExt.h
+-rw-r--r--   1 erwincoumans  primarygroup   5185 Mar 25 07:33 PxCollectionExt.h
+-rw-r--r--   1 erwincoumans  primarygroup   2435 Mar 25 07:33 PxConstraintExt.h
+-rw-r--r--   1 erwincoumans  primarygroup   5375 Mar 25 07:33 PxContactJoint.h
+-rw-r--r--   1 erwincoumans  primarygroup   2849 Mar 25 07:33 PxConvexMeshExt.h
+-rw-r--r--   1 erwincoumans  primarygroup  18004 Mar 25 07:33 PxD6Joint.h
+-rw-r--r--   1 erwincoumans  primarygroup  14633 Mar 25 07:33 PxD6JointCreate.h
+-rw-r--r--   1 erwincoumans  primarygroup   3242 Mar 25 07:33 PxDefaultAllocator.h
+-rw-r--r--   1 erwincoumans  primarygroup   3304 Mar 25 07:33 PxDefaultCpuDispatcher.h
+-rw-r--r--   1 erwincoumans  primarygroup   2640 Mar 25 07:33 PxDefaultErrorCallback.h
+-rw-r--r--   1 erwincoumans  primarygroup   7630 Mar 25 07:33 PxDefaultSimulationFilterShader.h
+-rw-r--r--   1 erwincoumans  primarygroup   4008 Mar 25 07:33 PxDefaultStreams.h
+-rw-r--r--   1 erwincoumans  primarygroup   8048 Mar 25 07:33 PxDistanceJoint.h
+-rw-r--r--   1 erwincoumans  primarygroup   3655 Mar 25 07:33 PxExtensionsAPI.h
+-rw-r--r--   1 erwincoumans  primarygroup   5509 Mar 25 07:33 PxFixedJoint.h
+-rw-r--r--   1 erwincoumans  primarygroup  12302 Mar 25 07:33 PxJoint.h
+-rw-r--r--   1 erwincoumans  primarygroup  19413 Mar 25 07:33 PxJointLimit.h
+-rw-r--r--   1 erwincoumans  primarygroup  13061 Mar 25 07:33 PxMassProperties.h
+-rw-r--r--   1 erwincoumans  primarygroup   7308 Mar 25 07:33 PxPrismaticJoint.h
+-rw-r--r--   1 erwincoumans  primarygroup   3794 Mar 25 07:33 PxRaycastCCD.h
+-rw-r--r--   1 erwincoumans  primarygroup   5872 Mar 25 07:33 PxRepXSerializer.h
+-rw-r--r--   1 erwincoumans  primarygroup   3382 Mar 25 07:33 PxRepXSimpleType.h
+-rw-r--r--   1 erwincoumans  primarygroup  10548 Mar 25 07:33 PxRevoluteJoint.h
+-rw-r--r--   1 erwincoumans  primarygroup   6436 Mar 25 07:33 PxRigidActorExt.h
+-rw-r--r--   1 erwincoumans  primarygroup  25733 Mar 25 07:33 PxRigidBodyExt.h
+-rw-r--r--   1 erwincoumans  primarygroup  18543 Mar 25 07:33 PxSceneQueryExt.h
+-rw-r--r--   1 erwincoumans  primarygroup  14200 Mar 25 07:33 PxSerialization.h
+-rw-r--r--   1 erwincoumans  primarygroup   6090 Mar 25 07:33 PxShapeExt.h
+-rw-r--r--   1 erwincoumans  primarygroup  11386 Mar 25 07:33 PxSimpleFactory.h
+-rw-r--r--   1 erwincoumans  primarygroup   2803 Mar 25 07:33 PxSmoothNormals.h
+-rw-r--r--   1 erwincoumans  primarygroup   6816 Mar 25 07:33 PxSphericalJoint.h
+-rw-r--r--   1 erwincoumans  primarygroup   2146 Mar 25 07:33 PxStringTableExt.h
+-rw-r--r--   1 erwincoumans  primarygroup   8674 Mar 25 07:33 PxTriangleMeshExt.h
+
+./include/filebuf:
+total 24
+drwxr-xr-x   3 erwincoumans  primarygroup    96 Mar 25 07:33 .
+drwxr-xr-x  59 erwincoumans  primarygroup  1888 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  8643 Mar 25 07:33 PxFileBuf.h
+
+./include/foundation:
+total 32
+drwxr-xr-x   5 erwincoumans  primarygroup   160 Mar 25 07:33 .
+drwxr-xr-x  59 erwincoumans  primarygroup  1888 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  4763 Mar 25 07:33 PxAssert.h
+-rw-r--r--   1 erwincoumans  primarygroup  2303 Mar 25 07:33 PxFoundationConfig.h
+-rw-r--r--   1 erwincoumans  primarygroup  2820 Mar 25 07:33 PxMathUtils.h
+
+./include/geometry:
+total 328
+drwxr-xr-x  23 erwincoumans  primarygroup    736 Mar 25 07:33 .
+drwxr-xr-x  59 erwincoumans  primarygroup   1888 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   4825 Mar 25 07:33 PxBVHStructure.h
+-rw-r--r--   1 erwincoumans  primarygroup   3868 Mar 25 07:33 PxBoxGeometry.h
+-rw-r--r--   1 erwincoumans  primarygroup   4396 Mar 25 07:33 PxCapsuleGeometry.h
+-rw-r--r--   1 erwincoumans  primarygroup   7221 Mar 25 07:33 PxConvexMesh.h
+-rw-r--r--   1 erwincoumans  primarygroup   4954 Mar 25 07:33 PxConvexMeshGeometry.h
+-rw-r--r--   1 erwincoumans  primarygroup   2944 Mar 25 07:33 PxGeometry.h
+-rw-r--r--   1 erwincoumans  primarygroup   6549 Mar 25 07:33 PxGeometryHelpers.h
+-rw-r--r--   1 erwincoumans  primarygroup   9074 Mar 25 07:33 PxGeometryQuery.h
+-rw-r--r--   1 erwincoumans  primarygroup  10395 Mar 25 07:33 PxHeightField.h
+-rw-r--r--   1 erwincoumans  primarygroup   5607 Mar 25 07:33 PxHeightFieldDesc.h
+-rw-r--r--   1 erwincoumans  primarygroup   4502 Mar 25 07:33 PxHeightFieldFlag.h
+-rw-r--r--   1 erwincoumans  primarygroup   4590 Mar 25 07:33 PxHeightFieldGeometry.h
+-rw-r--r--   1 erwincoumans  primarygroup   5070 Mar 25 07:33 PxHeightFieldSample.h
+-rw-r--r--   1 erwincoumans  primarygroup  10378 Mar 25 07:33 PxMeshQuery.h
+-rw-r--r--   1 erwincoumans  primarygroup   5917 Mar 25 07:33 PxMeshScale.h
+-rw-r--r--   1 erwincoumans  primarygroup   3589 Mar 25 07:33 PxPlaneGeometry.h
+-rw-r--r--   1 erwincoumans  primarygroup   4674 Mar 25 07:33 PxSimpleTriangleMesh.h
+-rw-r--r--   1 erwincoumans  primarygroup   3027 Mar 25 07:33 PxSphereGeometry.h
+-rw-r--r--   1 erwincoumans  primarygroup   3848 Mar 25 07:33 PxTriangle.h
+-rw-r--r--   1 erwincoumans  primarygroup  11515 Mar 25 07:33 PxTriangleMesh.h
+-rw-r--r--   1 erwincoumans  primarygroup   5005 Mar 25 07:33 PxTriangleMeshGeometry.h
+
+./include/geomutils:
+total 16
+drwxr-xr-x   4 erwincoumans  primarygroup   128 Mar 25 07:33 .
+drwxr-xr-x  59 erwincoumans  primarygroup  1888 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  3955 Mar 25 07:33 GuContactBuffer.h
+-rw-r--r--   1 erwincoumans  primarygroup  3266 Mar 25 07:33 GuContactPoint.h
+
+./include/gpu:
+total 8
+drwxr-xr-x   3 erwincoumans  primarygroup    96 Mar 25 07:33 .
+drwxr-xr-x  59 erwincoumans  primarygroup  1888 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  3519 Mar 25 07:33 PxGpu.h
+
+./include/pvd:
+total 48
+drwxr-xr-x   5 erwincoumans  primarygroup   160 Mar 25 07:33 .
+drwxr-xr-x  59 erwincoumans  primarygroup  1888 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  6340 Mar 25 07:33 PxPvd.h
+-rw-r--r--   1 erwincoumans  primarygroup  4320 Mar 25 07:33 PxPvdSceneClient.h
+-rw-r--r--   1 erwincoumans  primarygroup  4248 Mar 25 07:34 PxPvdTransport.h
+
+./include/solver:
+total 40
+drwxr-xr-x   3 erwincoumans  primarygroup     96 Mar 25 07:34 .
+drwxr-xr-x  59 erwincoumans  primarygroup   1888 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  17381 Mar 25 07:34 PxSolverDefs.h
+
+./include/task:
+total 88
+drwxr-xr-x   8 erwincoumans  primarygroup    256 Mar 25 07:34 .
+drwxr-xr-x  59 erwincoumans  primarygroup   1888 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   2867 Mar 25 07:34 PxCpuDispatcher.h
+-rw-r--r--   1 erwincoumans  primarygroup  11055 Mar 25 07:34 PxGpuDispatcher.h
+-rw-r--r--   1 erwincoumans  primarygroup   3707 Mar 25 07:34 PxGpuTask.h
+-rw-r--r--   1 erwincoumans  primarygroup   8839 Mar 25 07:34 PxTask.h
+-rw-r--r--   1 erwincoumans  primarygroup   1781 Mar 25 07:34 PxTaskDefine.h
+-rw-r--r--   1 erwincoumans  primarygroup   6085 Mar 25 07:34 PxTaskManager.h
+
+./include/vehicle:
+total 504
+drwxr-xr-x  17 erwincoumans  primarygroup    544 Mar 25 07:34 .
+drwxr-xr-x  59 erwincoumans  primarygroup   1888 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  39272 Mar 25 07:34 PxVehicleComponents.h
+-rw-r--r--   1 erwincoumans  primarygroup  15877 Mar 25 07:34 PxVehicleDrive.h
+-rw-r--r--   1 erwincoumans  primarygroup  10858 Mar 25 07:34 PxVehicleDrive4W.h
+-rw-r--r--   1 erwincoumans  primarygroup   9463 Mar 25 07:34 PxVehicleDriveNW.h
+-rw-r--r--   1 erwincoumans  primarygroup  11237 Mar 25 07:34 PxVehicleDriveTank.h
+-rw-r--r--   1 erwincoumans  primarygroup   8621 Mar 25 07:34 PxVehicleNoDrive.h
+-rw-r--r--   1 erwincoumans  primarygroup   8095 Mar 25 07:34 PxVehicleSDK.h
+-rw-r--r--   1 erwincoumans  primarygroup   4300 Mar 25 07:34 PxVehicleShaders.h
+-rw-r--r--   1 erwincoumans  primarygroup   8449 Mar 25 07:34 PxVehicleTireFriction.h
+-rw-r--r--   1 erwincoumans  primarygroup  31005 Mar 25 07:34 PxVehicleUpdate.h
+-rw-r--r--   1 erwincoumans  primarygroup   2789 Mar 25 07:34 PxVehicleUtil.h
+-rw-r--r--   1 erwincoumans  primarygroup  26614 Mar 25 07:34 PxVehicleUtilControl.h
+-rw-r--r--   1 erwincoumans  primarygroup   8701 Mar 25 07:34 PxVehicleUtilSetup.h
+-rw-r--r--   1 erwincoumans  primarygroup  10249 Mar 25 07:34 PxVehicleUtilTelemetry.h
+-rw-r--r--   1 erwincoumans  primarygroup  30537 Mar 25 07:34 PxVehicleWheels.h
+
+./source:
+total 0
+drwxr-xr-x  23 erwincoumans  primarygroup  736 Mar 25 07:34 .
+drwxr-xr-x   9 erwincoumans  primarygroup  288 Mar 27 14:24 ..
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 common
+drwxr-xr-x   5 erwincoumans  primarygroup  160 Mar 25 07:34 compiler
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 fastxml
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 filebuf
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 foundation
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 geomutils
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 immediatemode
+drwxr-xr-x   5 erwincoumans  primarygroup  160 Mar 25 07:34 lowlevel
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 lowlevelaabb
+drwxr-xr-x   5 erwincoumans  primarygroup  160 Mar 25 08:22 lowleveldynamics
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 physx
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 physxcharacterkinematic
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 physxcooking
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 physxextensions
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 physxgpu
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 physxmetadata
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 physxvehicle
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 pvd
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 scenequery
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 simulationcontroller
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 task
+
+./source/common:
+total 0
+drwxr-xr-x   4 erwincoumans  primarygroup   128 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup   736 Mar 25 07:34 ..
+drwxr-xr-x   3 erwincoumans  primarygroup    96 Mar 25 07:34 include
+drwxr-xr-x  39 erwincoumans  primarygroup  1248 Mar 25 07:34 src
+
+./source/common/include:
+total 0
+drwxr-xr-x  3 erwincoumans  primarygroup   96 Mar 25 07:34 .
+drwxr-xr-x  4 erwincoumans  primarygroup  128 Mar 25 07:34 ..
+drwxr-xr-x  4 erwincoumans  primarygroup  128 Mar 25 07:34 windows
+
+./source/common/include/windows:
+total 16
+drwxr-xr-x  4 erwincoumans  primarygroup   128 Mar 25 07:34 .
+drwxr-xr-x  3 erwincoumans  primarygroup    96 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  2874 Mar 25 07:34 CmWindowsLoadLibrary.h
+-rw-r--r--  1 erwincoumans  primarygroup  2618 Mar 25 07:34 CmWindowsModuleUpdateLoader.h
+
+./source/common/src:
+total 576
+drwxr-xr-x  39 erwincoumans  primarygroup   1248 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  14066 Mar 25 07:34 CmBitMap.h
+-rw-r--r--   1 erwincoumans  primarygroup   3908 Mar 25 07:34 CmBlockArray.h
+-rw-r--r--   1 erwincoumans  primarygroup   7423 Mar 25 07:34 CmBoxPruning.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2297 Mar 25 07:34 CmBoxPruning.h
+-rw-r--r--   1 erwincoumans  primarygroup   7460 Mar 25 07:34 CmCollection.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4450 Mar 25 07:34 CmCollection.h
+-rw-r--r--   1 erwincoumans  primarygroup   7660 Mar 25 07:34 CmConeLimitHelper.h
+-rw-r--r--   1 erwincoumans  primarygroup   4577 Mar 25 07:34 CmFlushPool.h
+-rw-r--r--   1 erwincoumans  primarygroup   5407 Mar 25 07:34 CmIDPool.h
+-rw-r--r--   1 erwincoumans  primarygroup   3807 Mar 25 07:34 CmIO.h
+-rw-r--r--   1 erwincoumans  primarygroup   2814 Mar 25 07:34 CmMathUtils.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   7815 Mar 25 07:34 CmMatrix34.h
+-rw-r--r--   1 erwincoumans  primarygroup   4022 Mar 25 07:34 CmPhysXCommon.h
+-rw-r--r--   1 erwincoumans  primarygroup   8426 Mar 25 07:34 CmPool.h
+-rw-r--r--   1 erwincoumans  primarygroup  10350 Mar 25 07:34 CmPreallocatingPool.h
+-rw-r--r--   1 erwincoumans  primarygroup   6874 Mar 25 07:34 CmPriorityQueue.h
+-rw-r--r--   1 erwincoumans  primarygroup   5999 Mar 25 07:34 CmPtrTable.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5024 Mar 25 07:34 CmPtrTable.h
+-rw-r--r--   1 erwincoumans  primarygroup   3855 Mar 25 07:34 CmQueue.h
+-rw-r--r--   1 erwincoumans  primarygroup  18641 Mar 25 07:34 CmRadixSort.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4038 Mar 25 07:34 CmRadixSort.h
+-rw-r--r--   1 erwincoumans  primarygroup   5747 Mar 25 07:34 CmRadixSortBuffered.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2420 Mar 25 07:34 CmRadixSortBuffered.h
+-rw-r--r--   1 erwincoumans  primarygroup   3588 Mar 25 07:34 CmRefCountable.h
+-rw-r--r--   1 erwincoumans  primarygroup   4319 Mar 25 07:34 CmRenderBuffer.h
+-rw-r--r--   1 erwincoumans  primarygroup  10660 Mar 25 07:34 CmRenderOutput.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5695 Mar 25 07:34 CmRenderOutput.h
+-rw-r--r--   1 erwincoumans  primarygroup   7584 Mar 25 07:34 CmScaling.h
+-rw-r--r--   1 erwincoumans  primarygroup  16067 Mar 25 07:34 CmSpatialVector.h
+-rw-r--r--   1 erwincoumans  primarygroup   7670 Mar 25 07:34 CmTask.h
+-rw-r--r--   1 erwincoumans  primarygroup   3829 Mar 25 07:34 CmTaskPool.h
+-rw-r--r--   1 erwincoumans  primarygroup   2917 Mar 25 07:34 CmTmpMem.h
+-rw-r--r--   1 erwincoumans  primarygroup   5050 Mar 25 07:34 CmTransformUtils.h
+-rw-r--r--   1 erwincoumans  primarygroup   9377 Mar 25 07:34 CmUtils.h
+-rw-r--r--   1 erwincoumans  primarygroup   4940 Mar 25 07:34 CmVisualization.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4360 Mar 25 07:34 CmVisualization.h
+drwxr-xr-x   4 erwincoumans  primarygroup    128 Mar 25 07:34 windows
+
+./source/common/src/windows:
+total 24
+drwxr-xr-x   4 erwincoumans  primarygroup   128 Mar 25 07:34 .
+drwxr-xr-x  39 erwincoumans  primarygroup  1248 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  2820 Mar 25 07:34 CmWindowsDelayLoadHook.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  4338 Mar 25 07:34 CmWindowsModuleUpdateLoader.cpp
+
+./source/compiler:
+total 0
+drwxr-xr-x   5 erwincoumans  primarygroup  160 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup  736 Mar 25 07:34 ..
+drwxr-xr-x  24 erwincoumans  primarygroup  768 Mar 25 07:34 cmake
+drwxr-xr-x   7 erwincoumans  primarygroup  224 Mar 25 07:34 resource_x64
+drwxr-xr-x   7 erwincoumans  primarygroup  224 Mar 25 07:34 resource_x86
+
+./source/compiler/cmake:
+total 352
+drwxr-xr-x  24 erwincoumans  primarygroup    768 Mar 25 07:34 .
+drwxr-xr-x   5 erwincoumans  primarygroup    160 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   5697 Mar 25 07:34 CMakeLists.txt
+-rw-r--r--   1 erwincoumans  primarygroup   3499 Mar 25 07:34 FastXml.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   1789 Mar 25 07:34 IfTemplate.txt
+-rw-r--r--   1 erwincoumans  primarygroup   9044 Mar 25 07:34 LowLevel.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   4777 Mar 25 07:34 LowLevelAABB.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   8774 Mar 25 07:34 LowLevelDynamics.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  14421 Mar 25 07:34 PhysX.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   5849 Mar 25 07:34 PhysXCharacterKinematic.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  25026 Mar 25 07:34 PhysXCommon.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   7700 Mar 25 07:34 PhysXCooking.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  13728 Mar 25 07:34 PhysXExtensions.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   8697 Mar 25 07:34 PhysXFoundation.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   7426 Mar 25 07:34 PhysXPvdSDK.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   3827 Mar 25 07:34 PhysXTask.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   6706 Mar 25 07:34 PhysXVehicle.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   6255 Mar 25 07:34 SceneQuery.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   9574 Mar 25 07:34 SimulationController.cmake
+drwxr-xr-x  18 erwincoumans  primarygroup    576 Mar 25 07:34 android
+drwxr-xr-x  18 erwincoumans  primarygroup    576 Mar 25 07:34 ios
+drwxr-xr-x  18 erwincoumans  primarygroup    576 Mar 25 07:34 linux
+drwxr-xr-x  18 erwincoumans  primarygroup    576 Mar 25 07:34 mac
+drwxr-xr-x  18 erwincoumans  primarygroup    576 Mar 25 07:34 windows
+
+./source/compiler/cmake/android:
+total 136
+drwxr-xr-x  18 erwincoumans  primarygroup   576 Mar 25 07:34 .
+drwxr-xr-x  24 erwincoumans  primarygroup   768 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  6750 Mar 25 07:34 CMakeLists.txt
+-rw-r--r--   1 erwincoumans  primarygroup  1948 Mar 25 07:34 FastXml.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2253 Mar 25 07:34 LowLevel.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2237 Mar 25 07:34 LowLevelAABB.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2241 Mar 25 07:34 LowLevelDynamics.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2480 Mar 25 07:34 PhysX.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2020 Mar 25 07:34 PhysXCharacterKinematic.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2127 Mar 25 07:34 PhysXCommon.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2071 Mar 25 07:34 PhysXCooking.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2201 Mar 25 07:34 PhysXExtensions.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  3670 Mar 25 07:34 PhysXFoundation.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  1961 Mar 25 07:34 PhysXPvdSDK.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  1955 Mar 25 07:34 PhysXTask.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  1985 Mar 25 07:34 PhysXVehicle.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2061 Mar 25 07:34 SceneQuery.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2137 Mar 25 07:34 SimulationController.cmake
+
+./source/compiler/cmake/ios:
+total 136
+drwxr-xr-x  18 erwincoumans  primarygroup   576 Mar 25 07:34 .
+drwxr-xr-x  24 erwincoumans  primarygroup   768 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  5649 Mar 25 07:34 CMakeLists.txt
+-rw-r--r--   1 erwincoumans  primarygroup  2005 Mar 25 07:34 FastXml.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2217 Mar 25 07:34 LowLevel.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2208 Mar 25 07:34 LowLevelAABB.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2288 Mar 25 07:34 LowLevelDynamics.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2657 Mar 25 07:34 PhysX.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2011 Mar 25 07:34 PhysXCharacterKinematic.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2103 Mar 25 07:34 PhysXCommon.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2261 Mar 25 07:34 PhysXCooking.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2254 Mar 25 07:34 PhysXExtensions.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  3656 Mar 25 07:34 PhysXFoundation.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2014 Mar 25 07:34 PhysXPvdSDK.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  1902 Mar 25 07:34 PhysXTask.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2005 Mar 25 07:34 PhysXVehicle.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2112 Mar 25 07:34 SceneQuery.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2186 Mar 25 07:34 SimulationController.cmake
+
+./source/compiler/cmake/linux:
+total 152
+drwxr-xr-x  18 erwincoumans  primarygroup   576 Mar 25 07:34 .
+drwxr-xr-x  24 erwincoumans  primarygroup   768 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  7063 Mar 25 07:34 CMakeLists.txt
+-rw-r--r--   1 erwincoumans  primarygroup  2015 Mar 25 07:34 FastXml.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2653 Mar 25 07:34 LowLevel.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2223 Mar 25 07:34 LowLevelAABB.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2308 Mar 25 07:34 LowLevelDynamics.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  4170 Mar 25 07:34 PhysX.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2216 Mar 25 07:34 PhysXCharacterKinematic.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2364 Mar 25 07:34 PhysXCommon.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2524 Mar 25 07:34 PhysXCooking.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2301 Mar 25 07:34 PhysXExtensions.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  4361 Mar 25 07:34 PhysXFoundation.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2048 Mar 25 07:34 PhysXPvdSDK.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  1979 Mar 25 07:34 PhysXTask.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2052 Mar 25 07:34 PhysXVehicle.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2127 Mar 25 07:34 SceneQuery.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2203 Mar 25 07:34 SimulationController.cmake
+
+./source/compiler/cmake/mac:
+total 144
+drwxr-xr-x  18 erwincoumans  primarygroup   576 Mar 25 07:34 .
+drwxr-xr-x  24 erwincoumans  primarygroup   768 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  5868 Mar 25 07:34 CMakeLists.txt
+-rw-r--r--   1 erwincoumans  primarygroup  2007 Mar 25 07:34 FastXml.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2218 Mar 25 07:34 LowLevel.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2209 Mar 25 07:34 LowLevelAABB.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2286 Mar 25 07:34 LowLevelDynamics.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2733 Mar 25 07:34 PhysX.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2058 Mar 25 07:34 PhysXCharacterKinematic.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2583 Mar 25 07:34 PhysXCommon.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2347 Mar 25 07:34 PhysXCooking.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2254 Mar 25 07:34 PhysXExtensions.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  4101 Mar 25 07:34 PhysXFoundation.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2014 Mar 25 07:34 PhysXPvdSDK.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  1902 Mar 25 07:34 PhysXTask.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2040 Mar 25 07:34 PhysXVehicle.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2112 Mar 25 07:34 SceneQuery.cmake
+-rw-r--r--   1 erwincoumans  primarygroup  2186 Mar 25 07:34 SimulationController.cmake
+
+./source/compiler/cmake/windows:
+total 248
+drwxr-xr-x  18 erwincoumans  primarygroup    576 Mar 25 07:34 .
+drwxr-xr-x  24 erwincoumans  primarygroup    768 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  10688 Mar 25 07:34 CMakeLists.txt
+-rw-r--r--   1 erwincoumans  primarygroup   2736 Mar 25 07:34 FastXml.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   4454 Mar 25 07:34 LowLevel.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   4589 Mar 25 07:34 LowLevelAABB.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   4826 Mar 25 07:34 LowLevelDynamics.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   7621 Mar 25 07:34 PhysX.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   4140 Mar 25 07:34 PhysXCharacterKinematic.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   5251 Mar 25 07:34 PhysXCommon.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   5186 Mar 25 07:34 PhysXCooking.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   4228 Mar 25 07:34 PhysXExtensions.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   6217 Mar 25 07:34 PhysXFoundation.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   4501 Mar 25 07:34 PhysXPvdSDK.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   4162 Mar 25 07:34 PhysXTask.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   3870 Mar 25 07:34 PhysXVehicle.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   4371 Mar 25 07:34 SceneQuery.cmake
+-rw-r--r--   1 erwincoumans  primarygroup   4628 Mar 25 07:34 SimulationController.cmake
+
+./source/compiler/resource_x64:
+total 48
+drwxr-xr-x  7 erwincoumans  primarygroup   224 Mar 25 07:34 .
+drwxr-xr-x  5 erwincoumans  primarygroup   160 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  2054 Mar 25 07:34 PhysX.rc
+-rw-r--r--  1 erwincoumans  primarygroup  2072 Mar 25 07:34 PhysXCommon.rc
+-rw-r--r--  1 erwincoumans  primarygroup  1987 Mar 25 07:34 PhysXCooking.rc
+-rw-r--r--  1 erwincoumans  primarygroup  4642 Mar 25 07:34 PhysXFoundation.rc
+-rw-r--r--  1 erwincoumans  primarygroup  2089 Mar 25 07:34 resource.h
+
+./source/compiler/resource_x86:
+total 48
+drwxr-xr-x  7 erwincoumans  primarygroup   224 Mar 25 07:34 .
+drwxr-xr-x  5 erwincoumans  primarygroup   160 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  2057 Mar 25 07:34 PhysX.rc
+-rw-r--r--  1 erwincoumans  primarygroup  1987 Mar 25 07:34 PhysXCommon.rc
+-rw-r--r--  1 erwincoumans  primarygroup  1987 Mar 25 07:34 PhysXCooking.rc
+-rw-r--r--  1 erwincoumans  primarygroup  4642 Mar 25 07:34 PhysXFoundation.rc
+-rw-r--r--  1 erwincoumans  primarygroup  2090 Mar 25 07:34 resource.h
+
+./source/fastxml:
+total 0
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup  736 Mar 25 07:34 ..
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 include
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 src
+
+./source/fastxml/include:
+total 16
+drwxr-xr-x  3 erwincoumans  primarygroup    96 Mar 25 07:34 .
+drwxr-xr-x  4 erwincoumans  primarygroup   128 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  5230 Mar 25 07:34 PsFastXml.h
+
+./source/fastxml/src:
+total 40
+drwxr-xr-x  3 erwincoumans  primarygroup     96 Mar 25 07:34 .
+drwxr-xr-x  4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  18408 Mar 25 07:34 PsFastXml.cpp
+
+./source/filebuf:
+total 0
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup  736 Mar 25 07:34 ..
+drwxr-xr-x   8 erwincoumans  primarygroup  256 Mar 25 07:34 include
+
+./source/filebuf/include:
+total 120
+drwxr-xr-x  8 erwincoumans  primarygroup    256 Mar 25 07:34 .
+drwxr-xr-x  3 erwincoumans  primarygroup     96 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup   4162 Mar 25 07:34 PsAsciiConversion.h
+-rw-r--r--  1 erwincoumans  primarygroup  14584 Mar 25 07:34 PsAsciiConversion.inl
+-rw-r--r--  1 erwincoumans  primarygroup   5521 Mar 25 07:34 PsFileBuffer.h
+-rw-r--r--  1 erwincoumans  primarygroup   5180 Mar 25 07:34 PsIOStream.h
+-rw-r--r--  1 erwincoumans  primarygroup   8189 Mar 25 07:34 PsIOStream.inl
+-rw-r--r--  1 erwincoumans  primarygroup  10945 Mar 25 07:34 PsMemoryBuffer.h
+
+./source/foundation:
+total 0
+drwxr-xr-x   4 erwincoumans  primarygroup   128 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup   736 Mar 25 07:34 ..
+drwxr-xr-x  46 erwincoumans  primarygroup  1472 Mar 25 07:34 include
+drwxr-xr-x  11 erwincoumans  primarygroup   352 Mar 25 07:34 src
+
+./source/foundation/include:
+total 800
+drwxr-xr-x  46 erwincoumans  primarygroup   1472 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   2577 Mar 25 07:34 Ps.h
+-rw-r--r--   1 erwincoumans  primarygroup   3222 Mar 25 07:34 PsAlignedMalloc.h
+-rw-r--r--   1 erwincoumans  primarygroup   3460 Mar 25 07:34 PsAlloca.h
+-rw-r--r--   1 erwincoumans  primarygroup  10817 Mar 25 07:34 PsAllocator.h
+-rw-r--r--   1 erwincoumans  primarygroup   2048 Mar 25 07:34 PsAoS.h
+-rw-r--r--   1 erwincoumans  primarygroup  19054 Mar 25 07:34 PsArray.h
+-rw-r--r--   1 erwincoumans  primarygroup   2971 Mar 25 07:34 PsAtomic.h
+-rw-r--r--   1 erwincoumans  primarygroup   3664 Mar 25 07:34 PsBasicTemplates.h
+-rw-r--r--   1 erwincoumans  primarygroup   3564 Mar 25 07:34 PsBitUtils.h
+-rw-r--r--   1 erwincoumans  primarygroup   7910 Mar 25 07:34 PsBroadcast.h
+-rw-r--r--   1 erwincoumans  primarygroup   1909 Mar 25 07:34 PsCpu.h
+-rw-r--r--   1 erwincoumans  primarygroup   3300 Mar 25 07:34 PsFPU.h
+-rw-r--r--   1 erwincoumans  primarygroup   7901 Mar 25 07:34 PsFoundation.h
+-rw-r--r--   1 erwincoumans  primarygroup   4124 Mar 25 07:34 PsHash.h
+-rw-r--r--   1 erwincoumans  primarygroup  18323 Mar 25 07:34 PsHashInternals.h
+-rw-r--r--   1 erwincoumans  primarygroup   4769 Mar 25 07:34 PsHashMap.h
+-rw-r--r--   1 erwincoumans  primarygroup   4835 Mar 25 07:34 PsHashSet.h
+-rw-r--r--   1 erwincoumans  primarygroup   2957 Mar 25 07:34 PsInlineAllocator.h
+-rw-r--r--   1 erwincoumans  primarygroup   2204 Mar 25 07:34 PsInlineAoS.h
+-rw-r--r--   1 erwincoumans  primarygroup   2626 Mar 25 07:34 PsInlineArray.h
+-rw-r--r--   1 erwincoumans  primarygroup   2175 Mar 25 07:34 PsIntrinsics.h
+-rw-r--r--   1 erwincoumans  primarygroup  18439 Mar 25 07:34 PsMathUtils.h
+-rw-r--r--   1 erwincoumans  primarygroup   4849 Mar 25 07:34 PsMutex.h
+-rw-r--r--   1 erwincoumans  primarygroup   8045 Mar 25 07:34 PsPool.h
+-rw-r--r--   1 erwincoumans  primarygroup   3724 Mar 25 07:34 PsSList.h
+-rw-r--r--   1 erwincoumans  primarygroup   5116 Mar 25 07:34 PsSocket.h
+-rw-r--r--   1 erwincoumans  primarygroup   3980 Mar 25 07:34 PsSort.h
+-rw-r--r--   1 erwincoumans  primarygroup   5304 Mar 25 07:34 PsSortInternals.h
+-rw-r--r--   1 erwincoumans  primarygroup   4000 Mar 25 07:34 PsString.h
+-rw-r--r--   1 erwincoumans  primarygroup   4432 Mar 25 07:34 PsSync.h
+-rw-r--r--   1 erwincoumans  primarygroup   2383 Mar 25 07:34 PsTempAllocator.h
+-rw-r--r--   1 erwincoumans  primarygroup   9761 Mar 25 07:34 PsThread.h
+-rw-r--r--   1 erwincoumans  primarygroup   3175 Mar 25 07:34 PsTime.h
+-rw-r--r--   1 erwincoumans  primarygroup   3784 Mar 25 07:34 PsUserAllocated.h
+-rw-r--r--   1 erwincoumans  primarygroup   4440 Mar 25 07:34 PsUtilities.h
+-rw-r--r--   1 erwincoumans  primarygroup  51690 Mar 25 07:34 PsVecMath.h
+-rw-r--r--   1 erwincoumans  primarygroup   5142 Mar 25 07:34 PsVecMathAoSScalar.h
+-rw-r--r--   1 erwincoumans  primarygroup  57768 Mar 25 07:34 PsVecMathAoSScalarInline.h
+-rw-r--r--   1 erwincoumans  primarygroup   2897 Mar 25 07:34 PsVecMathSSE.h
+-rw-r--r--   1 erwincoumans  primarygroup   2281 Mar 25 07:34 PsVecMathUtilities.h
+-rw-r--r--   1 erwincoumans  primarygroup  13903 Mar 25 07:34 PsVecQuat.h
+-rw-r--r--   1 erwincoumans  primarygroup   7348 Mar 25 07:34 PsVecTransform.h
+drwxr-xr-x   9 erwincoumans  primarygroup    288 Mar 25 07:34 unix
+drwxr-xr-x   8 erwincoumans  primarygroup    256 Mar 25 07:34 windows
+
+./source/foundation/include/unix:
+total 56
+drwxr-xr-x   9 erwincoumans  primarygroup   288 Mar 25 07:34 .
+drwxr-xr-x  46 erwincoumans  primarygroup  1472 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  2165 Mar 25 07:34 PsUnixAoS.h
+-rw-r--r--   1 erwincoumans  primarygroup  2715 Mar 25 07:34 PsUnixFPU.h
+-rw-r--r--   1 erwincoumans  primarygroup  2118 Mar 25 07:34 PsUnixInlineAoS.h
+-rw-r--r--   1 erwincoumans  primarygroup  4348 Mar 25 07:34 PsUnixIntrinsics.h
+-rw-r--r--   1 erwincoumans  primarygroup  5081 Mar 25 07:34 PsUnixTrigConstants.h
+drwxr-xr-x   4 erwincoumans  primarygroup   128 Mar 25 07:34 neon
+drwxr-xr-x   4 erwincoumans  primarygroup   128 Mar 25 07:34 sse2
+
+./source/foundation/include/unix/neon:
+total 208
+drwxr-xr-x  4 erwincoumans  primarygroup    128 Mar 25 07:34 .
+drwxr-xr-x  9 erwincoumans  primarygroup    288 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup   4012 Mar 25 07:34 PsUnixNeonAoS.h
+-rw-r--r--  1 erwincoumans  primarygroup  98638 Mar 25 07:34 PsUnixNeonInlineAoS.h
+
+./source/foundation/include/unix/sse2:
+total 192
+drwxr-xr-x  4 erwincoumans  primarygroup    128 Mar 25 07:34 .
+drwxr-xr-x  9 erwincoumans  primarygroup    288 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup   4696 Mar 25 07:34 PsUnixSse2AoS.h
+-rw-r--r--  1 erwincoumans  primarygroup  89618 Mar 25 07:34 PsUnixSse2InlineAoS.h
+
+./source/foundation/include/windows:
+total 232
+drwxr-xr-x   8 erwincoumans  primarygroup    256 Mar 25 07:34 .
+drwxr-xr-x  46 erwincoumans  primarygroup   1472 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   3947 Mar 25 07:34 PsWindowsAoS.h
+-rw-r--r--   1 erwincoumans  primarygroup   2381 Mar 25 07:34 PsWindowsFPU.h
+-rw-r--r--   1 erwincoumans  primarygroup   3416 Mar 25 07:34 PsWindowsInclude.h
+-rw-r--r--   1 erwincoumans  primarygroup  88475 Mar 25 07:34 PsWindowsInlineAoS.h
+-rw-r--r--   1 erwincoumans  primarygroup   5490 Mar 25 07:34 PsWindowsIntrinsics.h
+-rw-r--r--   1 erwincoumans  primarygroup   5206 Mar 25 07:34 PsWindowsTrigConstants.h
+
+./source/foundation/src:
+total 80
+drwxr-xr-x  11 erwincoumans  primarygroup   352 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup   128 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  3852 Mar 25 07:34 PsAllocator.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  3192 Mar 25 07:34 PsAssert.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  8016 Mar 25 07:34 PsFoundation.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  7407 Mar 25 07:34 PsMathUtils.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  4869 Mar 25 07:34 PsString.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  4013 Mar 25 07:34 PsTempAllocator.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  2714 Mar 25 07:34 PsUtilities.cpp
+drwxr-xr-x  12 erwincoumans  primarygroup   384 Mar 25 07:34 unix
+drwxr-xr-x  13 erwincoumans  primarygroup   416 Mar 25 07:34 windows
+
+./source/foundation/src/unix:
+total 144
+drwxr-xr-x  12 erwincoumans  primarygroup    384 Mar 25 07:34 .
+drwxr-xr-x  11 erwincoumans  primarygroup    352 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   2972 Mar 25 07:34 PsUnixAtomic.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2911 Mar 25 07:34 PsUnixCpu.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4410 Mar 25 07:34 PsUnixFPU.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4280 Mar 25 07:34 PsUnixMutex.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2017 Mar 25 07:34 PsUnixPrintString.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3855 Mar 25 07:34 PsUnixSList.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  11215 Mar 25 07:34 PsUnixSocket.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4930 Mar 25 07:34 PsUnixSync.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  13054 Mar 25 07:34 PsUnixThread.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3555 Mar 25 07:34 PsUnixTime.cpp
+
+./source/foundation/src/windows:
+total 128
+drwxr-xr-x  13 erwincoumans  primarygroup    416 Mar 25 07:34 .
+drwxr-xr-x  11 erwincoumans  primarygroup    352 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   8158 Mar 25 07:34 PsUWPThread.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3129 Mar 25 07:34 PsWindowsAtomic.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2432 Mar 25 07:34 PsWindowsCpu.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3121 Mar 25 07:34 PsWindowsFPU.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4025 Mar 25 07:34 PsWindowsMutex.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2240 Mar 25 07:34 PsWindowsPrintString.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2506 Mar 25 07:34 PsWindowsSList.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  10569 Mar 25 07:34 PsWindowsSocket.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2448 Mar 25 07:34 PsWindowsSync.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  11270 Mar 25 07:34 PsWindowsThread.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3061 Mar 25 07:34 PsWindowsTime.cpp
+
+./source/geomutils:
+total 0
+drwxr-xr-x   4 erwincoumans  primarygroup   128 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup   736 Mar 25 07:34 ..
+drwxr-xr-x  12 erwincoumans  primarygroup   384 Mar 25 07:34 include
+drwxr-xr-x  48 erwincoumans  primarygroup  1536 Mar 25 07:34 src
+
+./source/geomutils/include:
+total 112
+drwxr-xr-x  12 erwincoumans  primarygroup   384 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup   128 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  2608 Mar 25 07:34 GuAxes.h
+-rw-r--r--   1 erwincoumans  primarygroup  7246 Mar 25 07:34 GuBox.h
+-rw-r--r--   1 erwincoumans  primarygroup  2515 Mar 25 07:34 GuDistanceSegmentBox.h
+-rw-r--r--   1 erwincoumans  primarygroup  2923 Mar 25 07:34 GuDistanceSegmentSegment.h
+-rw-r--r--   1 erwincoumans  primarygroup  2355 Mar 25 07:34 GuIntersectionBoxBox.h
+-rw-r--r--   1 erwincoumans  primarygroup  3976 Mar 25 07:34 GuIntersectionTriangleBox.h
+-rw-r--r--   1 erwincoumans  primarygroup  8750 Mar 25 07:34 GuIntersectionTriangleBoxRef.h
+-rw-r--r--   1 erwincoumans  primarygroup  3553 Mar 25 07:34 GuRaycastTests.h
+-rw-r--r--   1 erwincoumans  primarygroup  3486 Mar 25 07:34 GuSIMDHelpers.h
+-rw-r--r--   1 erwincoumans  primarygroup  4542 Mar 25 07:34 GuSegment.h
+
+./source/geomutils/src:
+total 952
+drwxr-xr-x  48 erwincoumans  primarygroup   1536 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   9642 Mar 25 07:34 GuAABBTreeBuild.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   7694 Mar 25 07:34 GuAABBTreeBuild.h
+-rw-r--r--   1 erwincoumans  primarygroup   8171 Mar 25 07:34 GuAABBTreeQuery.h
+-rw-r--r--   1 erwincoumans  primarygroup   6194 Mar 25 07:34 GuBVHStructure.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6789 Mar 25 07:34 GuBVHStructure.h
+-rw-r--r--   1 erwincoumans  primarygroup   9305 Mar 25 07:34 GuBVHTestsSIMD.h
+-rw-r--r--   1 erwincoumans  primarygroup  21733 Mar 25 07:34 GuBounds.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6850 Mar 25 07:34 GuBounds.h
+-rw-r--r--   1 erwincoumans  primarygroup   4185 Mar 25 07:34 GuBox.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  14590 Mar 25 07:34 GuCCTSweepTests.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2481 Mar 25 07:34 GuCapsule.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2573 Mar 25 07:34 GuCapsule.h
+-rw-r--r--   1 erwincoumans  primarygroup   4631 Mar 25 07:34 GuCenterExtents.h
+-rw-r--r--   1 erwincoumans  primarygroup  12818 Mar 25 07:34 GuGeometryQuery.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4648 Mar 25 07:34 GuGeometryUnion.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  10230 Mar 25 07:34 GuGeometryUnion.h
+-rw-r--r--   1 erwincoumans  primarygroup   5098 Mar 25 07:34 GuInternal.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6801 Mar 25 07:34 GuInternal.h
+-rw-r--r--   1 erwincoumans  primarygroup  47866 Mar 25 07:34 GuMTD.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2863 Mar 25 07:34 GuMTD.h
+-rw-r--r--   1 erwincoumans  primarygroup  18648 Mar 25 07:34 GuMeshFactory.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5193 Mar 25 07:34 GuMeshFactory.h
+-rw-r--r--   1 erwincoumans  primarygroup  29279 Mar 25 07:34 GuMetaData.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  26108 Mar 25 07:34 GuOverlapTests.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4779 Mar 25 07:34 GuOverlapTests.h
+-rw-r--r--   1 erwincoumans  primarygroup  18327 Mar 25 07:34 GuRaycastTests.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  10652 Mar 25 07:34 GuSerialize.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   7663 Mar 25 07:34 GuSerialize.h
+-rw-r--r--   1 erwincoumans  primarygroup   3028 Mar 25 07:34 GuSphere.h
+-rw-r--r--   1 erwincoumans  primarygroup  40610 Mar 25 07:34 GuSweepMTD.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4483 Mar 25 07:34 GuSweepMTD.h
+-rw-r--r--   1 erwincoumans  primarygroup  23615 Mar 25 07:34 GuSweepSharedTests.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2312 Mar 25 07:34 GuSweepSharedTests.h
+-rw-r--r--   1 erwincoumans  primarygroup  20089 Mar 25 07:34 GuSweepTests.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6646 Mar 25 07:34 GuSweepTests.h
+drwxr-xr-x   5 erwincoumans  primarygroup    160 Mar 25 07:34 ccd
+drwxr-xr-x   9 erwincoumans  primarygroup    288 Mar 25 07:34 common
+drwxr-xr-x  22 erwincoumans  primarygroup    704 Mar 25 07:34 contact
+drwxr-xr-x  20 erwincoumans  primarygroup    640 Mar 25 07:34 convex
+drwxr-xr-x  14 erwincoumans  primarygroup    448 Mar 25 07:34 distance
+drwxr-xr-x  22 erwincoumans  primarygroup    704 Mar 25 07:34 gjk
+drwxr-xr-x  10 erwincoumans  primarygroup    320 Mar 25 07:34 hf
+drwxr-xr-x  20 erwincoumans  primarygroup    640 Mar 25 07:34 intersection
+drwxr-xr-x  61 erwincoumans  primarygroup   1952 Mar 25 07:34 mesh
+drwxr-xr-x  35 erwincoumans  primarygroup   1120 Mar 25 07:34 pcm
+drwxr-xr-x  24 erwincoumans  primarygroup    768 Mar 25 07:34 sweep
+
+./source/geomutils/src/ccd:
+total 88
+drwxr-xr-x   5 erwincoumans  primarygroup    160 Mar 25 07:34 .
+drwxr-xr-x  48 erwincoumans  primarygroup   1536 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  21796 Mar 25 07:34 GuCCDSweepConvexMesh.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5938 Mar 25 07:34 GuCCDSweepConvexMesh.h
+-rw-r--r--   1 erwincoumans  primarygroup  10087 Mar 25 07:34 GuCCDSweepPrimitives.cpp
+
+./source/geomutils/src/common:
+total 72
+drwxr-xr-x   9 erwincoumans  primarygroup   288 Mar 25 07:34 .
+drwxr-xr-x  48 erwincoumans  primarygroup  1536 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  3823 Mar 25 07:34 GuBarycentricCoordinates.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  3612 Mar 25 07:34 GuBarycentricCoordinates.h
+-rw-r--r--   1 erwincoumans  primarygroup  4505 Mar 25 07:34 GuBoxConversion.h
+-rw-r--r--   1 erwincoumans  primarygroup  2767 Mar 25 07:34 GuEdgeCache.h
+-rw-r--r--   1 erwincoumans  primarygroup  4947 Mar 25 07:34 GuEdgeListData.h
+-rw-r--r--   1 erwincoumans  primarygroup  2255 Mar 25 07:34 GuSeparatingAxes.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  2999 Mar 25 07:34 GuSeparatingAxes.h
+
+./source/geomutils/src/contact:
+total 560
+drwxr-xr-x  22 erwincoumans  primarygroup    704 Mar 25 07:34 .
+drwxr-xr-x  48 erwincoumans  primarygroup   1536 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  23987 Mar 25 07:34 GuContactBoxBox.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  13981 Mar 25 07:34 GuContactCapsuleBox.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5834 Mar 25 07:34 GuContactCapsuleCapsule.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  18834 Mar 25 07:34 GuContactCapsuleConvex.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  21188 Mar 25 07:34 GuContactCapsuleMesh.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  37940 Mar 25 07:34 GuContactConvexConvex.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  44367 Mar 25 07:34 GuContactConvexMesh.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6857 Mar 25 07:34 GuContactMethodImpl.h
+-rw-r--r--   1 erwincoumans  primarygroup   5729 Mar 25 07:34 GuContactPlaneBox.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3146 Mar 25 07:34 GuContactPlaneCapsule.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3863 Mar 25 07:34 GuContactPlaneConvex.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  26442 Mar 25 07:34 GuContactPolygonPolygon.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3073 Mar 25 07:34 GuContactPolygonPolygon.h
+-rw-r--r--   1 erwincoumans  primarygroup   5940 Mar 25 07:34 GuContactSphereBox.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3448 Mar 25 07:34 GuContactSphereCapsule.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  19859 Mar 25 07:34 GuContactSphereMesh.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2738 Mar 25 07:34 GuContactSpherePlane.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2924 Mar 25 07:34 GuContactSphereSphere.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3287 Mar 25 07:34 GuFeatureCode.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2013 Mar 25 07:34 GuFeatureCode.h
+
+./source/geomutils/src/convex:
+total 264
+drwxr-xr-x  20 erwincoumans  primarygroup    640 Mar 25 07:34 .
+drwxr-xr-x  48 erwincoumans  primarygroup   1536 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   5983 Mar 25 07:34 GuBigConvexData.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3903 Mar 25 07:34 GuBigConvexData.h
+-rw-r--r--   1 erwincoumans  primarygroup   4269 Mar 25 07:34 GuBigConvexData2.h
+-rw-r--r--   1 erwincoumans  primarygroup   2627 Mar 25 07:34 GuConvexEdgeFlags.h
+-rw-r--r--   1 erwincoumans  primarygroup   4880 Mar 25 07:34 GuConvexHelper.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3220 Mar 25 07:34 GuConvexHelper.h
+-rw-r--r--   1 erwincoumans  primarygroup  12958 Mar 25 07:34 GuConvexMesh.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   8689 Mar 25 07:34 GuConvexMesh.h
+-rw-r--r--   1 erwincoumans  primarygroup   9297 Mar 25 07:34 GuConvexMeshData.h
+-rw-r--r--   1 erwincoumans  primarygroup   2065 Mar 25 07:34 GuConvexSupportTable.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4269 Mar 25 07:34 GuConvexSupportTable.h
+-rw-r--r--   1 erwincoumans  primarygroup   3423 Mar 25 07:34 GuConvexUtilsInternal.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2644 Mar 25 07:34 GuConvexUtilsInternal.h
+-rw-r--r--   1 erwincoumans  primarygroup   5542 Mar 25 07:34 GuCubeIndex.h
+-rw-r--r--   1 erwincoumans  primarygroup   3540 Mar 25 07:34 GuHillClimbing.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   1992 Mar 25 07:34 GuHillClimbing.h
+-rw-r--r--   1 erwincoumans  primarygroup  15906 Mar 25 07:34 GuShapeConvex.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3705 Mar 25 07:34 GuShapeConvex.h
+
+./source/geomutils/src/distance:
+total 216
+drwxr-xr-x  14 erwincoumans  primarygroup    448 Mar 25 07:34 .
+drwxr-xr-x  48 erwincoumans  primarygroup   1536 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   2620 Mar 25 07:34 GuDistancePointBox.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2838 Mar 25 07:34 GuDistancePointBox.h
+-rw-r--r--   1 erwincoumans  primarygroup   3073 Mar 25 07:34 GuDistancePointSegment.h
+-rw-r--r--   1 erwincoumans  primarygroup  11669 Mar 25 07:34 GuDistancePointTriangle.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4584 Mar 25 07:34 GuDistancePointTriangle.h
+-rw-r--r--   1 erwincoumans  primarygroup   2299 Mar 25 07:34 GuDistancePointTriangleSIMD.h
+-rw-r--r--   1 erwincoumans  primarygroup  14834 Mar 25 07:34 GuDistanceSegmentBox.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  20496 Mar 25 07:34 GuDistanceSegmentSegment.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2694 Mar 25 07:34 GuDistanceSegmentSegmentSIMD.h
+-rw-r--r--   1 erwincoumans  primarygroup  19344 Mar 25 07:34 GuDistanceSegmentTriangle.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2549 Mar 25 07:34 GuDistanceSegmentTriangle.h
+-rw-r--r--   1 erwincoumans  primarygroup   2283 Mar 25 07:34 GuDistanceSegmentTriangleSIMD.h
+
+./source/geomutils/src/gjk:
+total 392
+drwxr-xr-x  22 erwincoumans  primarygroup    704 Mar 25 07:34 .
+drwxr-xr-x  48 erwincoumans  primarygroup   1536 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  20924 Mar 25 07:34 GuEPA.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2889 Mar 25 07:34 GuEPA.h
+-rw-r--r--   1 erwincoumans  primarygroup   9685 Mar 25 07:34 GuEPAFacet.h
+-rw-r--r--   1 erwincoumans  primarygroup   9063 Mar 25 07:34 GuGJK.h
+-rw-r--r--   1 erwincoumans  primarygroup  11475 Mar 25 07:34 GuGJKPenetration.h
+-rw-r--r--   1 erwincoumans  primarygroup  10382 Mar 25 07:34 GuGJKRaycast.h
+-rw-r--r--   1 erwincoumans  primarygroup   6618 Mar 25 07:34 GuGJKSimplex.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  14815 Mar 25 07:34 GuGJKSimplex.h
+-rw-r--r--   1 erwincoumans  primarygroup   3082 Mar 25 07:34 GuGJKTest.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2881 Mar 25 07:34 GuGJKTest.h
+-rw-r--r--   1 erwincoumans  primarygroup   7202 Mar 25 07:34 GuGJKType.h
+-rw-r--r--   1 erwincoumans  primarygroup   2641 Mar 25 07:34 GuGJKUtil.h
+-rw-r--r--   1 erwincoumans  primarygroup   7919 Mar 25 07:34 GuVecBox.h
+-rw-r--r--   1 erwincoumans  primarygroup   6973 Mar 25 07:34 GuVecCapsule.h
+-rw-r--r--   1 erwincoumans  primarygroup   4990 Mar 25 07:34 GuVecConvex.h
+-rw-r--r--   1 erwincoumans  primarygroup  17966 Mar 25 07:34 GuVecConvexHull.h
+-rw-r--r--   1 erwincoumans  primarygroup   7264 Mar 25 07:34 GuVecConvexHullNoScale.h
+-rw-r--r--   1 erwincoumans  primarygroup   6178 Mar 25 07:34 GuVecPlane.h
+-rw-r--r--   1 erwincoumans  primarygroup   7042 Mar 25 07:34 GuVecSphere.h
+-rw-r--r--   1 erwincoumans  primarygroup   8092 Mar 25 07:34 GuVecTriangle.h
+
+./source/geomutils/src/hf:
+total 384
+drwxr-xr-x  10 erwincoumans  primarygroup    320 Mar 25 07:34 .
+drwxr-xr-x  48 erwincoumans  primarygroup   1536 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   2010 Mar 25 07:34 GuEntityReport.h
+-rw-r--r--   1 erwincoumans  primarygroup  23567 Mar 25 07:34 GuHeightField.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  40665 Mar 25 07:34 GuHeightField.h
+-rw-r--r--   1 erwincoumans  primarygroup   3622 Mar 25 07:34 GuHeightFieldData.h
+-rw-r--r--   1 erwincoumans  primarygroup  28835 Mar 25 07:34 GuHeightFieldUtil.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  37608 Mar 25 07:34 GuHeightFieldUtil.h
+-rw-r--r--   1 erwincoumans  primarygroup  23781 Mar 25 07:34 GuOverlapTestsHF.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  20683 Mar 25 07:34 GuSweepsHF.cpp
+
+./source/geomutils/src/intersection:
+total 216
+drwxr-xr-x  20 erwincoumans  primarygroup    640 Mar 25 07:34 .
+drwxr-xr-x  48 erwincoumans  primarygroup   1536 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   4348 Mar 25 07:34 GuIntersectionBoxBox.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2770 Mar 25 07:34 GuIntersectionCapsuleTriangle.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4468 Mar 25 07:34 GuIntersectionCapsuleTriangle.h
+-rw-r--r--   1 erwincoumans  primarygroup   3732 Mar 25 07:34 GuIntersectionEdgeEdge.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2362 Mar 25 07:34 GuIntersectionEdgeEdge.h
+-rw-r--r--   1 erwincoumans  primarygroup   2048 Mar 25 07:34 GuIntersectionRay.h
+-rw-r--r--   1 erwincoumans  primarygroup  14111 Mar 25 07:34 GuIntersectionRayBox.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4192 Mar 25 07:34 GuIntersectionRayBox.h
+-rw-r--r--   1 erwincoumans  primarygroup   2246 Mar 25 07:34 GuIntersectionRayBoxSIMD.h
+-rw-r--r--   1 erwincoumans  primarygroup   6978 Mar 25 07:34 GuIntersectionRayCapsule.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3930 Mar 25 07:34 GuIntersectionRayCapsule.h
+-rw-r--r--   1 erwincoumans  primarygroup   2312 Mar 25 07:34 GuIntersectionRayPlane.h
+-rw-r--r--   1 erwincoumans  primarygroup   3787 Mar 25 07:34 GuIntersectionRaySphere.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2389 Mar 25 07:34 GuIntersectionRaySphere.h
+-rw-r--r--   1 erwincoumans  primarygroup   7232 Mar 25 07:34 GuIntersectionRayTriangle.h
+-rw-r--r--   1 erwincoumans  primarygroup   3140 Mar 25 07:34 GuIntersectionSphereBox.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2199 Mar 25 07:34 GuIntersectionSphereBox.h
+-rw-r--r--   1 erwincoumans  primarygroup   6981 Mar 25 07:34 GuIntersectionTriangleBox.cpp
+
+./source/geomutils/src/mesh:
+total 1384
+drwxr-xr-x  61 erwincoumans  primarygroup   1952 Mar 25 07:34 .
+drwxr-xr-x  48 erwincoumans  primarygroup   1536 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   7351 Mar 25 07:34 GuBV32.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5746 Mar 25 07:34 GuBV32.h
+-rw-r--r--   1 erwincoumans  primarygroup  14374 Mar 25 07:34 GuBV32Build.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2087 Mar 25 07:34 GuBV32Build.h
+-rw-r--r--   1 erwincoumans  primarygroup   9536 Mar 25 07:34 GuBV4.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   9338 Mar 25 07:34 GuBV4.h
+-rw-r--r--   1 erwincoumans  primarygroup  45550 Mar 25 07:34 GuBV4Build.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5404 Mar 25 07:34 GuBV4Build.h
+-rw-r--r--   1 erwincoumans  primarygroup   2322 Mar 25 07:34 GuBV4Settings.h
+-rw-r--r--   1 erwincoumans  primarygroup   5641 Mar 25 07:34 GuBV4_AABBAABBSweepTest.h
+-rw-r--r--   1 erwincoumans  primarygroup   1942 Mar 25 07:34 GuBV4_AABBSweep.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   8376 Mar 25 07:34 GuBV4_BoxBoxOverlapTest.h
+-rw-r--r--   1 erwincoumans  primarygroup  13663 Mar 25 07:34 GuBV4_BoxOverlap.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4998 Mar 25 07:34 GuBV4_BoxOverlap_Internal.h
+-rw-r--r--   1 erwincoumans  primarygroup  17545 Mar 25 07:34 GuBV4_BoxSweep_Internal.h
+-rw-r--r--   1 erwincoumans  primarygroup   6993 Mar 25 07:34 GuBV4_BoxSweep_Params.h
+-rw-r--r--   1 erwincoumans  primarygroup   6078 Mar 25 07:34 GuBV4_CapsuleSweep.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4053 Mar 25 07:34 GuBV4_CapsuleSweepAA.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  14117 Mar 25 07:34 GuBV4_CapsuleSweep_Internal.h
+-rw-r--r--   1 erwincoumans  primarygroup  15306 Mar 25 07:34 GuBV4_Common.h
+-rw-r--r--   1 erwincoumans  primarygroup  11600 Mar 25 07:34 GuBV4_Internal.h
+-rw-r--r--   1 erwincoumans  primarygroup   7916 Mar 25 07:34 GuBV4_OBBSweep.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3929 Mar 25 07:34 GuBV4_ProcessStreamNoOrder_OBBOBB.h
+-rw-r--r--   1 erwincoumans  primarygroup   2462 Mar 25 07:34 GuBV4_ProcessStreamNoOrder_SegmentAABB.h
+-rw-r--r--   1 erwincoumans  primarygroup   2555 Mar 25 07:34 GuBV4_ProcessStreamNoOrder_SegmentAABB_Inflated.h
+-rw-r--r--   1 erwincoumans  primarygroup   3989 Mar 25 07:34 GuBV4_ProcessStreamNoOrder_SphereAABB.h
+-rw-r--r--   1 erwincoumans  primarygroup   4103 Mar 25 07:34 GuBV4_ProcessStreamOrdered_OBBOBB.h
+-rw-r--r--   1 erwincoumans  primarygroup   2925 Mar 25 07:34 GuBV4_ProcessStreamOrdered_SegmentAABB.h
+-rw-r--r--   1 erwincoumans  primarygroup   3070 Mar 25 07:34 GuBV4_ProcessStreamOrdered_SegmentAABB_Inflated.h
+-rw-r--r--   1 erwincoumans  primarygroup  20953 Mar 25 07:34 GuBV4_Raycast.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   8569 Mar 25 07:34 GuBV4_Slabs.h
+-rw-r--r--   1 erwincoumans  primarygroup   9197 Mar 25 07:34 GuBV4_Slabs_KajiyaNoOrder.h
+-rw-r--r--   1 erwincoumans  primarygroup  16256 Mar 25 07:34 GuBV4_Slabs_KajiyaOrdered.h
+-rw-r--r--   1 erwincoumans  primarygroup   4727 Mar 25 07:34 GuBV4_Slabs_SwizzledNoOrder.h
+-rw-r--r--   1 erwincoumans  primarygroup   5881 Mar 25 07:34 GuBV4_Slabs_SwizzledOrdered.h
+-rw-r--r--   1 erwincoumans  primarygroup  10404 Mar 25 07:34 GuBV4_SphereOverlap.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  12778 Mar 25 07:34 GuBV4_SphereSweep.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2264 Mar 25 07:34 GuBVConstants.h
+-rw-r--r--   1 erwincoumans  primarygroup   8641 Mar 25 07:34 GuMeshData.h
+-rw-r--r--   1 erwincoumans  primarygroup  11165 Mar 25 07:34 GuMeshQuery.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  40446 Mar 25 07:34 GuMidphaseBV4.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  20304 Mar 25 07:34 GuMidphaseInterface.h
+-rw-r--r--   1 erwincoumans  primarygroup  34361 Mar 25 07:34 GuMidphaseRTree.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   9457 Mar 25 07:34 GuOverlapTestsMesh.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  15110 Mar 25 07:34 GuRTree.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  12212 Mar 25 07:34 GuRTree.h
+-rw-r--r--   1 erwincoumans  primarygroup  23296 Mar 25 07:34 GuRTreeQueries.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4550 Mar 25 07:34 GuSweepConvexTri.h
+-rw-r--r--   1 erwincoumans  primarygroup   7588 Mar 25 07:34 GuSweepMesh.h
+-rw-r--r--   1 erwincoumans  primarygroup  23287 Mar 25 07:34 GuSweepsMesh.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4453 Mar 25 07:34 GuTriangle32.h
+-rw-r--r--   1 erwincoumans  primarygroup   5132 Mar 25 07:34 GuTriangleCache.h
+-rw-r--r--   1 erwincoumans  primarygroup   7857 Mar 25 07:34 GuTriangleMesh.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  12289 Mar 25 07:34 GuTriangleMesh.h
+-rw-r--r--   1 erwincoumans  primarygroup   3090 Mar 25 07:34 GuTriangleMeshBV4.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3105 Mar 25 07:34 GuTriangleMeshBV4.h
+-rw-r--r--   1 erwincoumans  primarygroup   5095 Mar 25 07:34 GuTriangleMeshRTree.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3182 Mar 25 07:34 GuTriangleMeshRTree.h
+-rw-r--r--   1 erwincoumans  primarygroup   2666 Mar 25 07:34 GuTriangleVertexPointers.h
+
+./source/geomutils/src/pcm:
+total 1072
+drwxr-xr-x  35 erwincoumans  primarygroup   1120 Mar 25 07:34 .
+drwxr-xr-x  48 erwincoumans  primarygroup   1536 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  31913 Mar 25 07:34 GuPCMContactBoxBox.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  11712 Mar 25 07:34 GuPCMContactBoxConvex.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   8688 Mar 25 07:34 GuPCMContactCapsuleBox.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  10323 Mar 25 07:34 GuPCMContactCapsuleCapsule.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  10522 Mar 25 07:34 GuPCMContactCapsuleConvex.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6034 Mar 25 07:34 GuPCMContactCapsuleHeightField.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   7174 Mar 25 07:34 GuPCMContactCapsuleMesh.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  46202 Mar 25 07:34 GuPCMContactConvexCommon.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  18275 Mar 25 07:34 GuPCMContactConvexCommon.h
+-rw-r--r--   1 erwincoumans  primarygroup  14334 Mar 25 07:34 GuPCMContactConvexConvex.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  10331 Mar 25 07:34 GuPCMContactConvexHeightField.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  10433 Mar 25 07:34 GuPCMContactConvexMesh.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4907 Mar 25 07:34 GuPCMContactGen.h
+-rw-r--r--   1 erwincoumans  primarygroup  28480 Mar 25 07:34 GuPCMContactGenBoxConvex.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  17707 Mar 25 07:34 GuPCMContactGenSphereCapsule.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  15053 Mar 25 07:34 GuPCMContactGenUtil.h
+-rw-r--r--   1 erwincoumans  primarygroup   6538 Mar 25 07:34 GuPCMContactMeshCallback.h
+-rw-r--r--   1 erwincoumans  primarygroup   8670 Mar 25 07:34 GuPCMContactPlaneBox.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5517 Mar 25 07:34 GuPCMContactPlaneCapsule.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6381 Mar 25 07:34 GuPCMContactPlaneConvex.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5865 Mar 25 07:34 GuPCMContactSphereBox.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4567 Mar 25 07:34 GuPCMContactSphereCapsule.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  10946 Mar 25 07:34 GuPCMContactSphereConvex.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5988 Mar 25 07:34 GuPCMContactSphereHeightField.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6647 Mar 25 07:34 GuPCMContactSphereMesh.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3340 Mar 25 07:34 GuPCMContactSpherePlane.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3329 Mar 25 07:34 GuPCMContactSphereSphere.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   7300 Mar 25 07:34 GuPCMShapeConvex.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2567 Mar 25 07:34 GuPCMShapeConvex.h
+-rw-r--r--   1 erwincoumans  primarygroup  44080 Mar 25 07:34 GuPCMTriangleContactGen.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3103 Mar 25 07:34 GuPCMTriangleContactGen.h
+-rw-r--r--   1 erwincoumans  primarygroup  74593 Mar 25 07:34 GuPersistentContactManifold.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  35837 Mar 25 07:34 GuPersistentContactManifold.h
+
+./source/geomutils/src/sweep:
+total 352
+drwxr-xr-x  24 erwincoumans  primarygroup    768 Mar 25 07:34 .
+drwxr-xr-x  48 erwincoumans  primarygroup   1536 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   7707 Mar 25 07:34 GuSweepBoxBox.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2048 Mar 25 07:34 GuSweepBoxBox.h
+-rw-r--r--   1 erwincoumans  primarygroup   4917 Mar 25 07:34 GuSweepBoxSphere.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2097 Mar 25 07:34 GuSweepBoxSphere.h
+-rw-r--r--   1 erwincoumans  primarygroup  17978 Mar 25 07:34 GuSweepBoxTriangle_FeatureBased.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2946 Mar 25 07:34 GuSweepBoxTriangle_FeatureBased.h
+-rw-r--r--   1 erwincoumans  primarygroup   2105 Mar 25 07:34 GuSweepBoxTriangle_SAT.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   7953 Mar 25 07:34 GuSweepBoxTriangle_SAT.h
+-rw-r--r--   1 erwincoumans  primarygroup   6591 Mar 25 07:34 GuSweepCapsuleBox.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2134 Mar 25 07:34 GuSweepCapsuleBox.h
+-rw-r--r--   1 erwincoumans  primarygroup   9366 Mar 25 07:34 GuSweepCapsuleCapsule.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2106 Mar 25 07:34 GuSweepCapsuleCapsule.h
+-rw-r--r--   1 erwincoumans  primarygroup  12553 Mar 25 07:34 GuSweepCapsuleTriangle.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3320 Mar 25 07:34 GuSweepCapsuleTriangle.h
+-rw-r--r--   1 erwincoumans  primarygroup   3521 Mar 25 07:34 GuSweepSphereCapsule.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2110 Mar 25 07:34 GuSweepSphereCapsule.h
+-rw-r--r--   1 erwincoumans  primarygroup   3994 Mar 25 07:34 GuSweepSphereSphere.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2039 Mar 25 07:34 GuSweepSphereSphere.h
+-rw-r--r--   1 erwincoumans  primarygroup  15017 Mar 25 07:34 GuSweepSphereTriangle.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   7217 Mar 25 07:34 GuSweepSphereTriangle.h
+-rw-r--r--   1 erwincoumans  primarygroup   8669 Mar 25 07:34 GuSweepTriangleUtils.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  13698 Mar 25 07:34 GuSweepTriangleUtils.h
+
+./source/immediatemode:
+total 0
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup  736 Mar 25 07:34 ..
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 src
+
+./source/immediatemode/src:
+total 144
+drwxr-xr-x  3 erwincoumans  primarygroup     96 Mar 25 07:34 .
+drwxr-xr-x  3 erwincoumans  primarygroup     96 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  72679 Mar 25 07:34 NpImmediateMode.cpp
+
+./source/lowlevel:
+total 0
+drwxr-xr-x   5 erwincoumans  primarygroup  160 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup  736 Mar 25 07:34 ..
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 api
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 common
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 software
+
+./source/lowlevel/api:
+total 0
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 .
+drwxr-xr-x   5 erwincoumans  primarygroup  160 Mar 25 07:34 ..
+drwxr-xr-x  10 erwincoumans  primarygroup  320 Mar 25 07:34 include
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 src
+
+./source/lowlevel/api/include:
+total 104
+drwxr-xr-x  10 erwincoumans  primarygroup   320 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup   128 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  4357 Mar 25 07:34 PxsMaterialCore.h
+-rw-r--r--   1 erwincoumans  primarygroup  4455 Mar 25 07:34 PxsMaterialManager.h
+-rw-r--r--   1 erwincoumans  primarygroup  2271 Mar 25 07:34 PxvConfig.h
+-rw-r--r--   1 erwincoumans  primarygroup  7296 Mar 25 07:34 PxvDynamics.h
+-rw-r--r--   1 erwincoumans  primarygroup  3330 Mar 25 07:34 PxvGeometry.h
+-rw-r--r--   1 erwincoumans  primarygroup  3506 Mar 25 07:34 PxvGlobals.h
+-rw-r--r--   1 erwincoumans  primarygroup  4941 Mar 25 07:34 PxvManager.h
+-rw-r--r--   1 erwincoumans  primarygroup  4113 Mar 25 07:34 PxvSimStats.h
+
+./source/lowlevel/api/src:
+total 8
+drwxr-xr-x  3 erwincoumans  primarygroup    96 Mar 25 07:34 .
+drwxr-xr-x  4 erwincoumans  primarygroup   128 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  2816 Mar 25 07:34 px_globals.cpp
+
+./source/lowlevel/common:
+total 0
+drwxr-xr-x  4 erwincoumans  primarygroup  128 Mar 25 07:34 .
+drwxr-xr-x  5 erwincoumans  primarygroup  160 Mar 25 07:34 ..
+drwxr-xr-x  5 erwincoumans  primarygroup  160 Mar 25 07:34 include
+drwxr-xr-x  4 erwincoumans  primarygroup  128 Mar 25 07:34 src
+
+./source/lowlevel/common/include:
+total 0
+drwxr-xr-x   5 erwincoumans  primarygroup  160 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 ..
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 collision
+drwxr-xr-x  14 erwincoumans  primarygroup  448 Mar 25 07:34 pipeline
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 utils
+
+./source/lowlevel/common/include/collision:
+total 8
+drwxr-xr-x  3 erwincoumans  primarygroup    96 Mar 25 07:34 .
+drwxr-xr-x  5 erwincoumans  primarygroup   160 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  2908 Mar 25 07:34 PxcContactMethodImpl.h
+
+./source/lowlevel/common/include/pipeline:
+total 136
+drwxr-xr-x  14 erwincoumans  primarygroup   448 Mar 25 07:34 .
+drwxr-xr-x   5 erwincoumans  primarygroup   160 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  1730 Mar 25 07:34 PxcCCDStateStreamPair.h
+-rw-r--r--   1 erwincoumans  primarygroup  4973 Mar 25 07:34 PxcConstraintBlockStream.h
+-rw-r--r--   1 erwincoumans  primarygroup  2646 Mar 25 07:34 PxcContactCache.h
+-rw-r--r--   1 erwincoumans  primarygroup  2641 Mar 25 07:34 PxcMaterialMethodImpl.h
+-rw-r--r--   1 erwincoumans  primarygroup  2204 Mar 25 07:34 PxcNpBatch.h
+-rw-r--r--   1 erwincoumans  primarygroup  5184 Mar 25 07:34 PxcNpCache.h
+-rw-r--r--   1 erwincoumans  primarygroup  2288 Mar 25 07:34 PxcNpCacheStreamPair.h
+-rw-r--r--   1 erwincoumans  primarygroup  2876 Mar 25 07:34 PxcNpContactPrepShared.h
+-rw-r--r--   1 erwincoumans  primarygroup  3912 Mar 25 07:34 PxcNpMemBlockPool.h
+-rw-r--r--   1 erwincoumans  primarygroup  8921 Mar 25 07:34 PxcNpThreadContext.h
+-rw-r--r--   1 erwincoumans  primarygroup  5348 Mar 25 07:34 PxcNpWorkUnit.h
+-rw-r--r--   1 erwincoumans  primarygroup  3806 Mar 25 07:34 PxcRigidBody.h
+
+./source/lowlevel/common/include/utils:
+total 24
+drwxr-xr-x  4 erwincoumans  primarygroup   128 Mar 25 07:34 .
+drwxr-xr-x  5 erwincoumans  primarygroup   160 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  3733 Mar 25 07:34 PxcScratchAllocator.h
+-rw-r--r--  1 erwincoumans  primarygroup  4234 Mar 25 07:34 PxcThreadCoherentCache.h
+
+./source/lowlevel/common/src:
+total 0
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 ..
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 collision
+drwxr-xr-x  13 erwincoumans  primarygroup  416 Mar 25 07:34 pipeline
+
+./source/lowlevel/common/src/collision:
+total 24
+drwxr-xr-x  3 erwincoumans  primarygroup     96 Mar 25 07:34 .
+drwxr-xr-x  4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  10109 Mar 25 07:34 PxcContact.cpp
+
+./source/lowlevel/common/src/pipeline:
+total 240
+drwxr-xr-x  13 erwincoumans  primarygroup    416 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  12204 Mar 25 07:34 PxcContactCache.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  17659 Mar 25 07:34 PxcContactMethodImpl.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4807 Mar 25 07:34 PxcMaterialHeightField.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4431 Mar 25 07:34 PxcMaterialMesh.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5899 Mar 25 07:34 PxcMaterialMethodImpl.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2636 Mar 25 07:34 PxcMaterialShape.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  16393 Mar 25 07:34 PxcNpBatch.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2465 Mar 25 07:34 PxcNpCacheStreamPair.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  19198 Mar 25 07:34 PxcNpContactPrepShared.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   9550 Mar 25 07:34 PxcNpMemBlockPool.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3562 Mar 25 07:34 PxcNpThreadContext.cpp
+
+./source/lowlevel/software:
+total 0
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 .
+drwxr-xr-x   5 erwincoumans  primarygroup  160 Mar 25 07:34 ..
+drwxr-xr-x  23 erwincoumans  primarygroup  736 Mar 25 07:34 include
+drwxr-xr-x  10 erwincoumans  primarygroup  320 Mar 25 07:34 src
+
+./source/lowlevel/software/include:
+total 376
+drwxr-xr-x  23 erwincoumans  primarygroup    736 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   2013 Mar 25 07:34 PxsBodySim.h
+-rw-r--r--   1 erwincoumans  primarygroup  20573 Mar 25 07:34 PxsCCD.h
+-rw-r--r--   1 erwincoumans  primarygroup   6737 Mar 25 07:34 PxsContactManager.h
+-rw-r--r--   1 erwincoumans  primarygroup   4155 Mar 25 07:34 PxsContactManagerState.h
+-rw-r--r--   1 erwincoumans  primarygroup  12143 Mar 25 07:34 PxsContext.h
+-rw-r--r--   1 erwincoumans  primarygroup   3030 Mar 25 07:34 PxsDefaultMemoryManager.h
+-rw-r--r--   1 erwincoumans  primarygroup   2365 Mar 25 07:34 PxsHeapMemoryAllocator.h
+-rw-r--r--   1 erwincoumans  primarygroup   1867 Mar 25 07:34 PxsIncrementalConstraintPartitioning.h
+-rw-r--r--   1 erwincoumans  primarygroup  11486 Mar 25 07:34 PxsIslandManagerTypes.h
+-rw-r--r--   1 erwincoumans  primarygroup   3125 Mar 25 07:34 PxsIslandNodeIndex.h
+-rw-r--r--   1 erwincoumans  primarygroup  32707 Mar 25 07:34 PxsIslandSim.h
+-rw-r--r--   1 erwincoumans  primarygroup   2015 Mar 25 07:34 PxsKernelWrangler.h
+-rw-r--r--   1 erwincoumans  primarygroup   5184 Mar 25 07:34 PxsMaterialCombiner.h
+-rw-r--r--   1 erwincoumans  primarygroup   2329 Mar 25 07:34 PxsMemoryManager.h
+-rw-r--r--   1 erwincoumans  primarygroup   5875 Mar 25 07:34 PxsNphaseImplementationContext.h
+-rw-r--r--   1 erwincoumans  primarygroup   8280 Mar 25 07:34 PxsRigidBody.h
+-rw-r--r--   1 erwincoumans  primarygroup   2166 Mar 25 07:34 PxsShapeSim.h
+-rw-r--r--   1 erwincoumans  primarygroup   6622 Mar 25 07:34 PxsSimpleIslandManager.h
+-rw-r--r--   1 erwincoumans  primarygroup   5281 Mar 25 07:34 PxsSimulationController.h
+-rw-r--r--   1 erwincoumans  primarygroup   4442 Mar 25 07:34 PxsTransformCache.h
+-rw-r--r--   1 erwincoumans  primarygroup   7830 Mar 25 07:34 PxvNphaseImplementationContext.h
+
+./source/lowlevel/software/src:
+total 472
+drwxr-xr-x  10 erwincoumans  primarygroup    320 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  71867 Mar 25 07:34 PxsCCD.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2891 Mar 25 07:34 PxsContactManager.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  18263 Mar 25 07:34 PxsContext.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2902 Mar 25 07:34 PxsDefaultMemoryManager.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  77071 Mar 25 07:34 PxsIslandSim.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4210 Mar 25 07:34 PxsMaterialCombiner.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  36748 Mar 25 07:34 PxsNphaseImplementationContext.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  12643 Mar 25 07:34 PxsSimpleIslandManager.cpp
+
+./source/lowlevelaabb:
+total 0
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup  736 Mar 25 07:34 ..
+drwxr-xr-x   6 erwincoumans  primarygroup  192 Mar 25 07:34 include
+drwxr-xr-x  19 erwincoumans  primarygroup  608 Mar 25 07:34 src
+
+./source/lowlevelaabb/include:
+total 128
+drwxr-xr-x  6 erwincoumans  primarygroup    192 Mar 25 07:34 .
+drwxr-xr-x  4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  21288 Mar 25 07:34 BpAABBManager.h
+-rw-r--r--  1 erwincoumans  primarygroup   3926 Mar 25 07:34 BpAABBManagerTasks.h
+-rw-r--r--  1 erwincoumans  primarygroup  13267 Mar 25 07:34 BpBroadPhase.h
+-rw-r--r--  1 erwincoumans  primarygroup  17341 Mar 25 07:34 BpBroadPhaseUpdate.h
+
+./source/lowlevelaabb/src:
+total 920
+drwxr-xr-x  19 erwincoumans  primarygroup    608 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  79964 Mar 25 07:34 BpAABBManager.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5743 Mar 25 07:34 BpBroadPhase.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  97972 Mar 25 07:34 BpBroadPhaseABP.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4193 Mar 25 07:34 BpBroadPhaseABP.h
+-rw-r--r--   1 erwincoumans  primarygroup  99317 Mar 25 07:34 BpBroadPhaseMBP.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4829 Mar 25 07:34 BpBroadPhaseMBP.h
+-rw-r--r--   1 erwincoumans  primarygroup   6247 Mar 25 07:34 BpBroadPhaseMBPCommon.h
+-rw-r--r--   1 erwincoumans  primarygroup  68770 Mar 25 07:34 BpBroadPhaseSap.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   7771 Mar 25 07:34 BpBroadPhaseSap.h
+-rw-r--r--   1 erwincoumans  primarygroup  31010 Mar 25 07:34 BpBroadPhaseSapAux.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   9434 Mar 25 07:34 BpBroadPhaseSapAux.h
+-rw-r--r--   1 erwincoumans  primarygroup   7069 Mar 25 07:34 BpBroadPhaseShared.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   7441 Mar 25 07:34 BpBroadPhaseShared.h
+-rw-r--r--   1 erwincoumans  primarygroup   1701 Mar 25 07:34 BpMBPTasks.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3636 Mar 25 07:34 BpMBPTasks.h
+-rw-r--r--   1 erwincoumans  primarygroup   2456 Mar 25 07:34 BpSAPTasks.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2759 Mar 25 07:34 BpSAPTasks.h
+
+./source/lowleveldynamics:
+total 24
+drwxr-xr-x   5 erwincoumans  primarygroup   160 Mar 25 08:22 .
+drwxr-xr-x  23 erwincoumans  primarygroup   736 Mar 25 07:34 ..
+-rw-r--r--@  1 erwincoumans  primarygroup  8196 Mar 25 10:27 .DS_Store
+drwxr-xr-x  14 erwincoumans  primarygroup   448 Mar 25 07:34 include
+drwxr-xr-x  73 erwincoumans  primarygroup  2336 Mar 25 08:48 src
+
+./source/lowleveldynamics/include:
+total 328
+drwxr-xr-x  14 erwincoumans  primarygroup    448 Mar 25 07:34 .
+drwxr-xr-x   5 erwincoumans  primarygroup    160 Mar 25 08:22 ..
+-rw-r--r--   1 erwincoumans  primarygroup   9678 Mar 25 07:34 DyArticulation.h
+-rw-r--r--   1 erwincoumans  primarygroup   3197 Mar 25 07:34 DyArticulationCore.h
+-rw-r--r--   1 erwincoumans  primarygroup   5163 Mar 25 07:34 DyArticulationJointCore.h
+-rw-r--r--   1 erwincoumans  primarygroup   2841 Mar 25 07:34 DyConstraint.h
+-rw-r--r--   1 erwincoumans  primarygroup   2199 Mar 25 07:34 DyConstraintWriteBack.h
+-rw-r--r--   1 erwincoumans  primarygroup  14489 Mar 25 07:34 DyContext.h
+-rw-r--r--   1 erwincoumans  primarygroup  37823 Mar 25 07:34 DyFeatherstoneArticulation.h
+-rw-r--r--   1 erwincoumans  primarygroup   7595 Mar 25 07:34 DyFeatherstoneArticulationJointData.h
+-rw-r--r--   1 erwincoumans  primarygroup  28719 Mar 25 07:34 DyFeatherstoneArticulationUtils.h
+-rw-r--r--   1 erwincoumans  primarygroup   1980 Mar 25 07:34 DySleepingConfigulation.h
+-rw-r--r--   1 erwincoumans  primarygroup   8352 Mar 25 07:34 DyThresholdTable.h
+-rw-r--r--   1 erwincoumans  primarygroup  18528 Mar 25 07:34 DyVArticulation.h
+
+./source/lowleveldynamics/src:
+total 3624
+drwxr-xr-x  73 erwincoumans  primarygroup    2336 Mar 25 08:48 .
+drwxr-xr-x   5 erwincoumans  primarygroup     160 Mar 25 08:22 ..
+-rw-r--r--   1 erwincoumans  primarygroup   55350 Mar 25 07:34 DyArticulation.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   20296 Mar 25 07:34 DyArticulationContactPrep.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    3995 Mar 25 07:34 DyArticulationContactPrep.h
+-rw-r--r--   1 erwincoumans  primarygroup   11435 Mar 25 07:34 DyArticulationContactPrepPF.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    7360 Mar 25 07:34 DyArticulationFnsDebug.h
+-rw-r--r--   1 erwincoumans  primarygroup   11202 Mar 25 07:34 DyArticulationFnsScalar.h
+-rw-r--r--   1 erwincoumans  primarygroup   16180 Mar 25 07:34 DyArticulationFnsSimd.h
+-rw-r--r--   1 erwincoumans  primarygroup   18669 Mar 25 07:34 DyArticulationHelper.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    7157 Mar 25 07:34 DyArticulationHelper.h
+-rw-r--r--   1 erwincoumans  primarygroup    7207 Mar 25 07:34 DyArticulationPImpl.h
+-rw-r--r--   1 erwincoumans  primarygroup    3577 Mar 25 07:34 DyArticulationReference.h
+-rw-r--r--   1 erwincoumans  primarygroup   11060 Mar 25 07:34 DyArticulationSIMD.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   18771 Mar 25 07:34 DyArticulationScalar.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    3226 Mar 25 07:34 DyArticulationScalar.h
+-rw-r--r--   1 erwincoumans  primarygroup   10538 Mar 25 07:34 DyArticulationUtils.h
+-rw-r--r--   1 erwincoumans  primarygroup   14485 Mar 25 07:34 DyBodyCoreIntegrator.h
+-rw-r--r--   1 erwincoumans  primarygroup   30632 Mar 25 07:34 DyConstraintPartition.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    2659 Mar 25 07:34 DyConstraintPartition.h
+-rw-r--r--   1 erwincoumans  primarygroup    3371 Mar 25 07:34 DyConstraintPrep.h
+-rw-r--r--   1 erwincoumans  primarygroup   23225 Mar 25 07:34 DyConstraintSetup.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   21562 Mar 25 07:34 DyConstraintSetupBlock.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   32898 Mar 25 07:34 DyContactPrep.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    8183 Mar 25 07:34 DyContactPrep.h
+-rw-r--r--   1 erwincoumans  primarygroup   65763 Mar 25 07:34 DyContactPrep4.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   44520 Mar 25 07:34 DyContactPrep4PF.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   24148 Mar 25 07:34 DyContactPrepPF.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   12146 Mar 25 07:34 DyContactPrepShared.h
+-rw-r--r--   1 erwincoumans  primarygroup   13136 Mar 25 07:34 DyContactReduction.h
+-rw-r--r--   1 erwincoumans  primarygroup    3689 Mar 25 07:34 DyCorrelationBuffer.h
+-rw-r--r--   1 erwincoumans  primarygroup  119847 Mar 25 07:34 DyDynamics.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   16010 Mar 25 07:34 DyDynamics.h
+-rw-r--r--   1 erwincoumans  primarygroup  171837 Mar 25 08:24 DyFeatherstoneArticulation.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    2597 Mar 25 07:34 DyFeatherstoneArticulationLink.h
+-rw-r--r--   1 erwincoumans  primarygroup   61711 Mar 25 07:34 DyFeatherstoneForwardDynamic.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   69004 Mar 25 07:34 DyFeatherstoneInverseDynamic.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    9921 Mar 25 07:34 DyFrictionCorrelation.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    2899 Mar 25 07:34 DyFrictionPatch.h
+-rw-r--r--   1 erwincoumans  primarygroup    4099 Mar 25 07:34 DyFrictionPatchStreamPair.h
+-rw-r--r--   1 erwincoumans  primarygroup    3976 Mar 25 07:34 DyRigidBodyToSolverBody.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    3269 Mar 25 07:34 DySolverBody.h
+-rw-r--r--   1 erwincoumans  primarygroup    6813 Mar 25 07:34 DySolverConstraint1D.h
+-rw-r--r--   1 erwincoumans  primarygroup    3330 Mar 25 07:34 DySolverConstraint1D4.h
+-rw-r--r--   1 erwincoumans  primarygroup    7265 Mar 25 07:34 DySolverConstraint1DStep.h
+-rw-r--r--   1 erwincoumans  primarygroup    4508 Mar 25 07:34 DySolverConstraintDesc.h
+-rw-r--r--   1 erwincoumans  primarygroup    2846 Mar 25 07:34 DySolverConstraintExtShared.h
+-rw-r--r--   1 erwincoumans  primarygroup    2863 Mar 25 07:34 DySolverConstraintTypes.h
+-rw-r--r--   1 erwincoumans  primarygroup   46910 Mar 25 07:34 DySolverConstraints.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   47101 Mar 25 07:34 DySolverConstraintsBlock.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    6427 Mar 25 07:34 DySolverConstraintsShared.h
+-rw-r--r--   1 erwincoumans  primarygroup    9782 Mar 25 07:34 DySolverContact.h
+-rw-r--r--   1 erwincoumans  primarygroup    5399 Mar 25 07:34 DySolverContact4.h
+-rw-r--r--   1 erwincoumans  primarygroup    4516 Mar 25 07:34 DySolverContactPF.h
+-rw-r--r--   1 erwincoumans  primarygroup    4158 Mar 25 07:34 DySolverContactPF4.h
+-rw-r--r--   1 erwincoumans  primarygroup    2369 Mar 25 07:34 DySolverContext.h
+-rw-r--r--   1 erwincoumans  primarygroup   27996 Mar 25 07:34 DySolverControl.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    5282 Mar 25 07:34 DySolverControl.h
+-rw-r--r--   1 erwincoumans  primarygroup   30311 Mar 25 07:34 DySolverControlPF.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    2679 Mar 25 07:34 DySolverControlPF.h
+-rw-r--r--   1 erwincoumans  primarygroup    7342 Mar 25 07:34 DySolverCore.h
+-rw-r--r--   1 erwincoumans  primarygroup    3225 Mar 25 07:34 DySolverExt.h
+-rw-r--r--   1 erwincoumans  primarygroup   29893 Mar 25 07:34 DySolverPFConstraints.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   36696 Mar 25 07:34 DySolverPFConstraintsBlock.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    4054 Mar 25 07:34 DySpatial.h
+-rw-r--r--   1 erwincoumans  primarygroup  130272 Mar 25 07:34 DyTGSContactPrep.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    5653 Mar 25 07:34 DyTGSContactPrep.h
+-rw-r--r--   1 erwincoumans  primarygroup  154667 Mar 25 07:34 DyTGSContactPrepBlock.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  120514 Mar 25 08:34 DyTGSDynamics.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   18831 Mar 25 07:34 DyTGSDynamics.h
+-rw-r--r--   1 erwincoumans  primarygroup    4476 Mar 25 07:34 DyThreadContext.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    6601 Mar 25 07:34 DyThreadContext.h
+-rw-r--r--   1 erwincoumans  primarygroup    2921 Mar 25 07:34 DyThresholdTable.cpp
+
+./source/physx:
+total 0
+drwxr-xr-x   3 erwincoumans  primarygroup    96 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup   736 Mar 25 07:34 ..
+drwxr-xr-x  68 erwincoumans  primarygroup  2176 Mar 25 07:34 src
+
+./source/physx/src:
+total 1864
+drwxr-xr-x  68 erwincoumans  primarygroup   2176 Mar 25 07:34 .
+drwxr-xr-x   3 erwincoumans  primarygroup     96 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  14417 Mar 25 07:34 NpActor.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   7189 Mar 25 07:34 NpActor.h
+-rw-r--r--   1 erwincoumans  primarygroup   9129 Mar 25 07:34 NpActorTemplate.h
+-rw-r--r--   1 erwincoumans  primarygroup  13370 Mar 25 07:34 NpAggregate.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4623 Mar 25 07:34 NpAggregate.h
+-rw-r--r--   1 erwincoumans  primarygroup   9102 Mar 25 07:34 NpArticulation.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5309 Mar 25 07:34 NpArticulation.h
+-rw-r--r--   1 erwincoumans  primarygroup  10945 Mar 25 07:34 NpArticulationJoint.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  13814 Mar 25 07:34 NpArticulationJoint.h
+-rw-r--r--   1 erwincoumans  primarygroup   9312 Mar 25 07:34 NpArticulationJointReducedCoordinate.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5413 Mar 25 07:34 NpArticulationJointReducedCoordinate.h
+-rw-r--r--   1 erwincoumans  primarygroup  20558 Mar 25 07:34 NpArticulationLink.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   8287 Mar 25 07:34 NpArticulationLink.h
+-rw-r--r--   1 erwincoumans  primarygroup  17273 Mar 25 07:34 NpArticulationReducedCoordinate.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6790 Mar 25 07:34 NpArticulationReducedCoordinate.h
+-rw-r--r--   1 erwincoumans  primarygroup  20192 Mar 25 07:34 NpArticulationTemplate.h
+-rw-r--r--   1 erwincoumans  primarygroup  23554 Mar 25 07:34 NpBatchQuery.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5641 Mar 25 07:34 NpBatchQuery.h
+-rw-r--r--   1 erwincoumans  primarygroup   5380 Mar 25 07:34 NpCast.h
+-rw-r--r--   1 erwincoumans  primarygroup   5230 Mar 25 07:34 NpConnector.h
+-rw-r--r--   1 erwincoumans  primarygroup  12918 Mar 25 07:34 NpConstraint.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5719 Mar 25 07:34 NpConstraint.h
+-rw-r--r--   1 erwincoumans  primarygroup  28544 Mar 25 07:34 NpFactory.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   9702 Mar 25 07:34 NpFactory.h
+-rw-r--r--   1 erwincoumans  primarygroup   6101 Mar 25 07:34 NpMaterial.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5332 Mar 25 07:34 NpMaterial.h
+-rw-r--r--   1 erwincoumans  primarygroup   4691 Mar 25 07:34 NpMaterialManager.h
+-rw-r--r--   1 erwincoumans  primarygroup  24581 Mar 25 07:34 NpMetaData.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  25404 Mar 25 07:34 NpPhysics.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   9372 Mar 25 07:34 NpPhysics.h
+-rw-r--r--   1 erwincoumans  primarygroup   2883 Mar 25 07:34 NpPhysicsInsertionCallback.h
+-rw-r--r--   1 erwincoumans  primarygroup   3766 Mar 25 07:34 NpPtrTableStorageManager.h
+-rw-r--r--   1 erwincoumans  primarygroup   8804 Mar 25 07:34 NpPvdSceneQueryCollector.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6676 Mar 25 07:34 NpPvdSceneQueryCollector.h
+-rw-r--r--   1 erwincoumans  primarygroup   3877 Mar 25 07:34 NpQueryShared.h
+-rw-r--r--   1 erwincoumans  primarygroup   3688 Mar 25 07:34 NpReadCheck.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2884 Mar 25 07:34 NpReadCheck.h
+-rw-r--r--   1 erwincoumans  primarygroup  15992 Mar 25 07:34 NpRigidActorTemplate.h
+-rw-r--r--   1 erwincoumans  primarygroup   2986 Mar 25 07:34 NpRigidActorTemplateInternal.h
+-rw-r--r--   1 erwincoumans  primarygroup  21258 Mar 25 07:34 NpRigidBodyTemplate.h
+-rw-r--r--   1 erwincoumans  primarygroup  21453 Mar 25 07:34 NpRigidDynamic.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   7084 Mar 25 07:34 NpRigidDynamic.h
+-rw-r--r--   1 erwincoumans  primarygroup   5501 Mar 25 07:34 NpRigidStatic.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4746 Mar 25 07:34 NpRigidStatic.h
+-rw-r--r--   1 erwincoumans  primarygroup  99856 Mar 25 07:34 NpScene.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  20535 Mar 25 07:34 NpScene.h
+-rw-r--r--   1 erwincoumans  primarygroup   2413 Mar 25 07:34 NpSceneAccessor.h
+-rw-r--r--   1 erwincoumans  primarygroup  38711 Mar 25 07:34 NpSceneQueries.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   9148 Mar 25 07:34 NpSceneQueries.h
+-rw-r--r--   1 erwincoumans  primarygroup   8282 Mar 25 07:34 NpSerializerAdapter.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  25808 Mar 25 07:34 NpShape.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   9386 Mar 25 07:34 NpShape.h
+-rw-r--r--   1 erwincoumans  primarygroup  29071 Mar 25 07:34 NpShapeManager.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6471 Mar 25 07:34 NpShapeManager.h
+-rw-r--r--   1 erwincoumans  primarygroup   4412 Mar 25 07:34 NpWriteCheck.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3393 Mar 25 07:34 NpWriteCheck.h
+-rw-r--r--   1 erwincoumans  primarygroup   3023 Mar 25 07:34 PvdMetaDataBindingData.h
+-rw-r--r--   1 erwincoumans  primarygroup  65885 Mar 25 07:34 PvdMetaDataPvdBinding.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6939 Mar 25 07:34 PvdMetaDataPvdBinding.h
+-rw-r--r--   1 erwincoumans  primarygroup   6981 Mar 25 07:34 PvdPhysicsClient.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3509 Mar 25 07:34 PvdPhysicsClient.h
+-rw-r--r--   1 erwincoumans  primarygroup   6865 Mar 25 07:34 PvdTypeNames.h
+drwxr-xr-x  25 erwincoumans  primarygroup    800 Mar 25 07:34 buffering
+drwxr-xr-x   6 erwincoumans  primarygroup    192 Mar 25 07:34 device
+drwxr-xr-x   4 erwincoumans  primarygroup    128 Mar 25 07:34 gpu
+drwxr-xr-x   3 erwincoumans  primarygroup     96 Mar 25 07:34 windows
+
+./source/physx/src/buffering:
+total 720
+drwxr-xr-x  25 erwincoumans  primarygroup    800 Mar 25 07:34 .
+drwxr-xr-x  68 erwincoumans  primarygroup   2176 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   2438 Mar 25 07:34 ScbActor.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   8231 Mar 25 07:34 ScbActor.h
+-rw-r--r--   1 erwincoumans  primarygroup   5360 Mar 25 07:34 ScbAggregate.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   8330 Mar 25 07:34 ScbAggregate.h
+-rw-r--r--   1 erwincoumans  primarygroup  15229 Mar 25 07:34 ScbArticulation.h
+-rw-r--r--   1 erwincoumans  primarygroup  21654 Mar 25 07:34 ScbArticulationJoint.h
+-rw-r--r--   1 erwincoumans  primarygroup   2067 Mar 25 07:34 ScbBase.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  14070 Mar 25 07:34 ScbBase.h
+-rw-r--r--   1 erwincoumans  primarygroup  43020 Mar 25 07:34 ScbBody.h
+-rw-r--r--   1 erwincoumans  primarygroup  10431 Mar 25 07:34 ScbConstraint.h
+-rw-r--r--   1 erwincoumans  primarygroup   8494 Mar 25 07:34 ScbDefs.h
+-rw-r--r--   1 erwincoumans  primarygroup   7262 Mar 25 07:34 ScbMetaData.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3095 Mar 25 07:34 ScbNpDeps.h
+-rw-r--r--   1 erwincoumans  primarygroup  17390 Mar 25 07:34 ScbRigidObject.h
+-rw-r--r--   1 erwincoumans  primarygroup   6137 Mar 25 07:34 ScbRigidStatic.h
+-rw-r--r--   1 erwincoumans  primarygroup  45176 Mar 25 07:34 ScbScene.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  27519 Mar 25 07:34 ScbScene.h
+-rw-r--r--   1 erwincoumans  primarygroup   4988 Mar 25 07:34 ScbSceneBuffer.h
+-rw-r--r--   1 erwincoumans  primarygroup  29435 Mar 25 07:34 ScbScenePvdClient.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   7642 Mar 25 07:34 ScbScenePvdClient.h
+-rw-r--r--   1 erwincoumans  primarygroup   5356 Mar 25 07:34 ScbShape.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  17863 Mar 25 07:34 ScbShape.h
+-rw-r--r--   1 erwincoumans  primarygroup   2033 Mar 25 07:34 ScbType.h
+
+./source/physx/src/device:
+total 24
+drwxr-xr-x   6 erwincoumans  primarygroup   192 Mar 25 07:34 .
+drwxr-xr-x  68 erwincoumans  primarygroup  2176 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  2132 Mar 25 07:34 PhysXIndicator.h
+drwxr-xr-x   3 erwincoumans  primarygroup    96 Mar 25 07:34 linux
+-rw-r--r--   1 erwincoumans  primarygroup  4357 Mar 25 07:34 nvPhysXtoDrv.h
+drwxr-xr-x   3 erwincoumans  primarygroup    96 Mar 25 07:34 windows
+
+./source/physx/src/device/linux:
+total 8
+drwxr-xr-x  3 erwincoumans  primarygroup    96 Mar 25 07:34 .
+drwxr-xr-x  6 erwincoumans  primarygroup   192 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  2072 Mar 25 07:34 PhysXIndicatorLinux.cpp
+
+./source/physx/src/device/windows:
+total 16
+drwxr-xr-x  3 erwincoumans  primarygroup    96 Mar 25 07:34 .
+drwxr-xr-x  6 erwincoumans  primarygroup   192 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  4343 Mar 25 07:34 PhysXIndicatorWindows.cpp
+
+./source/physx/src/gpu:
+total 24
+drwxr-xr-x   4 erwincoumans  primarygroup   128 Mar 25 07:34 .
+drwxr-xr-x  68 erwincoumans  primarygroup  2176 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  3840 Mar 25 07:34 PxGpu.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  6633 Mar 25 07:34 PxPhysXGpuModuleLoader.cpp
+
+./source/physx/src/windows:
+total 8
+drwxr-xr-x   3 erwincoumans  primarygroup    96 Mar 25 07:34 .
+drwxr-xr-x  68 erwincoumans  primarygroup  2176 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  2814 Mar 25 07:34 NpWindowsDelayLoadHook.cpp
+
+./source/physxcharacterkinematic:
+total 0
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup  736 Mar 25 07:34 ..
+drwxr-xr-x  23 erwincoumans  primarygroup  736 Mar 25 07:34 src
+
+./source/physxcharacterkinematic/src:
+total 600
+drwxr-xr-x  23 erwincoumans  primarygroup    736 Mar 25 07:34 .
+drwxr-xr-x   3 erwincoumans  primarygroup     96 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   7306 Mar 25 07:34 CctBoxController.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5499 Mar 25 07:34 CctBoxController.h
+-rw-r--r--   1 erwincoumans  primarygroup   7342 Mar 25 07:34 CctCapsuleController.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5534 Mar 25 07:34 CctCapsuleController.h
+-rw-r--r--   1 erwincoumans  primarygroup  94318 Mar 25 07:34 CctCharacterController.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  16202 Mar 25 07:34 CctCharacterController.h
+-rw-r--r--   1 erwincoumans  primarygroup  41650 Mar 25 07:34 CctCharacterControllerCallbacks.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  20199 Mar 25 07:34 CctCharacterControllerManager.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5741 Mar 25 07:34 CctCharacterControllerManager.h
+-rw-r--r--   1 erwincoumans  primarygroup   8879 Mar 25 07:34 CctController.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5455 Mar 25 07:34 CctController.h
+-rw-r--r--   1 erwincoumans  primarygroup   2848 Mar 25 07:34 CctInternalStructs.h
+-rw-r--r--   1 erwincoumans  primarygroup  18364 Mar 25 07:34 CctObstacleContext.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5436 Mar 25 07:34 CctObstacleContext.h
+-rw-r--r--   1 erwincoumans  primarygroup   2296 Mar 25 07:34 CctSweptBox.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2098 Mar 25 07:34 CctSweptBox.h
+-rw-r--r--   1 erwincoumans  primarygroup   2232 Mar 25 07:34 CctSweptCapsule.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2140 Mar 25 07:34 CctSweptCapsule.h
+-rw-r--r--   1 erwincoumans  primarygroup   2749 Mar 25 07:34 CctSweptVolume.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2593 Mar 25 07:34 CctSweptVolume.h
+-rw-r--r--   1 erwincoumans  primarygroup   6493 Mar 25 07:34 CctUtils.h
+
+./source/physxcooking:
+total 0
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup  736 Mar 25 07:34 ..
+drwxr-xr-x  19 erwincoumans  primarygroup  608 Mar 25 07:34 src
+
+./source/physxcooking/src:
+total 312
+drwxr-xr-x  19 erwincoumans  primarygroup    608 Mar 25 07:34 .
+drwxr-xr-x   3 erwincoumans  primarygroup     96 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  28881 Mar 25 07:34 Adjacencies.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   9309 Mar 25 07:34 Adjacencies.h
+-rw-r--r--   1 erwincoumans  primarygroup   6735 Mar 25 07:34 BVHStructureBuilder.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2325 Mar 25 07:34 BVHStructureBuilder.h
+-rw-r--r--   1 erwincoumans  primarygroup  18923 Mar 25 07:34 Cooking.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4690 Mar 25 07:34 Cooking.h
+-rw-r--r--   1 erwincoumans  primarygroup   4563 Mar 25 07:34 CookingUtils.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3108 Mar 25 07:34 CookingUtils.h
+-rw-r--r--   1 erwincoumans  primarygroup  23734 Mar 25 07:34 EdgeList.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4308 Mar 25 07:34 EdgeList.h
+-rw-r--r--   1 erwincoumans  primarygroup   7244 Mar 25 07:34 MeshCleaner.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2152 Mar 25 07:34 MeshCleaner.h
+-rw-r--r--   1 erwincoumans  primarygroup  11139 Mar 25 07:34 Quantizer.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2753 Mar 25 07:34 Quantizer.h
+drwxr-xr-x  18 erwincoumans  primarygroup    576 Mar 25 07:34 convex
+drwxr-xr-x  13 erwincoumans  primarygroup    416 Mar 25 07:34 mesh
+drwxr-xr-x   3 erwincoumans  primarygroup     96 Mar 25 07:34 windows
+
+./source/physxcooking/src/convex:
+total 600
+drwxr-xr-x  18 erwincoumans  primarygroup    576 Mar 25 07:34 .
+drwxr-xr-x  19 erwincoumans  primarygroup    608 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  12639 Mar 25 07:34 BigConvexDataBuilder.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4004 Mar 25 07:34 BigConvexDataBuilder.h
+-rw-r--r--   1 erwincoumans  primarygroup  25671 Mar 25 07:34 ConvexHullBuilder.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3549 Mar 25 07:34 ConvexHullBuilder.h
+-rw-r--r--   1 erwincoumans  primarygroup  11644 Mar 25 07:34 ConvexHullLib.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3865 Mar 25 07:34 ConvexHullLib.h
+-rw-r--r--   1 erwincoumans  primarygroup  30988 Mar 25 07:34 ConvexHullUtils.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5685 Mar 25 07:34 ConvexHullUtils.h
+-rw-r--r--   1 erwincoumans  primarygroup  19065 Mar 25 07:34 ConvexMeshBuilder.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4252 Mar 25 07:34 ConvexMeshBuilder.h
+-rw-r--r--   1 erwincoumans  primarygroup  40258 Mar 25 07:34 ConvexPolygonsBuilder.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2669 Mar 25 07:34 ConvexPolygonsBuilder.h
+-rw-r--r--   1 erwincoumans  primarygroup  75389 Mar 25 07:34 QuickHullConvexHullLib.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4216 Mar 25 07:34 QuickHullConvexHullLib.h
+-rw-r--r--   1 erwincoumans  primarygroup  30832 Mar 25 07:34 VolumeIntegration.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3568 Mar 25 07:34 VolumeIntegration.h
+
+./source/physxcooking/src/mesh:
+total 264
+drwxr-xr-x  13 erwincoumans  primarygroup    416 Mar 25 07:34 .
+drwxr-xr-x  19 erwincoumans  primarygroup    608 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   1699 Mar 25 07:34 GrbTriangleMeshCooking.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   9785 Mar 25 07:34 GrbTriangleMeshCooking.h
+-rw-r--r--   1 erwincoumans  primarygroup   3365 Mar 25 07:34 HeightFieldCooking.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   1840 Mar 25 07:34 HeightFieldCooking.h
+-rw-r--r--   1 erwincoumans  primarygroup   3570 Mar 25 07:34 MeshBuilder.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   1922 Mar 25 07:34 MeshBuilder.h
+-rw-r--r--   1 erwincoumans  primarygroup   4385 Mar 25 07:34 QuickSelect.h
+-rw-r--r--   1 erwincoumans  primarygroup  36789 Mar 25 07:34 RTreeCooking.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2441 Mar 25 07:34 RTreeCooking.h
+-rw-r--r--   1 erwincoumans  primarygroup  44811 Mar 25 07:34 TriangleMeshBuilder.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5046 Mar 25 07:34 TriangleMeshBuilder.h
+
+./source/physxcooking/src/windows:
+total 8
+drwxr-xr-x   3 erwincoumans  primarygroup    96 Mar 25 07:34 .
+drwxr-xr-x  19 erwincoumans  primarygroup   608 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  2826 Mar 25 07:34 WindowsCookingDelayLoadHook.cpp
+
+./source/physxextensions:
+total 0
+drwxr-xr-x   3 erwincoumans  primarygroup    96 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup   736 Mar 25 07:34 ..
+drwxr-xr-x  50 erwincoumans  primarygroup  1600 Mar 25 07:34 src
+
+./source/physxextensions/src:
+total 904
+drwxr-xr-x  50 erwincoumans  primarygroup   1600 Mar 25 07:34 .
+drwxr-xr-x   3 erwincoumans  primarygroup     96 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   3245 Mar 25 07:34 ExtBroadPhase.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6759 Mar 25 07:34 ExtCollection.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  13095 Mar 25 07:34 ExtConstraintHelper.h
+-rw-r--r--   1 erwincoumans  primarygroup   7937 Mar 25 07:34 ExtContactJoint.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4650 Mar 25 07:34 ExtContactJoint.h
+-rw-r--r--   1 erwincoumans  primarygroup   3553 Mar 25 07:34 ExtConvexMeshExt.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2972 Mar 25 07:34 ExtCpuWorkerThread.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2821 Mar 25 07:34 ExtCpuWorkerThread.h
+-rw-r--r--   1 erwincoumans  primarygroup  38264 Mar 25 07:34 ExtD6Joint.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   8002 Mar 25 07:34 ExtD6Joint.h
+-rw-r--r--   1 erwincoumans  primarygroup  10044 Mar 25 07:34 ExtD6JointCreate.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5868 Mar 25 07:34 ExtDefaultCpuDispatcher.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4506 Mar 25 07:34 ExtDefaultCpuDispatcher.h
+-rw-r--r--   1 erwincoumans  primarygroup   3373 Mar 25 07:34 ExtDefaultErrorCallback.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  10095 Mar 25 07:34 ExtDefaultSimulationFilterShader.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5231 Mar 25 07:34 ExtDefaultStreams.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  10849 Mar 25 07:34 ExtDistanceJoint.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5942 Mar 25 07:34 ExtDistanceJoint.h
+-rw-r--r--   1 erwincoumans  primarygroup   8725 Mar 25 07:34 ExtExtensions.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6892 Mar 25 07:34 ExtFixedJoint.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5069 Mar 25 07:34 ExtFixedJoint.h
+-rw-r--r--   1 erwincoumans  primarygroup  13234 Mar 25 07:34 ExtInertiaTensor.h
+-rw-r--r--   1 erwincoumans  primarygroup   4308 Mar 25 07:34 ExtJoint.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  16285 Mar 25 07:34 ExtJoint.h
+-rw-r--r--   1 erwincoumans  primarygroup   2559 Mar 25 07:34 ExtJointData.h
+-rw-r--r--   1 erwincoumans  primarygroup   2740 Mar 25 07:34 ExtJointMetaDataExtensions.h
+-rw-r--r--   1 erwincoumans  primarygroup  20642 Mar 25 07:34 ExtMetaData.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   1844 Mar 25 07:34 ExtPlatform.h
+-rw-r--r--   1 erwincoumans  primarygroup   8936 Mar 25 07:34 ExtPrismaticJoint.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6074 Mar 25 07:34 ExtPrismaticJoint.h
+-rw-r--r--   1 erwincoumans  primarygroup   6677 Mar 25 07:34 ExtPvd.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6905 Mar 25 07:34 ExtPvd.h
+-rw-r--r--   1 erwincoumans  primarygroup   3509 Mar 25 07:34 ExtPxStringTable.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   9442 Mar 25 07:34 ExtRaycastCCD.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  11786 Mar 25 07:34 ExtRevoluteJoint.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6624 Mar 25 07:34 ExtRevoluteJoint.h
+-rw-r--r--   1 erwincoumans  primarygroup   2789 Mar 25 07:34 ExtRigidActorExt.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  24248 Mar 25 07:34 ExtRigidBodyExt.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   7136 Mar 25 07:34 ExtSceneQueryExt.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   1998 Mar 25 07:34 ExtSerialization.h
+-rw-r--r--   1 erwincoumans  primarygroup   4887 Mar 25 07:34 ExtSharedQueueEntryPool.h
+-rw-r--r--   1 erwincoumans  primarygroup  11228 Mar 25 07:34 ExtSimpleFactory.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4766 Mar 25 07:34 ExtSmoothNormals.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   8643 Mar 25 07:34 ExtSphericalJoint.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5746 Mar 25 07:34 ExtSphericalJoint.h
+-rw-r--r--   1 erwincoumans  primarygroup   2398 Mar 25 07:34 ExtTaskQueueHelper.h
+-rw-r--r--   1 erwincoumans  primarygroup   5787 Mar 25 07:34 ExtTriangleMeshExt.cpp
+drwxr-xr-x  10 erwincoumans  primarygroup    320 Mar 25 07:34 serialization
+
+./source/physxextensions/src/serialization:
+total 88
+drwxr-xr-x  10 erwincoumans  primarygroup    320 Mar 25 07:34 .
+drwxr-xr-x  50 erwincoumans  primarygroup   1600 Mar 25 07:34 ..
+drwxr-xr-x  19 erwincoumans  primarygroup    608 Mar 25 07:34 Binary
+drwxr-xr-x   3 erwincoumans  primarygroup     96 Mar 25 07:34 File
+-rw-r--r--   1 erwincoumans  primarygroup   4776 Mar 25 07:34 SnSerialUtils.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2133 Mar 25 07:34 SnSerialUtils.h
+-rw-r--r--   1 erwincoumans  primarygroup  13474 Mar 25 07:34 SnSerialization.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   9199 Mar 25 07:34 SnSerializationRegistry.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3692 Mar 25 07:34 SnSerializationRegistry.h
+drwxr-xr-x  28 erwincoumans  primarygroup    896 Mar 25 07:34 Xml
+
+./source/physxextensions/src/serialization/Binary:
+total 384
+drwxr-xr-x  19 erwincoumans  primarygroup    608 Mar 25 07:34 .
+drwxr-xr-x  10 erwincoumans  primarygroup    320 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  10942 Mar 25 07:34 SnBinaryDeserialization.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  16048 Mar 25 07:34 SnBinarySerialization.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5186 Mar 25 07:34 SnConvX.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   8489 Mar 25 07:34 SnConvX.h
+-rw-r--r--   1 erwincoumans  primarygroup   2511 Mar 25 07:34 SnConvX_Align.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   1900 Mar 25 07:34 SnConvX_Align.h
+-rw-r--r--   1 erwincoumans  primarygroup   1949 Mar 25 07:34 SnConvX_Common.h
+-rw-r--r--   1 erwincoumans  primarygroup  45495 Mar 25 07:34 SnConvX_Convert.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2923 Mar 25 07:34 SnConvX_Error.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  27502 Mar 25 07:34 SnConvX_MetaData.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6797 Mar 25 07:34 SnConvX_MetaData.h
+-rw-r--r--   1 erwincoumans  primarygroup  12056 Mar 25 07:34 SnConvX_Output.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2917 Mar 25 07:34 SnConvX_Output.h
+-rw-r--r--   1 erwincoumans  primarygroup   3092 Mar 25 07:34 SnConvX_Union.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   1798 Mar 25 07:34 SnConvX_Union.h
+-rw-r--r--   1 erwincoumans  primarygroup   4040 Mar 25 07:34 SnSerializationContext.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  12680 Mar 25 07:34 SnSerializationContext.h
+
+./source/physxextensions/src/serialization/File:
+total 8
+drwxr-xr-x   3 erwincoumans  primarygroup    96 Mar 25 07:34 .
+drwxr-xr-x  10 erwincoumans  primarygroup   320 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  2587 Mar 25 07:34 SnFile.h
+
+./source/physxextensions/src/serialization/Xml:
+total 680
+drwxr-xr-x  28 erwincoumans  primarygroup    896 Mar 25 07:34 .
+drwxr-xr-x  10 erwincoumans  primarygroup    320 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   6188 Mar 25 07:34 SnJointRepXSerializer.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3216 Mar 25 07:34 SnJointRepXSerializer.h
+-rw-r--r--   1 erwincoumans  primarygroup   5418 Mar 25 07:34 SnPxStreamOperators.h
+-rw-r--r--   1 erwincoumans  primarygroup  17460 Mar 25 07:34 SnRepX1_0Defaults.h
+-rw-r--r--   1 erwincoumans  primarygroup  19805 Mar 25 07:34 SnRepX3_1Defaults.h
+-rw-r--r--   1 erwincoumans  primarygroup  22902 Mar 25 07:34 SnRepX3_2Defaults.h
+-rw-r--r--   1 erwincoumans  primarygroup   6101 Mar 25 07:34 SnRepXCollection.h
+-rw-r--r--   1 erwincoumans  primarygroup  23575 Mar 25 07:34 SnRepXCoreSerializer.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6864 Mar 25 07:34 SnRepXCoreSerializer.h
+-rw-r--r--   1 erwincoumans  primarygroup   3939 Mar 25 07:34 SnRepXSerializerImpl.h
+-rw-r--r--   1 erwincoumans  primarygroup  16873 Mar 25 07:34 SnRepXUpgrader.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2706 Mar 25 07:34 SnRepXUpgrader.h
+-rw-r--r--   1 erwincoumans  primarygroup   7618 Mar 25 07:34 SnSimpleXmlWriter.h
+-rw-r--r--   1 erwincoumans  primarygroup   7212 Mar 25 07:34 SnXmlDeserializer.h
+-rw-r--r--   1 erwincoumans  primarygroup   7494 Mar 25 07:34 SnXmlImpl.h
+-rw-r--r--   1 erwincoumans  primarygroup   4295 Mar 25 07:34 SnXmlMemoryAllocator.h
+-rw-r--r--   1 erwincoumans  primarygroup  12658 Mar 25 07:34 SnXmlMemoryPool.h
+-rw-r--r--   1 erwincoumans  primarygroup   4903 Mar 25 07:34 SnXmlMemoryPoolStreams.h
+-rw-r--r--   1 erwincoumans  primarygroup   4777 Mar 25 07:34 SnXmlReader.h
+-rw-r--r--   1 erwincoumans  primarygroup  26618 Mar 25 07:34 SnXmlSerialization.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5231 Mar 25 07:34 SnXmlSerializer.h
+-rw-r--r--   1 erwincoumans  primarygroup   6534 Mar 25 07:34 SnXmlSimpleXmlWriter.h
+-rw-r--r--   1 erwincoumans  primarygroup   8824 Mar 25 07:34 SnXmlStringToType.h
+-rw-r--r--   1 erwincoumans  primarygroup  31074 Mar 25 07:34 SnXmlVisitorReader.h
+-rw-r--r--   1 erwincoumans  primarygroup  32655 Mar 25 07:34 SnXmlVisitorWriter.h
+-rw-r--r--   1 erwincoumans  primarygroup   2429 Mar 25 07:34 SnXmlWriter.h
+
+./source/physxgpu:
+total 0
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup  736 Mar 25 07:34 ..
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 include
+
+./source/physxgpu/include:
+total 16
+drwxr-xr-x  3 erwincoumans  primarygroup    96 Mar 25 07:34 .
+drwxr-xr-x  3 erwincoumans  primarygroup    96 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  6509 Mar 25 07:34 PxPhysXGpu.h
+
+./source/physxmetadata:
+total 0
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup  736 Mar 25 07:34 ..
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 core
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 extensions
+
+./source/physxmetadata/core:
+total 0
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 ..
+drwxr-xr-x  11 erwincoumans  primarygroup  352 Mar 25 07:34 include
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 src
+
+./source/physxmetadata/core/include:
+total 576
+drwxr-xr-x  11 erwincoumans  primarygroup     352 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup     128 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   12003 Mar 25 07:34 PvdMetaDataDefineProperties.h
+-rw-r--r--   1 erwincoumans  primarygroup   13062 Mar 25 07:34 PvdMetaDataExtensions.h
+-rw-r--r--   1 erwincoumans  primarygroup   21533 Mar 25 07:34 PvdMetaDataPropertyVisitor.h
+-rw-r--r--   1 erwincoumans  primarygroup   13301 Mar 25 07:34 PxAutoGeneratedMetaDataObjectNames.h
+-rw-r--r--   1 erwincoumans  primarygroup  160572 Mar 25 07:34 PxAutoGeneratedMetaDataObjects.h
+-rw-r--r--   1 erwincoumans  primarygroup   14897 Mar 25 07:34 PxMetaDataCompare.h
+-rw-r--r--   1 erwincoumans  primarygroup    1918 Mar 25 07:34 PxMetaDataCppPrefix.h
+-rw-r--r--   1 erwincoumans  primarygroup   27441 Mar 25 07:34 PxMetaDataObjects.h
+-rw-r--r--   1 erwincoumans  primarygroup    9667 Mar 25 07:34 RepXMetaDataPropertyVisitor.h
+
+./source/physxmetadata/core/src:
+total 256
+drwxr-xr-x  4 erwincoumans  primarygroup     128 Mar 25 07:34 .
+drwxr-xr-x  4 erwincoumans  primarygroup     128 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  114716 Mar 25 07:34 PxAutoGeneratedMetaDataObjects.cpp
+-rw-r--r--  1 erwincoumans  primarygroup    8895 Mar 25 07:34 PxMetaDataObjects.cpp
+
+./source/physxmetadata/extensions:
+total 0
+drwxr-xr-x  4 erwincoumans  primarygroup  128 Mar 25 07:34 .
+drwxr-xr-x  4 erwincoumans  primarygroup  128 Mar 25 07:34 ..
+drwxr-xr-x  5 erwincoumans  primarygroup  160 Mar 25 07:34 include
+drwxr-xr-x  3 erwincoumans  primarygroup   96 Mar 25 07:34 src
+
+./source/physxmetadata/extensions/include:
+total 144
+drwxr-xr-x  5 erwincoumans  primarygroup    160 Mar 25 07:34 .
+drwxr-xr-x  4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup   5924 Mar 25 07:34 PxExtensionAutoGeneratedMetaDataObjectNames.h
+-rw-r--r--  1 erwincoumans  primarygroup  59054 Mar 25 07:34 PxExtensionAutoGeneratedMetaDataObjects.h
+-rw-r--r--  1 erwincoumans  primarygroup   2869 Mar 25 07:34 PxExtensionMetaDataObjects.h
+
+./source/physxmetadata/extensions/src:
+total 80
+drwxr-xr-x  3 erwincoumans  primarygroup     96 Mar 25 07:34 .
+drwxr-xr-x  4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  37709 Mar 25 07:34 PxExtensionAutoGeneratedMetaDataObjects.cpp
+
+./source/physxvehicle:
+total 0
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup  736 Mar 25 07:34 ..
+drwxr-xr-x  24 erwincoumans  primarygroup  768 Mar 25 07:34 src
+
+./source/physxvehicle/src:
+total 1152
+drwxr-xr-x  24 erwincoumans  primarygroup     768 Mar 25 07:34 .
+drwxr-xr-x   3 erwincoumans  primarygroup      96 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   12215 Mar 25 07:34 PxVehicleComponents.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    1922 Mar 25 07:34 PxVehicleDefaults.h
+-rw-r--r--   1 erwincoumans  primarygroup   10680 Mar 25 07:34 PxVehicleDrive.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    6479 Mar 25 07:34 PxVehicleDrive4W.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    4804 Mar 25 07:34 PxVehicleDriveNW.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    4449 Mar 25 07:34 PxVehicleDriveTank.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    9585 Mar 25 07:34 PxVehicleLinearMath.h
+-rw-r--r--   1 erwincoumans  primarygroup   31701 Mar 25 07:34 PxVehicleMetaData.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    5865 Mar 25 07:34 PxVehicleNoDrive.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    5360 Mar 25 07:34 PxVehicleSDK.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    8740 Mar 25 07:34 PxVehicleSerialization.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    3323 Mar 25 07:34 PxVehicleSerialization.h
+-rw-r--r--   1 erwincoumans  primarygroup   10133 Mar 25 07:34 PxVehicleSuspLimitConstraintShader.h
+-rw-r--r--   1 erwincoumans  primarygroup    9947 Mar 25 07:34 PxVehicleSuspWheelTire4.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   12829 Mar 25 07:34 PxVehicleSuspWheelTire4.h
+-rw-r--r--   1 erwincoumans  primarygroup    5641 Mar 25 07:34 PxVehicleTireFriction.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  315421 Mar 25 07:34 PxVehicleUpdate.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   32429 Mar 25 07:34 PxVehicleWheels.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   22178 Mar 25 07:34 VehicleUtilControl.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   11544 Mar 25 07:34 VehicleUtilSetup.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   17478 Mar 25 07:34 VehicleUtilTelemetry.cpp
+drwxr-xr-x   4 erwincoumans  primarygroup     128 Mar 25 07:34 physxmetadata
+
+./source/physxvehicle/src/physxmetadata:
+total 0
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 .
+drwxr-xr-x  24 erwincoumans  primarygroup  768 Mar 25 07:34 ..
+drwxr-xr-x   5 erwincoumans  primarygroup  160 Mar 25 07:34 include
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 src
+
+./source/physxvehicle/src/physxmetadata/include:
+total 208
+drwxr-xr-x  5 erwincoumans  primarygroup    160 Mar 25 07:34 .
+drwxr-xr-x  4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup   9612 Mar 25 07:34 PxVehicleAutoGeneratedMetaDataObjectNames.h
+-rw-r--r--  1 erwincoumans  primarygroup  89542 Mar 25 07:34 PxVehicleAutoGeneratedMetaDataObjects.h
+-rw-r--r--  1 erwincoumans  primarygroup   3666 Mar 25 07:34 PxVehicleMetaDataObjects.h
+
+./source/physxvehicle/src/physxmetadata/src:
+total 144
+drwxr-xr-x  4 erwincoumans  primarygroup    128 Mar 25 07:34 .
+drwxr-xr-x  4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  68936 Mar 25 07:34 PxVehicleAutoGeneratedMetaDataObjects.cpp
+-rw-r--r--  1 erwincoumans  primarygroup   3686 Mar 25 07:34 PxVehicleMetaDataObjects.cpp
+
+./source/pvd:
+total 0
+drwxr-xr-x   4 erwincoumans  primarygroup   128 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup   736 Mar 25 07:34 ..
+drwxr-xr-x  11 erwincoumans  primarygroup   352 Mar 25 07:34 include
+drwxr-xr-x  56 erwincoumans  primarygroup  1792 Mar 25 07:34 src
+
+./source/pvd/include:
+total 128
+drwxr-xr-x  11 erwincoumans  primarygroup    352 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   2808 Mar 25 07:34 PsPvd.h
+-rw-r--r--   1 erwincoumans  primarygroup   7724 Mar 25 07:34 PxProfileAllocatorWrapper.h
+-rw-r--r--   1 erwincoumans  primarygroup   2586 Mar 25 07:34 PxPvdClient.h
+-rw-r--r--   1 erwincoumans  primarygroup  10004 Mar 25 07:34 PxPvdDataStream.h
+-rw-r--r--   1 erwincoumans  primarygroup   4337 Mar 25 07:34 PxPvdDataStreamHelpers.h
+-rw-r--r--   1 erwincoumans  primarygroup   1988 Mar 25 07:34 PxPvdErrorCodes.h
+-rw-r--r--   1 erwincoumans  primarygroup  14421 Mar 25 07:34 PxPvdObjectModelBaseTypes.h
+-rw-r--r--   1 erwincoumans  primarygroup   3689 Mar 25 07:34 PxPvdRenderBuffer.h
+-rw-r--r--   1 erwincoumans  primarygroup   3951 Mar 25 07:34 PxPvdUserRenderer.h
+
+./source/pvd/src:
+total 960
+drwxr-xr-x  56 erwincoumans  primarygroup   1792 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   2343 Mar 25 07:34 PxProfileContextProvider.h
+-rw-r--r--   1 erwincoumans  primarygroup   2214 Mar 25 07:34 PxProfileContextProviderImpl.h
+-rw-r--r--   1 erwincoumans  primarygroup   5320 Mar 25 07:34 PxProfileDataBuffer.h
+-rw-r--r--   1 erwincoumans  primarygroup   8578 Mar 25 07:34 PxProfileDataParsing.h
+-rw-r--r--   1 erwincoumans  primarygroup  11615 Mar 25 07:34 PxProfileEventBuffer.h
+-rw-r--r--   1 erwincoumans  primarygroup  13247 Mar 25 07:34 PxProfileEventBufferAtomic.h
+-rw-r--r--   1 erwincoumans  primarygroup   2901 Mar 25 07:34 PxProfileEventBufferClient.h
+-rw-r--r--   1 erwincoumans  primarygroup   3087 Mar 25 07:34 PxProfileEventBufferClientManager.h
+-rw-r--r--   1 erwincoumans  primarygroup   2402 Mar 25 07:34 PxProfileEventId.h
+-rw-r--r--   1 erwincoumans  primarygroup   2810 Mar 25 07:34 PxProfileEventImpl.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2425 Mar 25 07:34 PxProfileEventMutex.h
+-rw-r--r--   1 erwincoumans  primarygroup   2962 Mar 25 07:34 PxProfileEventNames.h
+-rw-r--r--   1 erwincoumans  primarygroup   4183 Mar 25 07:34 PxProfileEventSender.h
+-rw-r--r--   1 erwincoumans  primarygroup   7305 Mar 25 07:34 PxProfileEventSerialization.h
+-rw-r--r--   1 erwincoumans  primarygroup  24514 Mar 25 07:34 PxProfileEvents.h
+-rw-r--r--   1 erwincoumans  primarygroup   3198 Mar 25 07:34 PxProfileMemory.h
+-rw-r--r--   1 erwincoumans  primarygroup   6205 Mar 25 07:34 PxProfileMemoryBuffer.h
+-rw-r--r--   1 erwincoumans  primarygroup   5785 Mar 25 07:34 PxProfileMemoryEventBuffer.h
+-rw-r--r--   1 erwincoumans  primarygroup  13594 Mar 25 07:34 PxProfileMemoryEvents.h
+-rw-r--r--   1 erwincoumans  primarygroup   4151 Mar 25 07:34 PxProfileScopedEvent.h
+-rw-r--r--   1 erwincoumans  primarygroup   2365 Mar 25 07:34 PxProfileScopedMutexLock.h
+-rw-r--r--   1 erwincoumans  primarygroup  10663 Mar 25 07:34 PxProfileZoneImpl.h
+-rw-r--r--   1 erwincoumans  primarygroup   5579 Mar 25 07:34 PxProfileZoneManager.h
+-rw-r--r--   1 erwincoumans  primarygroup   5771 Mar 25 07:34 PxProfileZoneManagerImpl.h
+-rw-r--r--   1 erwincoumans  primarygroup   2104 Mar 25 07:34 PxPvd.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4029 Mar 25 07:34 PxPvdBits.h
+-rw-r--r--   1 erwincoumans  primarygroup   3754 Mar 25 07:34 PxPvdByteStreams.h
+-rw-r--r--   1 erwincoumans  primarygroup   2289 Mar 25 07:34 PxPvdCommStreamEventSink.h
+-rw-r--r--   1 erwincoumans  primarygroup  25844 Mar 25 07:34 PxPvdCommStreamEvents.h
+-rw-r--r--   1 erwincoumans  primarygroup   5898 Mar 25 07:34 PxPvdCommStreamTypes.h
+-rw-r--r--   1 erwincoumans  primarygroup  27644 Mar 25 07:34 PxPvdDataStream.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4883 Mar 25 07:34 PxPvdDefaultFileTransport.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2709 Mar 25 07:34 PxPvdDefaultFileTransport.h
+-rw-r--r--   1 erwincoumans  primarygroup   3766 Mar 25 07:34 PxPvdDefaultSocketTransport.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2756 Mar 25 07:34 PxPvdDefaultSocketTransport.h
+-rw-r--r--   1 erwincoumans  primarygroup   8150 Mar 25 07:34 PxPvdFoundation.h
+-rw-r--r--   1 erwincoumans  primarygroup   9974 Mar 25 07:34 PxPvdImpl.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   6552 Mar 25 07:34 PxPvdImpl.h
+-rw-r--r--   1 erwincoumans  primarygroup   2904 Mar 25 07:34 PxPvdInternalByteStreams.h
+-rw-r--r--   1 erwincoumans  primarygroup   8919 Mar 25 07:34 PxPvdMarshalling.h
+-rw-r--r--   1 erwincoumans  primarygroup   3598 Mar 25 07:34 PxPvdMemClient.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3075 Mar 25 07:34 PxPvdMemClient.h
+-rw-r--r--   1 erwincoumans  primarygroup   1708 Mar 25 07:34 PxPvdObjectModelInternalTypeDefs.h
+-rw-r--r--   1 erwincoumans  primarygroup   6569 Mar 25 07:34 PxPvdObjectModelInternalTypes.h
+-rw-r--r--   1 erwincoumans  primarygroup  48940 Mar 25 07:34 PxPvdObjectModelMetaData.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  15072 Mar 25 07:34 PxPvdObjectModelMetaData.h
+-rw-r--r--   1 erwincoumans  primarygroup   2626 Mar 25 07:34 PxPvdObjectRegistrar.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2334 Mar 25 07:34 PxPvdObjectRegistrar.h
+-rw-r--r--   1 erwincoumans  primarygroup   5770 Mar 25 07:34 PxPvdProfileZone.h
+-rw-r--r--   1 erwincoumans  primarygroup   4670 Mar 25 07:34 PxPvdProfileZoneClient.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   2862 Mar 25 07:34 PxPvdProfileZoneClient.h
+-rw-r--r--   1 erwincoumans  primarygroup   9225 Mar 25 07:34 PxPvdUserRenderImpl.h
+-rw-r--r--   1 erwincoumans  primarygroup   2364 Mar 25 07:34 PxPvdUserRenderTypes.h
+-rw-r--r--   1 erwincoumans  primarygroup   9945 Mar 25 07:34 PxPvdUserRenderer.cpp
+
+./source/scenequery:
+total 0
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup  736 Mar 25 07:34 ..
+drwxr-xr-x   6 erwincoumans  primarygroup  192 Mar 25 07:34 include
+drwxr-xr-x  30 erwincoumans  primarygroup  960 Mar 25 07:34 src
+
+./source/scenequery/include:
+total 96
+drwxr-xr-x  6 erwincoumans  primarygroup    192 Mar 25 07:34 .
+drwxr-xr-x  4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  22418 Mar 25 07:34 SqPruner.h
+-rw-r--r--  1 erwincoumans  primarygroup   2441 Mar 25 07:34 SqPrunerMergeData.h
+-rw-r--r--  1 erwincoumans  primarygroup   4536 Mar 25 07:34 SqPruningStructure.h
+-rw-r--r--  1 erwincoumans  primarygroup   8817 Mar 25 07:34 SqSceneQueryManager.h
+
+./source/scenequery/src:
+total 912
+drwxr-xr-x  30 erwincoumans  primarygroup    960 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  31712 Mar 25 07:34 SqAABBPruner.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  13876 Mar 25 07:34 SqAABBPruner.h
+-rw-r--r--   1 erwincoumans  primarygroup  29290 Mar 25 07:34 SqAABBTree.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  10423 Mar 25 07:34 SqAABBTree.h
+-rw-r--r--   1 erwincoumans  primarygroup   7058 Mar 25 07:34 SqAABBTreeUpdateMap.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3339 Mar 25 07:34 SqAABBTreeUpdateMap.h
+-rw-r--r--   1 erwincoumans  primarygroup   3387 Mar 25 07:34 SqBounds.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   3318 Mar 25 07:34 SqBounds.h
+-rw-r--r--   1 erwincoumans  primarygroup  83051 Mar 25 07:34 SqBucketPruner.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  10780 Mar 25 07:34 SqBucketPruner.h
+-rw-r--r--   1 erwincoumans  primarygroup  24041 Mar 25 07:34 SqCompoundPruner.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4375 Mar 25 07:34 SqCompoundPruner.h
+-rw-r--r--   1 erwincoumans  primarygroup  10124 Mar 25 07:34 SqCompoundPruningPool.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4054 Mar 25 07:34 SqCompoundPruningPool.h
+-rw-r--r--   1 erwincoumans  primarygroup  32597 Mar 25 07:34 SqExtendedBucketPruner.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   8305 Mar 25 07:34 SqExtendedBucketPruner.h
+-rw-r--r--   1 erwincoumans  primarygroup  15485 Mar 25 07:34 SqIncrementalAABBPruner.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4680 Mar 25 07:34 SqIncrementalAABBPruner.h
+-rw-r--r--   1 erwincoumans  primarygroup  15067 Mar 25 07:34 SqIncrementalAABBPrunerCore.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   4393 Mar 25 07:34 SqIncrementalAABBPrunerCore.h
+-rw-r--r--   1 erwincoumans  primarygroup  35266 Mar 25 07:34 SqIncrementalAABBTree.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   8793 Mar 25 07:34 SqIncrementalAABBTree.h
+-rw-r--r--   1 erwincoumans  primarygroup   3069 Mar 25 07:34 SqMetaData.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   7055 Mar 25 07:34 SqPruningPool.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   5418 Mar 25 07:34 SqPruningPool.h
+-rw-r--r--   1 erwincoumans  primarygroup  13122 Mar 25 07:34 SqPruningStructure.cpp
+-rw-r--r--   1 erwincoumans  primarygroup  19157 Mar 25 07:34 SqSceneQueryManager.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   1908 Mar 25 07:34 SqTypedef.h
+
+./source/simulationcontroller:
+total 0
+drwxr-xr-x   4 erwincoumans  primarygroup   128 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup   736 Mar 25 07:34 ..
+drwxr-xr-x  14 erwincoumans  primarygroup   448 Mar 25 07:34 include
+drwxr-xr-x  64 erwincoumans  primarygroup  2048 Mar 25 07:34 src
+
+./source/simulationcontroller/include:
+total 256
+drwxr-xr-x  14 erwincoumans  primarygroup    448 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup    128 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup   5151 Mar 25 07:34 ScActorCore.h
+-rw-r--r--   1 erwincoumans  primarygroup   9427 Mar 25 07:34 ScArticulationCore.h
+-rw-r--r--   1 erwincoumans  primarygroup   9994 Mar 25 07:34 ScArticulationJointCore.h
+-rw-r--r--   1 erwincoumans  primarygroup   9691 Mar 25 07:34 ScBodyCore.h
+-rw-r--r--   1 erwincoumans  primarygroup   5405 Mar 25 07:34 ScConstraintCore.h
+-rw-r--r--   1 erwincoumans  primarygroup   3249 Mar 25 07:34 ScIterators.h
+-rw-r--r--   1 erwincoumans  primarygroup   3151 Mar 25 07:34 ScMaterialCore.h
+-rw-r--r--   1 erwincoumans  primarygroup   5460 Mar 25 07:34 ScPhysics.h
+-rw-r--r--   1 erwincoumans  primarygroup   3461 Mar 25 07:34 ScRigidCore.h
+-rw-r--r--   1 erwincoumans  primarygroup  44353 Mar 25 07:34 ScScene.h
+-rw-r--r--   1 erwincoumans  primarygroup   6405 Mar 25 07:34 ScShapeCore.h
+-rw-r--r--   1 erwincoumans  primarygroup   3230 Mar 25 07:34 ScStaticCore.h
+
+./source/simulationcontroller/src:
+total 1744
+drwxr-xr-x  64 erwincoumans  primarygroup    2048 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup     128 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup    2967 Mar 25 07:34 ScActorCore.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    8027 Mar 25 07:34 ScActorPair.h
+-rw-r--r--   1 erwincoumans  primarygroup    4642 Mar 25 07:34 ScActorSim.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    4853 Mar 25 07:34 ScActorSim.h
+-rw-r--r--   1 erwincoumans  primarygroup    8149 Mar 25 07:34 ScArticulationCore.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    8801 Mar 25 07:34 ScArticulationJointCore.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    3314 Mar 25 07:34 ScArticulationJointSim.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    2692 Mar 25 07:34 ScArticulationJointSim.h
+-rw-r--r--   1 erwincoumans  primarygroup   23181 Mar 25 07:34 ScArticulationSim.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    7357 Mar 25 07:34 ScArticulationSim.h
+-rw-r--r--   1 erwincoumans  primarygroup   20132 Mar 25 07:34 ScBodyCore.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   31854 Mar 25 07:34 ScBodySim.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   16983 Mar 25 07:34 ScBodySim.h
+-rw-r--r--   1 erwincoumans  primarygroup    1969 Mar 25 07:34 ScClient.h
+-rw-r--r--   1 erwincoumans  primarygroup    4515 Mar 25 07:34 ScConstraintCore.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    3818 Mar 25 07:34 ScConstraintGroupNode.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    7602 Mar 25 07:34 ScConstraintGroupNode.h
+-rw-r--r--   1 erwincoumans  primarygroup    6521 Mar 25 07:34 ScConstraintInteraction.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    2613 Mar 25 07:34 ScConstraintInteraction.h
+-rw-r--r--   1 erwincoumans  primarygroup   14613 Mar 25 07:34 ScConstraintProjectionManager.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    3577 Mar 25 07:34 ScConstraintProjectionManager.h
+-rw-r--r--   1 erwincoumans  primarygroup   21057 Mar 25 07:34 ScConstraintProjectionTree.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    3162 Mar 25 07:34 ScConstraintProjectionTree.h
+-rw-r--r--   1 erwincoumans  primarygroup   17439 Mar 25 07:34 ScConstraintSim.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    5527 Mar 25 07:34 ScConstraintSim.h
+-rw-r--r--   1 erwincoumans  primarygroup    5402 Mar 25 07:34 ScContactReportBuffer.h
+-rw-r--r--   1 erwincoumans  primarygroup   15968 Mar 25 07:34 ScContactStream.h
+-rw-r--r--   1 erwincoumans  primarygroup    2026 Mar 25 07:34 ScElementInteractionMarker.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    2759 Mar 25 07:34 ScElementInteractionMarker.h
+-rw-r--r--   1 erwincoumans  primarygroup    4597 Mar 25 07:34 ScElementSim.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    4983 Mar 25 07:34 ScElementSim.h
+-rw-r--r--   1 erwincoumans  primarygroup    3072 Mar 25 07:34 ScElementSimInteraction.h
+-rw-r--r--   1 erwincoumans  primarygroup    3015 Mar 25 07:34 ScInteraction.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    8255 Mar 25 07:34 ScInteraction.h
+-rw-r--r--   1 erwincoumans  primarygroup    2751 Mar 25 07:34 ScInteractionFlags.h
+-rw-r--r--   1 erwincoumans  primarygroup    4013 Mar 25 07:34 ScIterators.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   23263 Mar 25 07:34 ScMetaData.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   77485 Mar 25 07:34 ScNPhaseCore.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   16154 Mar 25 07:34 ScNPhaseCore.h
+-rw-r--r--   1 erwincoumans  primarygroup    3620 Mar 25 07:34 ScObjectIDTracker.h
+-rw-r--r--   1 erwincoumans  primarygroup    2226 Mar 25 07:34 ScPhysics.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    4419 Mar 25 07:34 ScRigidCore.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    2989 Mar 25 07:34 ScRigidSim.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    2328 Mar 25 07:34 ScRigidSim.h
+-rw-r--r--   1 erwincoumans  primarygroup  214153 Mar 25 07:34 ScScene.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   12008 Mar 25 07:34 ScShapeCore.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   43504 Mar 25 07:34 ScShapeInteraction.cpp
+-rw-r--r--   1 erwincoumans  primarygroup   17961 Mar 25 07:34 ScShapeInteraction.h
+-rw-r--r--   1 erwincoumans  primarygroup   14933 Mar 25 07:34 ScShapeSim.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    6066 Mar 25 07:34 ScShapeSim.h
+-rw-r--r--   1 erwincoumans  primarygroup    6804 Mar 25 07:34 ScSimStateData.h
+-rw-r--r--   1 erwincoumans  primarygroup    4809 Mar 25 07:34 ScSimStats.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    2917 Mar 25 07:34 ScSimStats.h
+-rw-r--r--   1 erwincoumans  primarygroup    2240 Mar 25 07:34 ScSimulationController.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    4687 Mar 25 07:34 ScSimulationController.h
+-rw-r--r--   1 erwincoumans  primarygroup    4835 Mar 25 07:34 ScSqBoundsManager.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    2763 Mar 25 07:34 ScSqBoundsManager.h
+-rw-r--r--   1 erwincoumans  primarygroup    2097 Mar 25 07:34 ScStaticCore.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    2420 Mar 25 07:34 ScStaticSim.h
+-rw-r--r--   1 erwincoumans  primarygroup    5507 Mar 25 07:34 ScTriggerInteraction.cpp
+-rw-r--r--   1 erwincoumans  primarygroup    5059 Mar 25 07:34 ScTriggerInteraction.h
+-rw-r--r--   1 erwincoumans  primarygroup    3462 Mar 25 07:34 ScTriggerPairs.h
+
+./source/task:
+total 0
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 .
+drwxr-xr-x  23 erwincoumans  primarygroup  736 Mar 25 07:34 ..
+drwxr-xr-x   3 erwincoumans  primarygroup   96 Mar 25 07:34 src
+
+./source/task/src:
+total 24
+drwxr-xr-x  3 erwincoumans  primarygroup     96 Mar 25 07:34 .
+drwxr-xr-x  3 erwincoumans  primarygroup     96 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  11650 Mar 25 07:34 TaskManager.cpp
+
+./tools:
+total 0
+drwxr-xr-x   4 erwincoumans  primarygroup  128 Mar 25 07:34 .
+drwxr-xr-x   9 erwincoumans  primarygroup  288 Mar 27 14:24 ..
+drwxr-xr-x   7 erwincoumans  primarygroup  224 Mar 25 07:34 binarymetadata
+drwxr-xr-x  12 erwincoumans  primarygroup  384 Mar 25 07:34 physxmetadatagenerator
+
+./tools/binarymetadata:
+total 0
+drwxr-xr-x  7 erwincoumans  primarygroup  224 Mar 25 07:34 .
+drwxr-xr-x  4 erwincoumans  primarygroup  128 Mar 25 07:34 ..
+drwxr-xr-x  3 erwincoumans  primarygroup   96 Mar 25 07:34 android
+drwxr-xr-x  3 erwincoumans  primarygroup   96 Mar 25 07:34 ios
+drwxr-xr-x  3 erwincoumans  primarygroup   96 Mar 25 07:34 linux
+drwxr-xr-x  3 erwincoumans  primarygroup   96 Mar 25 07:34 mac
+drwxr-xr-x  4 erwincoumans  primarygroup  128 Mar 25 07:34 windows
+
+./tools/binarymetadata/android:
+total 88
+drwxr-xr-x  3 erwincoumans  primarygroup     96 Mar 25 07:34 .
+drwxr-xr-x  7 erwincoumans  primarygroup    224 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  44677 Mar 25 07:34 android.metaData
+
+./tools/binarymetadata/ios:
+total 104
+drwxr-xr-x  3 erwincoumans  primarygroup     96 Mar 25 07:34 .
+drwxr-xr-x  7 erwincoumans  primarygroup    224 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  53155 Mar 25 07:34 ios64.metaData
+
+./tools/binarymetadata/linux:
+total 104
+drwxr-xr-x  3 erwincoumans  primarygroup     96 Mar 25 07:34 .
+drwxr-xr-x  7 erwincoumans  primarygroup    224 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  53155 Mar 25 07:34 linux64.metaData
+
+./tools/binarymetadata/mac:
+total 104
+drwxr-xr-x  3 erwincoumans  primarygroup     96 Mar 25 07:34 .
+drwxr-xr-x  7 erwincoumans  primarygroup    224 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  53155 Mar 25 07:34 mac64.metaData
+
+./tools/binarymetadata/windows:
+total 192
+drwxr-xr-x  4 erwincoumans  primarygroup    128 Mar 25 07:34 .
+drwxr-xr-x  7 erwincoumans  primarygroup    224 Mar 25 07:34 ..
+-rw-r--r--  1 erwincoumans  primarygroup  44677 Mar 25 07:34 win32.metaData
+-rw-r--r--  1 erwincoumans  primarygroup  53155 Mar 25 07:34 win64.metaData
+
+./tools/physxmetadatagenerator:
+total 112
+drwxr-xr-x  12 erwincoumans  primarygroup   384 Mar 25 07:34 .
+drwxr-xr-x   4 erwincoumans  primarygroup   128 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup  1565 Mar 25 07:34 PxBoilerPlate.h
+-rw-r--r--   1 erwincoumans  primarygroup  3064 Mar 25 07:34 PxExtensionsCommon.h
+-rw-r--r--   1 erwincoumans  primarygroup  8694 Mar 25 07:34 PxPhysicsWithExtensionsAPI.h
+-rw-r--r--   1 erwincoumans  primarygroup  3783 Mar 25 07:34 PxVehicleExtensionAPI.h
+-rw-r--r--   1 erwincoumans  primarygroup  4123 Mar 25 07:34 generateMetaData.bat
+-rw-r--r--   1 erwincoumans  primarygroup  9261 Mar 25 07:34 generateMetaData.py
+-rw-r--r--   1 erwincoumans  primarygroup  2259 Mar 25 07:34 generateMetaData.sh
+-rw-r--r--   1 erwincoumans  primarygroup  1714 Mar 25 07:34 helper.sh
+drwxr-xr-x   5 erwincoumans  primarygroup   160 Mar 25 07:34 lib
+-rw-r--r--   1 erwincoumans  primarygroup  2732 Mar 25 07:34 readme.txt
+
+./tools/physxmetadatagenerator/lib:
+total 24
+drwxr-xr-x   5 erwincoumans  primarygroup   160 Mar 25 07:34 .
+drwxr-xr-x  12 erwincoumans  primarygroup   384 Mar 25 07:34 ..
+-rw-r--r--   1 erwincoumans  primarygroup     0 Mar 25 07:34 __init__.py
+-rw-r--r--   1 erwincoumans  primarygroup  4476 Mar 25 07:34 compare.py
+-rw-r--r--   1 erwincoumans  primarygroup  3508 Mar 25 07:34 utils.py
