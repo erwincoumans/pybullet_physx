@@ -150,7 +150,6 @@ else:
     print("numpy_include_dirs = %s" % d)
   include_dirs += NP_DIRS
 
-##+["examples/SharedMemory/plugins/eglPlugin/eglRendererVisualShapeConverter.cpp"]\
 
 sources = ["examples/pybullet/pybullet_physx.c"]\
 +["src/PhysXLowLevelAll.cpp"]\
@@ -165,6 +164,7 @@ sources = ["examples/pybullet/pybullet_physx.c"]\
 +["src/btLinearMathAll.cpp"]\
 +["src/PhysXGeomUtilsAll.cpp"]\
 +["examples/SharedMemory/plugins/eglPlugin/eglRendererPlugin.cpp"]\
++["examples/SharedMemory/plugins/eglPlugin/eglRendererVisualShapeConverter.cpp"]\
 +["src/PhysX/physx/source/geomutils/src/contact/GuFeatureCode.cpp"]\
 +["src/PhysX/physx/source/geomutils/src/GuSweepMTD.cpp"]\
 +["src/PhysX/physx/source/geomutils/src/GuSweepSharedTests.cpp"]\
@@ -277,14 +277,14 @@ sources = ["examples/pybullet/pybullet_physx.c"]\
 +["src/PhysX/physx/source/lowlevelaabb/src/BpBroadPhaseShared.cpp"]\
 +["src/PhysX/physx/source/lowlevelaabb/src/BpMBPTasks.cpp"]\
 +["src/PhysX/physx/source/lowlevelaabb/src/BpSAPTasks.cpp"]\
-+["examples/ExampleBrowser/InProcessExampleBrowser.cpp"]\
 +["examples/TinyRenderer/geometry.cpp"]\
 +["examples/TinyRenderer/model.cpp"]\
 +["examples/TinyRenderer/tgaimage.cpp"]\
 +["examples/TinyRenderer/our_gl.cpp"]\
 +["examples/TinyRenderer/TinyRenderer.cpp"]\
++["examples/SharedMemory/PhysicsClient.cpp"]\
 +["examples/SharedMemory/PhysicsDirect.cpp"]\
-+["examples/SharedMemory/PhysicsDirectC_API.cpp"]\
++["examples/SharedMemory/PhysicsClientC_API.cpp"]\
 +["examples/SharedMemory/b3PluginManager.cpp"]\
 +["examples/Utils/b3ResourcePath.cpp"]\
 +["examples/Utils/RobotLoggingUtil.cpp"]\
@@ -412,7 +412,7 @@ else:
 setup_py_dir = os.path.dirname(os.path.realpath(__file__))
 
 need_files = []
-datadir = "examples/pybullet/gym/pybullet_data"
+datadir = "examples/pybullet/gym/pybullet_physx_data"
 
 hh = setup_py_dir + "/" + datadir
 

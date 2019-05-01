@@ -10723,9 +10723,8 @@ enum
 
 #if PY_MAJOR_VERSION >= 3
 static struct PyModuleDef moduledef = {
-	PyModuleDef_HEAD_INIT, "pybullet", /* m_name */
-	"Python bindings for Bullet Physics Robotics API (also known as Shared "
-	"Memory API)", /* m_doc */
+	PyModuleDef_HEAD_INIT, "pybullet_physx", /* m_name */
+	"Python bindings for PhysX ", /* m_doc */
 	-1,            /* m_size */
 	SpamMethods,   /* m_methods */
 	NULL,          /* m_reload */
@@ -10737,16 +10736,16 @@ static struct PyModuleDef moduledef = {
 
 PyMODINIT_FUNC
 #if PY_MAJOR_VERSION >= 3
-PyInit_pybullet(void)
+PyInit_pybullet_physx(void)
 #else
-initpybullet(void)
+initpybullet_physx(void)
 #endif
 {
 	PyObject* m;
 #if PY_MAJOR_VERSION >= 3
 	m = PyModule_Create(&moduledef);
 #else
-	m = Py_InitModule3("pybullet", SpamMethods, "Python bindings for Bullet");
+	m = Py_InitModule3("pybullet_physx", SpamMethods, "Python bindings for PhysX");
 #endif
 
 #if PY_MAJOR_VERSION >= 3
