@@ -188,7 +188,6 @@ if not _OPTIONS["no-enet"] then
 			"../../examples/SharedMemory/plugins/stablePDPlugin/BulletConversion.h",
 			}
 
-	if _OPTIONS["enable_physx"] then
   	defines {"BT_ENABLE_PHYSX","PX_PHYSX_STATIC_LIB", "PX_FOUNDATION_DLL=0", "PX_PROFILE"}
 		
 		configuration {"x64", "debug"}			
@@ -232,7 +231,6 @@ if not _OPTIONS["no-enet"] then
 				"../../examples/SharedMemory/physx/URDF2PhysX.h",
 				"../../examples/SharedMemory/physx/PhysXUserData.h",
 				}
-  end
   			
 if (_OPTIONS["enable_static_vr_plugin"]) then
 		files {"../../examples/SharedMemory/plugins/vrSyncPlugin/vrSyncPlugin.cpp"}

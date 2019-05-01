@@ -175,7 +175,10 @@ struct EGLRendererVisualShapeConverterInternalData
 	float m_mouseYpos;
 	bool m_mouseInitialized;
 	int m_graphicsUniqueIdGenerator;
-
+	
+	MyTexture3 m_defaultTexture;
+	btAlignedObjectArray<unsigned char> m_texels;
+	
 	EGLRendererVisualShapeConverterInternalData()
 		: m_upAxis(2),
 		  m_swWidth(START_WIDTH),
@@ -250,6 +253,60 @@ struct EGLRendererVisualShapeConverterInternalData
 		b3Assert(glGetError() == GL_NO_ERROR);
 		m_instancingRenderer->setLightPosition(m_lightDirection);
 		m_window->endRendering();
+		
+		
+		m_defaultTexture.m_width = 128;
+		m_defaultTexture.m_height = 128;
+		m_texels.resize(m_defaultTexture.m_width*m_defaultTexture.m_height*3);
+		m_defaultTexture.textureData1 = &m_texels[0];
+		m_defaultTexture.m_isCached = true;
+		
+		int reds[16] = { 255 };
+		int greens[16] = { 255 };
+		int blues[16] = { 255 };
+		
+		for (int i=0;i<8;i++)
+		{
+			reds[i]=255;
+			greens[i]=255;
+			blues[i]=255;
+		}
+		blues[8] = 255;
+		reds[9] = 255;
+		blues[12] = 255;
+		reds[12] = 255;
+		greens[13] = 255;
+		reds[14] = 255;
+		greens[14] = 255;
+		greens[15] = 255;
+		blues[15] = 255;
+
+		for (int i = 0; i < m_defaultTexture.m_width; i ++)
+		{
+			for (int j = 0; j < m_defaultTexture.m_height; j++)
+			{
+				int a = i / (m_defaultTexture.m_width / 4);
+				int b = j / (m_defaultTexture.m_height / 4);
+				int index = a + b * 4;
+				int red = reds[index];
+				int green = greens[index];
+				int blue = blues[index];
+				//mark a black border
+				if ((i % 32)==0 || (j%32)==0 || (i % 32) == 31 || (j % 32) == 31)
+				{
+					red = 0;
+					green = 0;
+					blue = 0;
+				}
+
+				m_defaultTexture.textureData1[j*3*m_defaultTexture.m_width+i*3 + 0] = red;
+				m_defaultTexture.textureData1[j * 3 * m_defaultTexture.m_width+ i * 3 + 1] = green;
+				m_defaultTexture.textureData1[j * 3 * m_defaultTexture.m_width+ i * 3 + 2] = blue;
+			}
+		}
+		
+	
+	
 	}
 
 	virtual ~EGLRendererVisualShapeConverterInternalData()
@@ -562,138 +619,59 @@ static void convertURDFToVisualShape2(const UrdfShape* visual, const char* urdfP
 	GLInstanceGraphicsShape* glmesh = 0;
 
 
-	MyTexture3 texture;
-	
-	texture.m_width = 128;
-	texture.m_height = 128;
-	texture.textureData1 = new unsigned char[texture.m_width*texture.m_height*3];
-
-	int reds[16] = { 255 };
-	int greens[16] = { 255 };
-	int blues[16] = { 255 };
-	
-	for (int i=0;i<8;i++)
-	{
-		reds[i]=255;
-		greens[i]=255;
-		blues[i]=255;
-	}
-	blues[8] = 255;
-	reds[9] = 255;
-	blues[12] = 255;
-	reds[12] = 255;
-	greens[13] = 255;
-	reds[14] = 255;
-	greens[14] = 255;
-	greens[15] = 255;
-	blues[15] = 255;
-
-	for (int i = 0; i < texture.m_width; i ++)
-	{
-		for (int j = 0; j < texture.m_height; j++)
-		{
-			int a = i / (texture.m_width / 4);
-			int b = j / (texture.m_height / 4);
-			int index = a + b * 4;
-			int red = reds[index];
-			int green = greens[index];
-			int blue = blues[index];
-			//mark a black border
-			if ((i % 32)==0 || (j%32)==0 || (i % 32) == 31 || (j % 32) == 31)
-			{
-				red = 0;
-				green = 0;
-				blue = 0;
-			}
-
-			texture.textureData1[j*3*texture.m_width+i*3 + 0] = red;
-			texture.textureData1[j * 3 * texture.m_width+ i * 3 + 1] = green;
-			texture.textureData1[j * 3 * texture.m_width+ i * 3 + 2] = blue;
-		}
-	}
-	
-	texturesOut.push_back(texture);
-
 	switch (visual->m_geometry.m_type)
 	{
 		case URDF_GEOM_CYLINDER:
 		case URDF_GEOM_CAPSULE:
 		{
-			btVector3 p1 = visual->m_geometry.m_capsuleFrom;
-			btVector3 p2 = visual->m_geometry.m_capsuleTo;
-			btTransform tr;
-			tr.setIdentity();
-			btScalar rad, len;
-			btVector3 center(0, 0, 0);
-			btVector3 axis(0, 0, 1);
-			btAlignedObjectArray<btVector3> vertices;
-			int numSteps = 32;
+			btScalar radius = visual->m_geometry.m_capsuleRadius;
+			btScalar halfHeight = 0.5*visual->m_geometry.m_capsuleHeight;
+			
+			btScalar sphereSize = 2. * radius;
+			btVector3 radiusScale(sphereSize, sphereSize, sphereSize);
 
-			if (visual->m_geometry.m_hasFromTo)
+
+			int numVertices = sizeof(textured_detailed_sphere_vertices) / strideInBytes;
+			
+			
+			glmesh = new GLInstanceGraphicsShape;
+			glmesh->m_indices = new b3AlignedObjectArray<int>();
+			glmesh->m_vertices = new b3AlignedObjectArray<GLInstanceVertex>();
+			glmesh->m_vertices->resize(numVertices);
+			glmesh->m_numvertices = numVertices;
+			
+			for (int i = 0; i < numVertices; i++)
 			{
-				btVector3 v = p2 - p1;
-				btVector3 dir = v.normalized();
-				tr = visual->m_linkLocalFrame;
-				len = v.length();
-				rad = visual->m_geometry.m_capsuleRadius;
-				btVector3 ax1, ax2;
-				btPlaneSpace1(dir, ax1, ax2);
-
-				for (int i = 0; i < numSteps; i++)
-				{
-					{
-						btVector3 vert = p1 + ax1 * rad * btSin(SIMD_2_PI * (float(i) / numSteps)) + ax2 * rad * btCos(SIMD_2_PI * (float(i) / numSteps));
-						vertices.push_back(vert);
-					}
-					{
-						btVector3 vert = p2 + ax1 * rad * btSin(SIMD_2_PI * (float(i) / numSteps)) + ax2 * rad * btCos(SIMD_2_PI * (float(i) / numSteps));
-						vertices.push_back(vert);
-					}
-				}
-				if (visual->m_geometry.m_type == URDF_GEOM_CAPSULE)
-				{
-					btVector3 pole1 = p1 - dir * rad;
-					btVector3 pole2 = p2 + dir * rad;
-					vertices.push_back(pole1);
-					vertices.push_back(pole2);
-				}
+				btVector3 vert(textured_detailed_sphere_vertices[i * 9 + 0],
+					textured_detailed_sphere_vertices[i * 9 + 1],
+					textured_detailed_sphere_vertices[i * 9 + 2]);
+				int up = 2;//Y up
+				btVector3 trVer = radiusScale * vert;
+				if (trVer[up] > 0)
+						trVer[up] += halfHeight;
+				else
+						trVer[up] -= halfHeight;
+				GLInstanceVertex& vtx = glmesh->m_vertices->at(i);
+				vtx.xyzw[0] = trVer[0];
+				vtx.xyzw[1] = trVer[1];
+				vtx.xyzw[2] = trVer[2];
+				vtx.xyzw[3] = 0;
+				vtx.normal[0] = textured_detailed_sphere_vertices[i * 9 + 4];
+				vtx.normal[1]  = textured_detailed_sphere_vertices[i * 9 + 5];
+				vtx.normal[2]  = textured_detailed_sphere_vertices[i * 9 + 6];
+				vtx.uv[0] = textured_detailed_sphere_vertices[i * 9 + 7];
+				vtx.uv[1]  = textured_detailed_sphere_vertices[i * 9 + 8];
 			}
-			else
+				
+			int numIndices = sizeof(textured_detailed_sphere_indices) / sizeof(int);
+			glmesh->m_indices->resize(numIndices);
+			glmesh->m_numIndices = numIndices;
+			
+			for (int i=0;i<numIndices;i++)
 			{
-				//assume a capsule along the Z-axis, centered at the origin
-				tr = visual->m_linkLocalFrame;
-				len = visual->m_geometry.m_capsuleHeight;
-				rad = visual->m_geometry.m_capsuleRadius;
-				for (int i = 0; i < numSteps; i++)
-				{
-					btVector3 vert(rad * btSin(SIMD_2_PI * (float(i) / numSteps)), rad * btCos(SIMD_2_PI * (float(i) / numSteps)), len / 2.);
-					vertices.push_back(vert);
-					vert[2] = -len / 2.;
-					vertices.push_back(vert);
-				}
-				if (visual->m_geometry.m_type == URDF_GEOM_CAPSULE)
-				{
-					btVector3 pole1(0, 0, +len / 2. + rad);
-					btVector3 pole2(0, 0, -len / 2. - rad);
-					vertices.push_back(pole1);
-					vertices.push_back(pole2);
-				}
+				glmesh->m_indices->at(i)=textured_detailed_sphere_indices[i];
 			}
-			visualShapeOut.m_localVisualFrame[0] = tr.getOrigin()[0];
-			visualShapeOut.m_localVisualFrame[1] = tr.getOrigin()[1];
-			visualShapeOut.m_localVisualFrame[2] = tr.getOrigin()[2];
-			visualShapeOut.m_localVisualFrame[3] = tr.getRotation()[0];
-			visualShapeOut.m_localVisualFrame[4] = tr.getRotation()[1];
-			visualShapeOut.m_localVisualFrame[5] = tr.getRotation()[2];
-			visualShapeOut.m_localVisualFrame[6] = tr.getRotation()[3];
-			visualShapeOut.m_dimensions[0] = len;
-			visualShapeOut.m_dimensions[1] = rad;
 
-			//btConvexHullShape* cylZShape = new btConvexHullShape(&vertices[0].x(), vertices.size(), sizeof(btVector3));
-			//btCapsuleShape* cylZShape = new btCapsuleShape(rad,len);//btConvexHullShape(&vertices[0].x(), vertices.size(), sizeof(btVector3));
-
-			//cylZShape->setMargin(0.001);
-			//convexColShape = cylZShape;
 			break;
 		}
 		case URDF_GEOM_BOX:
@@ -1189,6 +1167,10 @@ int EGLRendererVisualShapeConverter::convertVisualShapes(
 				{
 					convertURDFToVisualShape2(vis, pathPrefix, tr, vertices, indices, textures, visualShape, fileIO, m_data->m_flags);
 				}
+			}
+			if (textures.size()==0)
+			{
+				textures.push_back(m_data->m_defaultTexture);
 			}
 			m_data->m_visualShapes.push_back(visualShape);
 

@@ -75,7 +75,7 @@ int main(int argc, char* argv[])
 
 	b3RobotSimulatorLoadUrdfFileArgs args2;
 	args2.m_useMultiBody = false;
-	
+	sim->setAdditionalSearchPath("/Users/erwincoumans/develop/pybullet_physx/examples/pybullet/gym/pybullet_physx_data");
 	int planeUid = sim->loadURDF("plane.urdf", args2);
 	printf("planeUid = %d\n", planeUid);
 
@@ -90,7 +90,7 @@ int main(int argc, char* argv[])
 		{
 			args.m_startPosition.setValue(0, 0, boxSize*0.5+i * boxSize);
 //			args.m_useMultiBody = false;
-			int boxIdx = sim->loadURDF("cube.urdf",args);//sphere_small.urdf",args);//cube.urdf", args);
+			int boxIdx = sim->loadURDF("capsule.urdf",args);//sphere_small.urdf",args);//cube.urdf", args);
 			if (i == 7)
 				mass = 1000;
 			dynamicsArgs.m_mass = mass;

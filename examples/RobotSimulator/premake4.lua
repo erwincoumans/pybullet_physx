@@ -269,7 +269,6 @@ end
 			 "HelloPhysXRobotics.cpp"
 		}
 
-	if _OPTIONS["enable_physx"] then
   	defines {"BT_ENABLE_PHYSX","PX_PHYSX_STATIC_LIB", "PX_FOUNDATION_DLL=0", "PX_PROFILE"}
 		
 		configuration {"x64", "debug"}			
@@ -316,7 +315,6 @@ end
 				"../../examples/SharedMemory/physx/URDF2PhysX.h",
 				"../../examples/SharedMemory/physx/PhysXUserData.h",
 				}
-  end
 
 
 project ("App_HelloPhysXImmediateMode")
@@ -370,7 +368,6 @@ end
 			 "../Snippet/snippetutils/SnippetUtils.h",
 		}
 
-	if _OPTIONS["enable_physx"] then
   	defines {"BT_ENABLE_PHYSX","PX_PHYSX_STATIC_LIB", "PX_FOUNDATION_DLL=0", "PX_PROFILE"}
 		
 		configuration {"x64", "debug"}			
@@ -403,4 +400,3 @@ end
 			}
 			
 			
-  end

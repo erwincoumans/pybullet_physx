@@ -1,3 +1,0 @@
-pybullet_physx
-pybullet_physx_data
-pybullet_physx_envs
