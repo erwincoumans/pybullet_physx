@@ -571,17 +571,17 @@ void ImmediateScene::createScene()
 	//		for(PxU32 i=0;i<8;i++)
 	//			createBox(extents, PxTransform(PxVec3(0.0f, extents.y + float(i)*extents.y*2.0f, 0.0f)), 1.0f);
 
-			PxU32 size = 8;
+			PxU32 size = 28;
 //			PxU32 size = 2;
 //			PxU32 size = 1;
 			float y = extents.y;
 			float x = 0.0f;
 			while(size)
 			{
-				for(PxU32 i=0;i<size;i++)
+				for(PxU32 i=0;i<1;i++)
 					createActor(boxGeom, PxTransform(PxVec3(x+float(i)*extents.x*2.0f, y, 0.0f)), &massProps);
 
-				x += extents.x;
+				//x += extents.x;
 				y += extents.y*2.0f;
 				size--;
 			}

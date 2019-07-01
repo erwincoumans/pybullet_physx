@@ -1441,6 +1441,12 @@ bool PhysXServerCommandProcessor::processCommand(const struct SharedMemoryComman
 			hasStatus = processRequestCameraImageCommand(clientCmd, serverStatusOut, bufferServerToClient, bufferSizeInBytes);
 			break;
 		}
+		
+		case CMD_REQUEST_MOUSE_EVENTS_DATA:
+		{
+			hasStatus = processRequestMouseEventsCommand(clientCmd,serverStatusOut,bufferServerToClient, bufferSizeInBytes);
+			break;
+		};
 
 #if 0
 	case CMD_SET_VR_CAMERA_STATE:
@@ -1453,11 +1459,7 @@ bool PhysXServerCommandProcessor::processCommand(const struct SharedMemoryComman
 			hasStatus = processRequestVREventsCommand(clientCmd,serverStatusOut,bufferServerToClient, bufferSizeInBytes);
 			break;
 		};
-	case CMD_REQUEST_MOUSE_EVENTS_DATA:
-		{
-			hasStatus = processRequestMouseEventsCommand(clientCmd,serverStatusOut,bufferServerToClient, bufferSizeInBytes);
-			break;
-		};
+	
 	case CMD_REQUEST_KEYBOARD_EVENTS_DATA:
 		{
 			hasStatus = processRequestKeyboardEventsCommand(clientCmd,serverStatusOut,bufferServerToClient, bufferSizeInBytes);
@@ -1946,6 +1948,29 @@ bool PhysXServerCommandProcessor::processRequestCameraImageCommand(const struct 
 
 }
 
+
+bool PhysXServerCommandProcessor::processRequestMouseEventsCommand(const struct SharedMemoryCommand& clientCmd, struct SharedMemoryStatus& serverStatusOut, char* bufferServerToClient, int bufferSizeInBytes)
+{
+	bool hasStatus = true;
+	if (m_data->m_pluginManager.getRenderInterface())
+	{
+		b3MouseEventsData me;
+		m_data->m_pluginManager.getRenderInterface()->getMouseEvents(me);
+		serverStatusOut.m_sendMouseEvents.m_numMouseEvents = me.m_numMouseEvents;
+		if (serverStatusOut.m_sendMouseEvents.m_numMouseEvents > MAX_MOUSE_EVENTS)
+		{
+			serverStatusOut.m_sendMouseEvents.m_numMouseEvents = MAX_MOUSE_EVENTS;
+		}
+		for (int i = 0; i < serverStatusOut.m_sendMouseEvents.m_numMouseEvents; i++)
+		{
+			serverStatusOut.m_sendMouseEvents.m_mouseEvents[i] = me.m_mouseEvents[i];
+		}
+	}
+
+	serverStatusOut.m_type = CMD_REQUEST_MOUSE_EVENTS_DATA_COMPLETED;
+	return hasStatus;
+}
+
 bool PhysXServerCommandProcessor::processRequestInternalDataCommand(const struct SharedMemoryCommand& clientCmd, struct SharedMemoryStatus& serverStatusOut, char* bufferServerToClient, int bufferSizeInBytes)
 {
 	bool hasStatus = true;
@@ -2346,23 +2371,8 @@ bool PhysXServerCommandProcessor::processForwardDynamicsCommand(const struct Sha
 		if (m_data->m_pluginManager.getRenderInterface())
 		{
 			B3_PROFILE("render");
-			//m_data->m_pluginManager.getRenderInterface()->render();
-			unsigned char* pixelRGBA = 0;
-			int numRequestedPixels = 0;
-			float* depthBuffer = 0;
-			int* segmentationMaskBuffer = 0;
-			int startPixelIndex = 0;
 			
-			int width = 1024;
-			int height = 768;
-			m_data->m_pluginManager.getRenderInterface()->getWidthAndHeight(width, height);
-			int numPixelsCopied = 0;
-			
-
-			m_data->m_pluginManager.getRenderInterface()->copyCameraImageData(pixelRGBA, numRequestedPixels,
-				depthBuffer, numRequestedPixels,
-				segmentationMaskBuffer, numRequestedPixels,
-				startPixelIndex, &width, &height, &numPixelsCopied);
+			m_data->m_pluginManager.getRenderInterface()->render();
 		}
 	}
 

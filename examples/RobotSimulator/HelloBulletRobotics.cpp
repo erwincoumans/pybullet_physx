@@ -37,6 +37,9 @@ int main(int argc, char* argv[])
 
 	while (sim->isConnected())
 	{
+	b3MouseEventsData me;
+	
+		sim->getMouseEvents(me);
 		btVector3 basePos;
 		btQuaternion baseOrn;
 		sim->getBasePositionAndOrientation(r2d2Uid, basePos, baseOrn);

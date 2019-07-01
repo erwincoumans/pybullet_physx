@@ -192,6 +192,7 @@ void btSpinMutex::unlock()
 
 #else  //#if BT_THREADSAFE
 
+#error BT_THREADSAFE
 // These should not be called ever
 void btSpinMutex::lock()
 {

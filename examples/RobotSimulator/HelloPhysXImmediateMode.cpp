@@ -13,7 +13,7 @@
 
 
 
-int main(int argc, char* argv[])
+int main33(int argc, char* argv[])
 {
 	
 	b3RobotSimulatorClientAPI_NoGUI* sim = new b3RobotSimulatorClientAPI_NoGUI();

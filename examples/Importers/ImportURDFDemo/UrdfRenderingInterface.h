@@ -101,6 +101,11 @@ struct UrdfRenderingInterface
 	{
 		return false;
 	}
+	
+	virtual bool getMouseEvents(struct b3MouseEventsData& mouseEventData)
+	{
+		return false;
+	}
 
 };
 

@@ -33,6 +33,7 @@ subject to the following restrictions:
 #include "stb_image/stb_image.h"
 #include "LinearMath/btMinMax.h"
 #include "../OpenGLWindow/ShapeData.h"
+#include "LinearMath/btThreads.h"
 
 #ifdef __APPLE__
 #include "OpenGLWindow/MacOpenGLWindow.h"
@@ -138,6 +139,7 @@ struct EGLRendererVisualShapeConverterInternalData
 
 	btAlignedObjectArray<b3VisualShapeData> m_visualShapes;
 
+	btSpinMutex m_mutex;
 	
 	int m_upAxis;
 	int m_swWidth;
@@ -165,7 +167,9 @@ struct EGLRendererVisualShapeConverterInternalData
 	bool m_hasShadow;
 	int m_flags;
 	SimpleCamera m_camera;
-
+	b3MouseEvent m_mouseMoveEvent;
+	b3AlignedObjectArray<b3MouseEvent>  m_mouseButtonEvents;
+	b3AlignedObjectArray<b3MouseEvent>  m_cachedMouseButtonEvents;
 	bool m_leftMouseButton;
 	bool m_middleMouseButton;
 	bool m_rightMouseButton;
@@ -450,7 +454,46 @@ void EGLRendererVisualShapeConverter::mouseButtonCallback(int button, int state,
 
 	m_data->m_mouseXpos = x;
 	m_data->m_mouseYpos = y;
+	b3MouseEvent event;
+	event.m_eventType = MOUSE_BUTTON_EVENT;
+	event.m_buttonIndex = button;
+	event.m_buttonState = state;
+	event.m_mousePosX = x;
+	event.m_mousePosY = y;
+	m_data->m_mutex.lock();
+	m_data->m_mouseButtonEvents.push_back(event);
+	m_data->m_mutex.unlock();
 	m_data->m_mouseInitialized = true;
+}
+
+bool EGLRendererVisualShapeConverter::getMouseEvents(struct b3MouseEventsData& mouseEventData)
+{
+	m_data->m_cachedMouseButtonEvents.clear();
+	if (m_data->m_mouseMoveEvent.m_eventType==MOUSE_MOVE_EVENT)
+	{
+		m_data->m_cachedMouseButtonEvents.push_back(m_data->m_mouseMoveEvent);
+		m_data->m_mouseMoveEvent.m_eventType = 0;
+	}
+	m_data->m_mutex.lock();
+	
+	for (int i=0;i<m_data->m_mouseButtonEvents.size();i++)
+	{
+		const b3MouseEvent& event = m_data->m_mouseButtonEvents[i];
+		m_data->m_cachedMouseButtonEvents.push_back(event);
+	}
+	m_data->m_mouseButtonEvents.clear();
+	if (m_data->m_cachedMouseButtonEvents.size())
+	{
+		mouseEventData.m_mouseEvents = &m_data->m_cachedMouseButtonEvents[0];
+	} else
+	{
+		mouseEventData.m_mouseEvents = 0;
+	}
+	mouseEventData.m_numMouseEvents = m_data->m_cachedMouseButtonEvents.size();
+	
+	m_data->m_mutex.unlock();
+
+	return m_data->m_cachedMouseButtonEvents.size()>0;
 }
 void EGLRendererVisualShapeConverter::mouseMoveCallback(float x, float y)
 {
@@ -523,6 +566,11 @@ void EGLRendererVisualShapeConverter::mouseMoveCallback(float x, float y)
 	}
 	m_data->m_mouseXpos = x;
 	m_data->m_mouseYpos = y;
+	m_data->m_mutex.lock();
+	m_data->m_mouseMoveEvent.m_eventType = MOUSE_MOVE_EVENT;
+	m_data->m_mouseMoveEvent.m_mousePosX = x;
+	m_data->m_mouseMoveEvent.m_mousePosY = y;
+	m_data->m_mutex.unlock();
 	m_data->m_mouseInitialized = true;
 }
 EGLRendererVisualShapeConverter::EGLRendererVisualShapeConverter()
@@ -1374,6 +1422,21 @@ void EGLRendererVisualShapeConverter::clearBuffers(TGAColor& clearColor)
 void EGLRendererVisualShapeConverter::render()
 {
 	//mode the the actual render code inside 'copyImageData' since we need to know the width/height
+	m_data->m_window->endRendering();
+	m_data->m_window->startRendering();
+	m_data->m_instancingRenderer->renderScene();
+	
+	m_data->m_instancingRenderer->writeTransforms();
+	if (m_data->m_hasLightDirection)
+	{
+		m_data->m_instancingRenderer->setLightPosition(m_data->m_lightDirection);
+	}
+	
+	m_data->m_instancingRenderer->drawLine(b3MakeVector3(0, 0, 0), b3MakeVector3(1, 0, 0), b3MakeVector3(1, 0, 0), 3);
+	m_data->m_instancingRenderer->drawLine(b3MakeVector3(0, 0, 0), b3MakeVector3(0, 1, 0), b3MakeVector3(0, 1, 0), 3);
+	m_data->m_instancingRenderer->drawLine(b3MakeVector3(0, 0, 0), b3MakeVector3(0, 0, 1), b3MakeVector3(0, 0, 1), 3);
+
+	
 }
 
 void EGLRendererVisualShapeConverter::render(const float viewMat[16], const float projMat[16])
@@ -1388,9 +1451,10 @@ void EGLRendererVisualShapeConverter::render(const float viewMat[16], const floa
 	m_data->m_camera.setVRCamera(viewMat, projMat);
 
 	render();
-
+	
 	m_data->m_camera.disableVRCamera();
 
+	
 	//cout<<viewMat[4*0 + 0]<<" "<<viewMat[4*0+1]<<" "<<viewMat[4*0+2]<<" "<<viewMat[4*0+3] << endl;
 	//cout<<viewMat[4*1 + 0]<<" "<<viewMat[4*1+1]<<" "<<viewMat[4*1+2]<<" "<<viewMat[4*1+3] << endl;
 	//cout<<viewMat[4*2 + 0]<<" "<<viewMat[4*2+1]<<" "<<viewMat[4*2+2]<<" "<<viewMat[4*2+3] << endl;
@@ -1449,7 +1513,7 @@ void EGLRendererVisualShapeConverter::copyCameraImageDataGL(
 		{
 			m_data->m_window->endRendering();
 			m_data->m_window->startRendering();
-			glViewport(0,0, sourceWidth*m_data->m_window->getRetinaScale(), sourceHeight*m_data->m_window->getRetinaScale());
+			glViewport(0,0, sourceWidth, sourceHeight);
 			B3_PROFILE("m_instancingRenderer render");
 			m_data->m_instancingRenderer->writeTransforms();
 			if (m_data->m_hasLightDirection)
@@ -1457,12 +1521,14 @@ void EGLRendererVisualShapeConverter::copyCameraImageDataGL(
 				m_data->m_instancingRenderer->setLightPosition(m_data->m_lightDirection);
 			}
 			m_data->m_instancingRenderer->setActiveCamera(&m_data->m_camera);
-			m_data->m_instancingRenderer->updateCamera(m_data->m_upAxis);
+			//m_data->m_instancingRenderer->updateCamera(m_data->m_upAxis);
 
 			m_data->m_instancingRenderer->renderScene();
 			m_data->m_instancingRenderer->drawLine(b3MakeVector3(0, 0, 0), b3MakeVector3(1, 0, 0), b3MakeVector3(1, 0, 0), 3);
 			m_data->m_instancingRenderer->drawLine(b3MakeVector3(0, 0, 0), b3MakeVector3(0, 1, 0), b3MakeVector3(0, 1, 0), 3);
 			m_data->m_instancingRenderer->drawLine(b3MakeVector3(0, 0, 0), b3MakeVector3(0, 0, 1), b3MakeVector3(0, 0, 1), 3);
+
+			m_data->m_camera.disableVRCamera();
 
 			int numBytesPerPixel = 4;  //RGBA
 
@@ -1541,7 +1607,7 @@ void EGLRendererVisualShapeConverter::copyCameraImageDataGL(
 			{
 				{
 					m_data->m_window->startRendering();
-					glViewport(0,0, sourceWidth*m_data->m_window->getRetinaScale(), sourceHeight*m_data->m_window->getRetinaScale());
+					glViewport(0,0, sourceWidth, sourceHeight);
 					BT_PROFILE("renderScene");
 					m_data->m_instancingRenderer->renderSceneInternal(B3_SEGMENTATION_MASK_RENDERMODE);
 				}

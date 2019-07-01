@@ -102,6 +102,49 @@ int main(int argc, char* argv[])
 	int count = 5;
 	while (sim->isConnected())
 	{
+		b3RobotSimulatorGetCameraImageArgs args(320,200);
+		b3CameraImageData imageData;
+		float viewMat[16] = {
+		0.34202006459236145, 0.16317586600780487, -0.9254165291786194, 0.0, -0.9396925568580627, 0.05939115956425667, -0.3368240296840668, 0.0, 7.450580596923828e-09, 0.9848076105117798, 0.1736481487751007, 0.0, -1.2438441387985222e-07, -0.0, -3.999999761581421, 1.0
+		};
+		args.m_viewMatrix = viewMat;
+		float projMat[16] =
+		{
+		1.0825318098068237, 0.0, 0.0, 0.0, 0.0, 1.732050895690918, 0.0, 0.0, 0.0, 0.0, -1.0002000331878662, -1.0, 0.0, 0.0, -0.020002000033855438, 0.0
+		};
+		args.m_projectionMatrix = projMat;
+		static int few=10;
+		few--;
+		if (few>0)
+			sim->getCameraImage(320,200,args, imageData);
+		static int skip=-1;
+		skip--;
+		if (skip<0)
+		{
+			skip=100;
+			b3MouseEventsData me;
+			sim->getMouseEvents(&me);
+			if (me.m_numMouseEvents)
+			{
+			
+				printf("numMouseEvents=%d\n",me.m_numMouseEvents);
+				for (int i=0;i<me.m_numMouseEvents;i++)
+				{
+					b3MouseEvent* e = &me.m_mouseEvents[i];
+					printf("event[%d].type=%d, x=%f, y=%f\n", i,e->m_eventType,e->m_mousePosX,e->m_mousePosY);
+					if (e->m_eventType==MOUSE_BUTTON_EVENT)
+					{
+						printf("buttonIndex=%d, buttonState:%d\n", e->m_buttonIndex,e->m_buttonState);
+					}
+				}
+				
+			}
+			else
+			{
+				printf("none\n");
+			}
+		}
+		
 		sim->stepSimulation();
 		count--;
 		if (count == 0)
