@@ -1,4 +1,3 @@
-#include "PhysX/physx/source/common/src/CmBoxPruning.cpp"
 #include "PhysX/physx/source/common/src/CmCollection.cpp"
 #include "PhysX/physx/source/common/src/CmMathUtils.cpp"
 #include "PhysX/physx/source/common/src/CmPtrTable.cpp"

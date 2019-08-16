@@ -48,7 +48,7 @@ def parallelCCompile(self,
 
 
 import distutils.ccompiler
-distutils.ccompiler.CCompiler.compile = parallelCCompile
+#distutils.ccompiler.CCompiler.compile = parallelCCompile
 
 #see http://stackoverflow.com/a/8719066/295157
 import os
@@ -156,7 +156,6 @@ sources = ["examples/pybullet/pybullet_physx.c"]\
 +["src/PhysXExtensionAll.cpp"]\
 +["src/PhysX/physx/source/physxextensions/src/ExtDefaultCpuDispatcher.cpp"]\
 +["src/PhysX/physx/source/lowlevel/common/src/pipeline/PxcContactMethodImpl.cpp"]\
-+["src/PhysX/physx/source/lowlevel/common/src/collision/PxcContact.cpp"]\
 +["examples/SharedMemory/physx/PhysXC_API.cpp"]\
 +["examples/SharedMemory/physx/PhysXServerCommandProcessor.cpp"]\
 +["examples/SharedMemory/physx/PhysXUrdfImporter.cpp"]\
