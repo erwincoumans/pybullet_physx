@@ -3,26 +3,29 @@
 project ("pybullet_physx")
 		language "C++"
 		kind "SharedLib"
-
-		if _OPTIONS["enable_grpc"] then
-				initGRPC()
-				
-				 files {
-                  "../../examples/SharedMemory/PhysicsClientGRPC.cpp",
-                  "../../examples/SharedMemory/PhysicsClientGRPC.h",
-                  "../../examples/SharedMemory/PhysicsClientGRPC_C_API.cpp",
-                  "../../examples/SharedMemory/PhysicsClientGRPC_C_API.h",
-                }
-		end
 		
 		includedirs {"../../src", "../../examples",
 		"../../examples/ThirdPartyLibs"}
-		defines {"PHYSICS_IN_PROCESS_EXAMPLE_BROWSER", "STATIC_LINK_SPD_PLUGIN"}
-		
-		
-	hasCL = findOpenCL("clew")
+		defines {
+      "BT_USE_DOUBLE_PRECISION",
+		  "B3_DUMP_PYTHON_VERSION",
+		  "EGL_ADD_PYTHON_INIT",
+		  "B3_ENABLE_FILEIO_PLUGIN",
+		  "BT_THREADSAFE=1",
+		 }
 
-	links{ "BulletExampleBrowserLib","gwen", "BulletFileLoader","BulletWorldImporter","OpenGL_Window","BulletSoftBody", "BulletInverseDynamicsUtils", "BulletInverseDynamics", "BulletDynamics","BulletCollision","LinearMath","BussIK", "Bullet3Common"}
+    defines 
+    {
+      "BT_ENABLE_PHYSX",
+      "PX_PHYSX_STATIC_LIB", 
+      "PX_FOUNDATION_DLL=0", 
+      "PX_COOKING", 
+      "DISABLE_CUDA_PHYSX",
+      "PX_PROFILE",
+    }
+		
+		
+	links{ }
 	initOpenGL()
 	initGlew()
 
@@ -37,159 +40,77 @@ project ("pybullet_physx")
 		links{"Cocoa.framework","Python"}
 	end
 
-		if (hasCL) then
-			links {
-				"Bullet3OpenCL_clew",
-				"Bullet3Dynamics",
-				"Bullet3Collision",
-				"Bullet3Geometry",
-				"Bullet3Common",
-			}
-		end
-
-if not _OPTIONS["no-enet"] then
-
-		includedirs {"../../examples/ThirdPartyLibs/enet/include"}
-	
-		if os.is("Windows") then 
---			targetextension {"dylib"}
-			defines { "WIN32" }
-			links {"Ws2_32","Winmm"}
-		end
-		if os.is("Linux") then
-		end
-		if os.is("MacOSX") then
-		end		
+  if os.is("Windows") then
+  defines {"WIN32"}
+   files 
+   {
+      "../../examples/OpenGLWindow/Win32Window.cpp",
+      "../../examples/OpenGLWindow/Win32OpenGLWindow.cpp",
+      "../../examples/ThirdPartyLibs/glad/gl.c",
+      "../../src/PhysX/physx/source/physx/src/windows/NpWindowsDelayLoadHook.cpp",
+      "../../src/PhysXFoundationWindows.cpp",
+      "../../src/PhysX/physx/source/physx/src/device/windows/PhysXIndicatorWindows.cpp",
+  }
+end
 		
-		links {"enet"}		
 
-		files {
-			"../../examples/SharedMemory/PhysicsClientUDP.cpp",
-			"../../examples/SharedMemory/PhysicsClientUDP.h",
-			"../../examples/SharedMemory/PhysicsClientUDP_C_API.cpp",
-			"../../examples/SharedMemory/PhysicsClientUDP_C_API.h",
-		}	
-		defines {"BT_ENABLE_ENET"}
-	end
+		files 
+		{
+			"pybullet_physx.c",
+      "../../examples/SharedMemory/physx/PhysXC_API.cpp",
+      "../../examples/SharedMemory/physx/PhysXServerCommandProcessor.cpp",
+      "../../examples/SharedMemory/physx/PhysXUrdfImporter.cpp",
+      "../../examples/SharedMemory/physx/URDF2PhysX.cpp",
+      "../../examples/SharedMemory/plugins/eglPlugin/eglRendererPlugin.cpp",
+      "../../examples/SharedMemory/plugins/eglPlugin/eglRendererVisualShapeConverter.cpp",
+      "../../examples/TinyRenderer/geometry.cpp",
+      "../../examples/TinyRenderer/model.cpp",
+      "../../examples/TinyRenderer/tgaimage.cpp",
+      "../../examples/TinyRenderer/our_gl.cpp",
+      "../../examples/TinyRenderer/TinyRenderer.cpp",
+      "../../examples/SharedMemory/PhysicsClient.cpp",
+      "../../examples/SharedMemory/PhysicsDirect.cpp",
+      "../../examples/SharedMemory/PhysicsClientC_API.cpp",
+      "../../examples/SharedMemory/b3PluginManager.cpp",
+      "../../examples/Utils/b3ResourcePath.cpp",
+      "../../examples/Utils/RobotLoggingUtil.cpp",
+      "../../examples/Utils/ChromeTraceUtil.cpp",
+      "../../examples/Utils/b3Clock.cpp",
+      "../../examples/Utils/b3Quickprof.cpp",
+      "../../examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp",
+      "../../examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp",
+      "../../examples/ThirdPartyLibs/stb_image/stb_image.cpp",
+      "../../examples/ThirdPartyLibs/stb_image/stb_image_write.cpp",
+      "../../examples/ThirdPartyLibs/minizip/ioapi.c",
+      "../../examples/ThirdPartyLibs/minizip/unzip.c",
+      "../../examples/ThirdPartyLibs/minizip/zip.c",
+      "../../examples/ThirdPartyLibs/zlib/adler32.c",
+      "../../examples/ThirdPartyLibs/zlib/compress.c",
+      "../../examples/ThirdPartyLibs/zlib/crc32.c",
+      "../../examples/ThirdPartyLibs/zlib/deflate.c",
+      "../../examples/ThirdPartyLibs/zlib/gzclose.c",
+      "../../examples/ThirdPartyLibs/zlib/gzlib.c",
+      "../../examples/ThirdPartyLibs/zlib/gzread.c",
+      "../../examples/ThirdPartyLibs/zlib/gzwrite.c",
+      "../../examples/ThirdPartyLibs/zlib/infback.c",
+      "../../examples/ThirdPartyLibs/zlib/inffast.c",
+      "../../examples/ThirdPartyLibs/zlib/inflate.c",
+      "../../examples/ThirdPartyLibs/zlib/inftrees.c",
+      "../../examples/ThirdPartyLibs/zlib/trees.c",
+      "../../examples/ThirdPartyLibs/zlib/uncompr.c",
+      "../../examples/ThirdPartyLibs/zlib/zutil.c",
+      "../../examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp",
+      "../../examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp",
+      "../../examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp",
+      "../../examples/Importers/ImportURDFDemo/UrdfParser.cpp",
+      "../../examples/Importers/ImportURDFDemo/urdfStringSplit.cpp",
+      "../../examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp",
+      "../../examples/MultiThreading/b3PosixThreadSupport.cpp",
+      "../../examples/MultiThreading/b3Win32ThreadSupport.cpp",
+      "../../examples/MultiThreading/b3ThreadSupportInterface.cpp",
+		}
 
-	if not _OPTIONS["no-clsocket"] then
-
-                includedirs {"../../examples/ThirdPartyLibs/clsocket/src"}
-
-		 if os.is("Windows") then
-                	defines { "WIN32" }
-                	links {"Ws2_32","Winmm"}
-       		 end
-        	if os.is("Linux") then
-                	defines {"_LINUX"}
-        	end
-        	if os.is("MacOSX") then
-                	defines {"_DARWIN"}
-        	end
-
-                links {"clsocket"}
-
-                files {
-                        "../../examples/SharedMemory/PhysicsClientTCP.cpp",
-                        "../../examples/SharedMemory/PhysicsClientTCP.h",
-                        "../../examples/SharedMemory/PhysicsClientTCP_C_API.cpp",
-                        "../../examples/SharedMemory/PhysicsClientTCP_C_API.h",
-                }
-                defines {"BT_ENABLE_CLSOCKET"}
-        end
-
-
-		files {
-			"pybullet.c",
-			"../../examples/SharedMemory/IKTrajectoryHelper.cpp",
-			"../../examples/SharedMemory/IKTrajectoryHelper.h",
-			"../../examples/ExampleBrowser/InProcessExampleBrowser.cpp",
-			"../../examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp",
-			"../../examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.h",
-			"../../examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp",
-			"../../examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.h",
-			"../../examples/OpenGLWindow/SimpleCamera.cpp",
-			"../../examples/OpenGLWindow/SimpleCamera.h",
-			"../../examples/TinyRenderer/geometry.cpp",
-			"../../examples/TinyRenderer/model.cpp",
-			"../../examples/TinyRenderer/tgaimage.cpp",
-			"../../examples/TinyRenderer/our_gl.cpp",
-			"../../examples/TinyRenderer/TinyRenderer.cpp",
-			"../../examples/SharedMemory/InProcessMemory.cpp",
-			"../../examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp",
-			"../../examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.h",
-			"../../examples/SharedMemory/PhysicsClient.cpp",
-			"../../examples/SharedMemory/PhysicsClient.h",
-			"../../examples/SharedMemory/PhysicsServer.cpp",
-			"../../examples/SharedMemory/PhysicsServer.h",
-			"../../examples/SharedMemory/PhysicsServerExample.cpp",
-			"../../examples/SharedMemory/PhysicsServerExampleBullet2.cpp",
-			"../../examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp",
-			"../../examples/SharedMemory/PhysicsServerSharedMemory.cpp",
-			"../../examples/SharedMemory/PhysicsServerSharedMemory.h",
-			"../../examples/SharedMemory/PhysicsDirect.cpp",
-			"../../examples/SharedMemory/PhysicsDirect.h",
-			"../../examples/SharedMemory/PhysicsDirectC_API.cpp",
-			"../../examples/SharedMemory/PhysicsDirectC_API.h",
-			"../../examples/SharedMemory/PhysicsServerCommandProcessor.cpp",
-			"../../examples/SharedMemory/PhysicsServerCommandProcessor.h",
-			"../../examples/SharedMemory/b3PluginManager.cpp",
-			"../../examples/SharedMemory/b3PluginManager.h",
-			"../../examples/SharedMemory/PhysicsClientSharedMemory.cpp",
-			"../../examples/SharedMemory/PhysicsClientSharedMemory.h",
-			"../../examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp",
-			"../../examples/SharedMemory/PhysicsClientSharedMemory_C_API.h",
-			"../../examples/SharedMemory/PhysicsClientC_API.cpp",
-			"../../examples/SharedMemory/PhysicsClientC_API.h",
-			"../../examples/SharedMemory/Win32SharedMemory.cpp",
-			"../../examples/SharedMemory/Win32SharedMemory.h",
-			"../../examples/SharedMemory/PosixSharedMemory.cpp",
-			"../../examples/SharedMemory/PosixSharedMemory.h",
-			"../../examples/SharedMemory/SharedMemoryCommands.h",
-			"../../examples/SharedMemory/SharedMemoryPublic.h",
-			"../../examples/Utils/b3ResourcePath.cpp",
-			"../../examples/Utils/b3ResourcePath.h",
-			"../../examples/Utils/RobotLoggingUtil.cpp",
-			"../../examples/Utils/RobotLoggingUtil.h",
-			"../../examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp",
-			"../../examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp",
-			"../../examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.h",
-			"../../examples/ThirdPartyLibs/stb_image/stb_image.cpp",
-			"../../examples/ThirdPartyLibs/stb_image/stb_image_write.cpp",
-			"../../examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp",
-			"../../examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp",
-			"../../examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp",
-			"../../examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp",
-			"../../examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp",
-			"../../examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp",
-			"../../examples/Importers/ImportURDFDemo/URDF2Bullet.cpp",
-			"../../examples/Importers/ImportURDFDemo/UrdfParser.cpp",
-			"../../examples/Importers/ImportURDFDemo/urdfStringSplit.cpp",
-			"../../examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp",
-			"../../examples/MultiThreading/b3PosixThreadSupport.cpp",
-			"../../examples/MultiThreading/b3Win32ThreadSupport.cpp",
-			"../../examples/MultiThreading/b3ThreadSupportInterface.cpp",
-			"../../examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp",
-			"../../examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp",
-			"../../examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.h",
-			"../../examples/SharedMemory/plugins/stablePDPlugin/SpAlg.cpp",
-			"../../examples/SharedMemory/plugins/stablePDPlugin/SpAlg.h",
-			"../../examples/SharedMemory/plugins/stablePDPlugin/Shape.cpp",
-			"../../examples/SharedMemory/plugins/stablePDPlugin/Shape.h",
-			"../../examples/SharedMemory/plugins/stablePDPlugin/RBDUtil.cpp",
-			"../../examples/SharedMemory/plugins/stablePDPlugin/RBDUtil.h",
-			"../../examples/SharedMemory/plugins/stablePDPlugin/RBDModel.cpp",
-			"../../examples/SharedMemory/plugins/stablePDPlugin/RBDModel.h",
-			"../../examples/SharedMemory/plugins/stablePDPlugin/MathUtil.cpp",
-			"../../examples/SharedMemory/plugins/stablePDPlugin/MathUtil.h",
-			"../../examples/SharedMemory/plugins/stablePDPlugin/KinTree.cpp",
-			"../../examples/SharedMemory/plugins/stablePDPlugin/KinTree.h",
-			"../../examples/SharedMemory/plugins/stablePDPlugin/BulletConversion.cpp",
-			"../../examples/SharedMemory/plugins/stablePDPlugin/BulletConversion.h",
-			}
-
-  	defines {"BT_ENABLE_PHYSX","PX_PHYSX_STATIC_LIB", "PX_FOUNDATION_DLL=0", "PX_PROFILE"}
-		
+  	
 		configuration {"x64", "debug"}			
 				defines {"_DEBUG"}
 		configuration {"x86", "debug"}
@@ -201,40 +122,67 @@ if not _OPTIONS["no-enet"] then
 		configuration{}
 
 		includedirs {
-                ".",
-                "../../src/PhysX/physx/include",
-						    "../../src/PhysX/physx/include/characterkinematic",
-						    "../../src/PhysX/physx/include/common",
-						    "../../src/PhysX/physx/include/cooking",
-						    "../../src/PhysX/physx/include/extensions",
-						    "../../src/PhysX/physx/include/geometry",
-						    "../../src/PhysX/physx/include/geomutils",
-						    "../../src/PhysX/physx/include/vehicle",
-						    "../../src/PhysX/pxshared/include",
-                }
+      ".",
+      "../../examples",
+      "../../examples/SharedMemory",
+      "../../src/PhysX/physx/source/common/include",
+      "../../src/PhysX/physx/source/common/src",
+      "../../src/PhysX/physx/source/fastxml/include",
+      "../../src/PhysX/physx/source/filebuf/include",
+      "../../src/PhysX/physx/source/foundation/include",
+      "../../src/PhysX/physx/source/geomutils/include",
+      "../../src/PhysX/physx/source/geomutils/src",
+      "../../src/PhysX/physx/source/geomutils/src/ccd",
+      "../../src/PhysX/physx/source/geomutils/src/common",
+      "../../src/PhysX/physx/source/geomutils/src/contact",
+      "../../src/PhysX/physx/source/geomutils/src/convex",
+      "../../src/PhysX/physx/source/geomutils/src/distance",
+      "../../src/PhysX/physx/source/geomutils/src/gjk",
+      "../../src/PhysX/physx/source/geomutils/src/hf",
+      "../../src/PhysX/physx/source/geomutils/src/intersection",
+      "../../src/PhysX/physx/source/geomutils/src/mesh",
+      "../../src/PhysX/physx/source/geomutils/src/pcm",
+      "../../src/PhysX/physx/source/geomutils/src/sweep",
+      "../../src/PhysX/physx/source/lowlevel/api/include",
+      "../../src/PhysX/physx/source/lowlevel/common/include",
+      "../../src/PhysX/physx/source/lowlevel/common/include/collision",
+      "../../src/PhysX/physx/source/lowlevel/common/include/pipeline",
+      "../../src/PhysX/physx/source/lowlevel/common/include/utils",
+      "../../src/PhysX/physx/source/lowlevel/software/include",
+      "../../src/PhysX/physx/source/lowlevelaabb/include",
+      "../../src/PhysX/physx/source/lowleveldynamics/include",
+      "../../src/PhysX/physx/source/physx/src",
+      "../../src/PhysX/physx/source/physx/src/buffering",
+      "../../src/PhysX/physx/source/physx/src/device",
+      "../../src/PhysX/physx/source/physxcooking/src",
+      "../../src/PhysX/physx/source/physxcooking/src/convex",
+      "../../src/PhysX/physx/source/physxcooking/src/mesh",
+      "../../src/PhysX/physx/source/physxextensions/src",
+      "../../src/PhysX/physx/source/physxextensions/src/serialization/Binary",
+      "../../src/PhysX/physx/source/physxextensions/src/serialization/File",
+      "../../src/PhysX/physx/source/physxextensions/src/serialization/Xml",
+      "../../src/PhysX/physx/source/physxmetadata/core/include",
+      "../../src/PhysX/physx/source/physxmetadata/extensions/include",
+      "../../src/PhysX/physx/source/physxvehicle/src",
+      "../../src/PhysX/physx/source/physxvehicle/src/physxmetadata/include",
+      "../../src/PhysX/physx/source/pvd/include",
+      "../../src/PhysX/physx/source/scenequery/include",
+      "../../src/PhysX/physx/source/simulationcontroller/include",
+      "../../src/PhysX/physx/source/simulationcontroller/src",
+      "../../src/PhysX/physx/include",
+      "../../src/PhysX/physx/include/characterkinematic",
+      "../../src/PhysX/physx/include/common",
+      "../../src/PhysX/physx/include/cooking",
+      "../../src/PhysX/physx/include/extensions",
+      "../../src/PhysX/physx/include/geometry",
+      "../../src/PhysX/physx/include/geomutils",
+      "../../src/PhysX/physx/include/vehicle",
+      "../../src/PhysX/pxshared/include",
+    }
 		links {
-				"PhysX",
+				"PhysX","OpenGL_Window", "BulletFileLoader", "Bullet3Common","LinearMath",
 			}
-			
-			files {
-				"../../examples/SharedMemory/plugins/eglPlugin/eglRendererPlugin.cpp",
-				"../../examples/SharedMemory/plugins/eglPlugin/eglRendererPlugin.h",
-				"../../examples/SharedMemory/plugins/eglPlugin/eglRendererVisualShapeConverter.cpp",
-				"../../examples/SharedMemory/plugins/eglPlugin/eglRendererVisualShapeConverter.h",
-				"../../examples/SharedMemory/physx/PhysXC_API.cpp",
-				"../../examples/SharedMemory/physx/PhysXServerCommandProcessor.cpp",
-				"../../examples/SharedMemory/physx/PhysXUrdfImporter.cpp",
-				"../../examples/SharedMemory/physx/URDF2PhysX.cpp",
-				"../../examples/SharedMemory/physx/PhysXC_API.h",
-				"../../examples/SharedMemory/physx/PhysXServerCommandProcessor.h",
-				"../../examples/SharedMemory/physx/PhysXUrdfImporter.h",
-				"../../examples/SharedMemory/physx/URDF2PhysX.h",
-				"../../examples/SharedMemory/physx/PhysXUserData.h",
-				}
-  			
-if (_OPTIONS["enable_static_vr_plugin"]) then
-		files {"../../examples/SharedMemory/plugins/vrSyncPlugin/vrSyncPlugin.cpp"}
-end
+		
 
 	
 	includedirs {
