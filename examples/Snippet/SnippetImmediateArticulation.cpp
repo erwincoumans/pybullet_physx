@@ -564,6 +564,7 @@ void ImmediateScene::createScene()
 		{
 			const PxVec3 extents(0.5f, 0.5f, 0.5f);
 			const PxBoxGeometry boxGeom(extents);
+			//const PxSphereGeometry boxGeom(0.5);// extents);
 
 			MassProps massProps;
 			computeMassProps(massProps, boxGeom, 1.0f);
