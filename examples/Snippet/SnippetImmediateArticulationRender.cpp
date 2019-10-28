@@ -183,7 +183,36 @@ static void renderGeometry(const PxMat44& pose, const PxGeometry& geom, int text
 
 	case PxGeometryType::eSPHERE:
 	{
-		//const PxSphereGeometry& sphereGeom = static_cast<const PxSphereGeometry&>(geom);
+		const PxSphereGeometry& sphereGeom = static_cast<const PxSphereGeometry&>(geom);
+		
+		int strideInBytes = 9 * sizeof(float);
+		int numVertices = sizeof(textured_detailed_sphere_vertices) / strideInBytes;
+		int numIndices = sizeof(textured_detailed_sphere_indices) / sizeof(int);
+		b3AlignedObjectArray<unsigned int> indices;
+		indices.resize(numIndices);
+		for (int i = 0; i < numIndices; i++)
+		{
+			indices[i] = textured_detailed_sphere_indices[i];
+		}
+
+		b3AlignedObjectArray<GfxVertexFormat0> verts;
+		verts.resize(numVertices);
+		float textureScaling = 1;
+		for (int i = 0; i < numVertices; i++)
+		{
+			verts[i].x = 2.*sphereGeom.radius * textured_detailed_sphere_vertices[i * 9];
+			verts[i].y = 2.*sphereGeom.radius * textured_detailed_sphere_vertices[i * 9 + 1];
+			verts[i].z = 2.*sphereGeom.radius * textured_detailed_sphere_vertices[i * 9 + 2];
+			verts[i].w = textured_detailed_sphere_vertices[i * 9 + 3];
+			verts[i].u = textured_detailed_sphere_vertices[i * 9 + 7] * textureScaling;
+			verts[i].v = textured_detailed_sphere_vertices[i * 9 + 8] * textureScaling;
+		}
+		float color[4] = { 1, 1, 1, 1 };
+		
+		float pos[3] = { pose.getPosition().x, pose.getPosition().y, pose.getPosition().z };
+		PxTransform tr(pose);
+		float orn[4] = { tr.q.x, tr.q.y, tr.q.z, tr.q.w };
+		app->m_renderer->drawTexturedTriangleMesh(pos, orn, &verts[0].x, verts.size(), &indices[0], numIndices, color, textureHandle);
 		//glutSolidSphere(GLdouble(sphereGeom.radius), 10, 10);
 	}
 	break;
@@ -419,8 +448,19 @@ int main(int argc,  char* argv[])
 		int reds[16] = { 0 };
 		int greens[16] = { 0 };
 		int blues[16] = { 0 };
+		reds[0] = 64;
+		reds[1] = 128;
+		reds[2] = 255;
+		reds[3] = 255;
+		blues[4] = 64;
+		blues[5] = 128;
+		blues[6] = 255;
+		greens[7] = 128;
 		blues[8] = 255;
 		reds[9] = 255;
+		blues[10] = 128;
+		blues[11] = 128;
+		reds[11] = 128;
 		blues[12] = 255;
 		reds[12] = 255;
 		greens[13] = 255;
