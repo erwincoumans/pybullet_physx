@@ -38,7 +38,7 @@ def parallelCCompile(self,
     newcc_args = cc_args
     if _platform == "darwin":
       if src.endswith('.cpp'):
-        newcc_args = cc_args + ["-stdlib=libc++"]
+        newcc_args = cc_args + ["-stdlib=libc++"]+["-mmacosx-version-min=10.14"]
     self._compile(obj, src, ext, newcc_args, extra_postargs, pp_opts)
 
   # convert to list, imap is evaluated on-demand
@@ -48,7 +48,7 @@ def parallelCCompile(self,
 
 
 import distutils.ccompiler
-#distutils.ccompiler.CCompiler.compile = parallelCCompile
+distutils.ccompiler.CCompiler.compile = parallelCCompile
 
 #see http://stackoverflow.com/a/8719066/295157
 import os
@@ -386,7 +386,7 @@ elif _platform == "win32":
   +["src/PhysX/physx/source/physx/src/device/windows/PhysXIndicatorWindows.cpp"]
 elif _platform == "darwin":
   print("darwin!")
-  os.environ['LDFLAGS'] = '-framework Cocoa -stdlib=libc++ -framework OpenGL'
+  os.environ['LDFLAGS'] = '-framework Cocoa -stdlib=libc++ -mmacosx-version-min=10.14 -framework OpenGL'
   CXX_FLAGS += '-DB3_NO_PYTHON_FRAMEWORK '
   CXX_FLAGS += '-DHAS_SOCKLEN_T '
   CXX_FLAGS += '-D_DARWIN '
