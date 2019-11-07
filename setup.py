@@ -364,14 +364,6 @@ if _platform == "linux" or _platform == "linux2":
   +["examples/ThirdPartyLibs/glad/glx.c"]
   include_dirs += ["examples/ThirdPartyLibs/optionalX11"]
 
-  if 'BT_USE_EGL' in EGL_CXX_FLAGS:
-    egl_renderer_sources = egl_renderer_sources\
-    +["examples/OpenGLWindow/EGLOpenGLWindow.cpp"]\
-    +['examples/ThirdPartyLibs/glad/egl.c']
-  else:
-    egl_renderer_sources = egl_renderer_sources\
-    +["examples/OpenGLWindow/X11OpenGLWindow.cpp"]\
-    +["examples/ThirdPartyLibs/glad/glx.c"]
 
 elif _platform == "win32":
   print("win32!")

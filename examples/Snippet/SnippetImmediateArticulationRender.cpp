@@ -3,6 +3,7 @@ extern void stepPhysics(bool interactive);
 extern void cleanupPhysics(bool interactive);
 #include "PxPhysicsAPI.h"
 using namespace physx;
+#include "Bullet3Common/b3AlignedObjectArray.h"
 #include "OpenGLWindow/ShapeData.h"
 #include "LinearMath/btVector3.h"
 extern physx::PxU32 getNbBounds();
