@@ -42,8 +42,8 @@
 #include "snippetcommon/SnippetPrint.h"
 #include "snippetcommon/SnippetPVD.h"
 #include "PxProfileZone.h"
-#define USE_TGS 1
-
+#define USE_TGS 0
+//#define KEEP_SPHERE_STACK_UP
 //#define PRINT_TIMINGS
 #define TEST_IMMEDIATE_JOINTS
 
@@ -563,22 +563,26 @@ void ImmediateScene::createScene()
 		// Box stack
 		{
 			const PxVec3 extents(0.5f, 0.5f, 0.5f);
-			const PxBoxGeometry boxGeom(extents);
-			//const PxSphereGeometry boxGeom(0.5);// extents);
+			//const PxBoxGeometry boxGeom(extents);
+			const PxSphereGeometry boxGeom(0.5);// extents);
 
-			MassProps massProps;
-			computeMassProps(massProps, boxGeom, 1.0f);
 
 	//		for(PxU32 i=0;i<8;i++)
 	//			createBox(extents, PxTransform(PxVec3(0.0f, extents.y + float(i)*extents.y*2.0f, 0.0f)), 1.0f);
 
-			PxU32 size = 28;
+			PxU32 size = 5;
 //			PxU32 size = 2;
 //			PxU32 size = 1;
 			float y = extents.y;
 			float x = 0.0f;
+			
 			while(size)
 			{
+				
+				float mass = (size==1) ? 100 : 1;
+				MassProps massProps;
+				computeMassProps(massProps, boxGeom, mass);
+
 				for(PxU32 i=0;i<1;i++)
 					createActor(boxGeom, PxTransform(PxVec3(x+float(i)*extents.x*2.0f, y, 0.0f)), &massProps);
 
@@ -1294,6 +1298,12 @@ void ImmediateScene::narrowPhase()
 			{
 				// Fill in solver-specific data that our contact gen does not produce...
 				Gu::ContactPoint point = contactPoints[i];
+#ifdef KEEP_SPHERE_STACK_UP
+				point.normal.x = 0;
+				point.normal.z = 0;
+				point.point.x = 0;
+				point.point.z = 0;
+#endif //KEEP_SPHERE_STACK_UP
 				point.maxImpulse		= PX_MAX_F32;
 				point.targetVel			= PxVec3(0.0f);
 				point.staticFriction	= gStaticFriction;
